@@ -85,7 +85,11 @@ class AccountViewSet(DefaultsMixin, AuthMixin, mixins.RetrieveModelMixin, mixins
             )
 
             return Response(
-                {'id': 400, 'user_id': '-100'},
+                {
+                    'id': 400,
+                    'data': '-100',
+                    'message': 'this account saved for device'
+                },
                 status=status.HTTP_400_BAD_REQUEST
             )
 
@@ -99,13 +103,21 @@ class AccountViewSet(DefaultsMixin, AuthMixin, mixins.RetrieveModelMixin, mixins
             serializer = self.serializer_class(account)
 
             return Response(
-                {'id': 200, 'data': serializer.data},
+                {
+                    'id': 200,
+                    'data': serializer.data,
+                    'message': 'account set for device'
+                },
                 status=status.HTTP_200_OK
             )
 
         except Exception as e:
             return Response(
-                {'id': 400, 'user_id': '-100'},
+                {
+                    'id': 400,
+                    'data': '-100',
+                    'message': 'error in params'
+                },
                 status=status.HTTP_400_BAD_REQUEST
             )
 
@@ -119,18 +131,30 @@ class AccountViewSet(DefaultsMixin, AuthMixin, mixins.RetrieveModelMixin, mixins
             )
 
             return Response(
-                {'id': 200, 'user_id': account.user.username},
+                {
+                    'id': 200,
+                    'message':'account found',
+                    'data': account.user.username
+                },
                 status=status.HTTP_200_OK
             )
 
         except Account.DoesNotExist:
             return Response(
-                {'id': 404, 'user_id': None},
+                {
+                    'id': 404,
+                    'data': None,
+                    'message': 'account not found'
+                },
                 status=status.HTTP_404_NOT_FOUND
             )
 
         except Exception as e:
             return Response(
-                {'id': 400, 'user_id': '-100'},
+                {
+                    'id': 400,
+                    'data': '-100',
+                    'message': 'error in params'
+                },
                 status=status.HTTP_400_BAD_REQUEST
             )
