@@ -39,7 +39,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'rest_framework',
     'user_data',
-    'swash_service'
+    'swash_service',
     'rest_framework_docs',
 ]
 
