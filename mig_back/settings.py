@@ -38,7 +38,8 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'rest_framework',
-    'user_data'
+    'user_data',
+    'swash_service'
 ]
 
 MIDDLEWARE = [
@@ -114,6 +115,11 @@ USE_I18N = True
 USE_L10N = True
 
 USE_TZ = True
+
+
+# STATIC_URL = '/static/'
+
+STATIC_ROOT = os.path.join(BASE_DIR, "static")
 
 
 # Static files (CSS, JavaScript, Images)
