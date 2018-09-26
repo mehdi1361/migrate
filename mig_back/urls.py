@@ -22,4 +22,5 @@ urlpatterns = [
     url(r'^admin/', admin.site.urls),
     url(r'^login/', obtain_jwt_token),
     url(r'^api/', include(router.urls)),
+    url(r'^docs/', include('rest_framework_docs.urls')),
 ]
