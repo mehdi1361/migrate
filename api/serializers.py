@@ -45,6 +45,7 @@ class CategorySerializer(serializers.ModelSerializer):
         model = Category
 
         fields = (
+            'id',
             'name',
             'icon',
             'details',
@@ -59,6 +60,7 @@ class ServiceSerializer(serializers.ModelSerializer):
         model = Service
 
         fields = (
+            'id',
             'name',
             'icon',
             'notification',
