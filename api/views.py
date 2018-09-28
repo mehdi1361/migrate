@@ -222,13 +222,13 @@ class OrderViewSet(DefaultsMixin, AuthMixin, mixins.RetrieveModelMixin, mixins.L
 
             else:
                 try:
-                    order_service = OrderService.objects.get_or_create(order=order, service=service)
+                    order_service = OrderService.objects.get(order=order, service=service)
 
                     order_service.count += 1
                     order_service.save()
 
                 except Exception as e:
-                    OrderService.objects.get_or_create(order=order, service=service)
+                    OrderService.objects.create(order=order, service=service)
 
             serializer = self.serializer_class(order)
 
