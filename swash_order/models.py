@@ -11,7 +11,6 @@ class Order(Base):
     STATUS_TYPE = (
         ('draft', 'draft'),
         ('confirmed', 'confirmed'),
-        ('confirmed', 'confirmed'),
         ('paid', 'paid'),
         ('pickup', 'pickup'),
         ('progress', 'progress'),
@@ -76,8 +75,8 @@ class OrderStatus(Base):
 
 @python_2_unicode_compatible
 class OrderService(Base):
-    service = models.ForeignKey(Service, verbose_name=_('services'), related_name='services')
-    order = models.ForeignKey(Order, verbose_name=_('order'), related_name='orders')
+    service = models.ForeignKey(Service, verbose_name=_('services'), related_name='orders')
+    order = models.ForeignKey(Order, verbose_name=_('order'), related_name='services')
     count = models.PositiveIntegerField(_('count'), default=1)
 
     class Meta:

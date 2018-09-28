@@ -2,6 +2,7 @@ import uuid
 from datetime import datetime, timedelta
 from django.contrib.auth import get_user_model
 from django.contrib.auth.models import User
+from pip._internal.download import user_agent
 from rest_framework import viewsets, status, filters, mixins
 from rest_framework.permissions import AllowAny
 from rest_framework.decorators import list_route
@@ -16,7 +17,7 @@ from .serializers import UserSerializer, AccountSerializer, ProfileSerializer, C
     ServiceSerializer, OrderSerializer
 from user_data.models import Device, Account, Profile
 from swash_service.models import Category, Service
-from swash_order.models import Order,OrderService, OrderStatus
+from swash_order.models import Order, OrderService, OrderStatus, OrderAddress
 
 
 class DefaultsMixin(object):
@@ -195,10 +196,14 @@ class OrderViewSet(DefaultsMixin, AuthMixin, mixins.RetrieveModelMixin, mixins.L
 
     @list_route(methods=['post'])
     def bag(self, request):
-        order = get_object_or_404(Order, user=request.user, status='draft')
-        serializer = self.serializer_class(order)
+        try:
+            order = Order.objects.get(user=request.user, status__in=('draft', 'pickup'))
+            serializer = self.serializer_class(order)
 
-        return Response({"id": 200, "message": serializer.data}, status=status.HTTP_200_OK)
+            return Response({"id": 200, "message": serializer.data}, status=status.HTTP_200_OK)
+
+        except Exception as e:
+            return Response({"id": 400, "message": e}, status=status.HTTP_400_BAD_REQUEST)
 
     @list_route(methods=['post'])
     def add(self, request):
@@ -206,9 +211,9 @@ class OrderViewSet(DefaultsMixin, AuthMixin, mixins.RetrieveModelMixin, mixins.L
             service_id = request.data.get('service_id')
             service = get_object_or_404(Service, pk=service_id)
 
-            created, order = Order.objects.get_or_create(
+            order, created = Order.objects.get_or_create(
                 user=request.user,
-                defaults={'status': Order.STATUS_TYPE(0, 0)}
+                defaults={'status': 'draft'}
             )
 
             if created:
@@ -216,10 +221,14 @@ class OrderViewSet(DefaultsMixin, AuthMixin, mixins.RetrieveModelMixin, mixins.L
                 OrderStatus.objects.create(order=order, status='draft')
 
             else:
-                order_service = OrderService.objects.get(order=order, service=service)
+                try:
+                    order_service = OrderService.objects.get_or_create(order=order, service=service)
 
-                order_service.count += 1
-                order_service.save()
+                    order_service.count += 1
+                    order_service.save()
+
+                except Exception as e:
+                    OrderService.objects.get_or_create(order=order, service=service)
 
             serializer = self.serializer_class(order)
 
@@ -233,7 +242,7 @@ class OrderViewSet(DefaultsMixin, AuthMixin, mixins.RetrieveModelMixin, mixins.L
         try:
             service_id = request.data.get('service_id')
             service = get_object_or_404(Service, pk=service_id)
-            order = get_object_or_404(Order, user=request.user, defaults={'status': 'draft'})
+            order = get_object_or_404(Order, user=request.user, status='draft')
             order_service = get_object_or_404(OrderService, service=service, order=order)
 
             order_service.count -= 1
@@ -250,12 +259,78 @@ class OrderViewSet(DefaultsMixin, AuthMixin, mixins.RetrieveModelMixin, mixins.L
 
     @list_route(methods=['post'])
     def confirm(self, request):
-        order = get_object_or_404(Order, user=request.user, defaults={'status': 'draft'})
+        order = get_object_or_404(Order, user=request.user, defaults={'status': 'pickup'})
         order.status = 'confirmed'
         order.save()
 
         OrderStatus.objects.create(order=order, status='confirmed')
 
         return Response({"id": 200, "message": "order confirmed"}, status=status.HTTP_200_OK)
+
+    @list_route(methods=['post'])
+    def address(self, request):
+        try:
+            lat = request.data.get('lat')
+            long = request.data.get('long')
+            address = request.data.get('address')
+            state = request.data.get('status')
+
+            if lat is None:
+                raise Exception('lat cant null')
+
+            if long is None:
+                raise Exception('long cant null')
+
+            if address is None:
+                raise Exception('address cant null')
+
+            if state is None or state not in ('pickup', 'delivery'):
+                raise Exception('state not valid')
+
+            order = get_object_or_404(Order, user=request.user, defaults={'status': 'draft'})
+
+            OrderAddress.objects.create(
+                order=order,
+                lat=lat,
+                long=long,
+                address=address,
+                status=state
+            )
+            OrderStatus.objects.create(order=order, status='pickup')
+            order.status = 'pickup'
+            order.save()
+
+            serializer = self.serializer_class(order)
+            return Response({"id": 200, "message": serializer.data}, status=status.HTTP_200_OK)
+
+        except Exception as e:
+            return Response({"id": 400, "message": e}, status=status.HTTP_400_BAD_REQUEST)
+
+    @list_route(methods=['post'])
+    def pend_or_cancel(self, request):
+        try:
+            state = request.data.get('state')
+            order = Order.objects.filter(user=request.user).exclude(status__in=('pending', 'cancel'))
+
+            if order.count() == 0 or order.count() >= 2:
+                raise Exception('order not valid')
+
+            if state is None or state not in ('pending', 'cancel'):
+                raise Exception('state not valid')
+
+            selected_order = order[0]
+            selected_order.status = 'pending'
+            selected_order.save()
+
+            serializer = self.serializer_class(selected_order)
+
+            return Response({"id": 200, "message": serializer.data}, status=status.HTTP_200_OK)
+
+        except Exception as e:
+            return Response({"id": 400, "message": e}, status=status.HTTP_400_BAD_REQUEST)
+
+
+
+
 
 

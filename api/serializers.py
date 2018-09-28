@@ -99,4 +99,18 @@ class OrderSerializer(serializers.ModelSerializer):
         return None
 
     def get_services(self, requests):
-        return None
+        order = Order.objects.get(
+            user=requests.user,
+            status__in=('draft', 'pending')
+        )
+        lst_service = []
+
+        for order_service in order.services.all():
+            service = Service.objects.get(id=order_service.service.id)
+            service_serializer = ServiceSerializer(service)
+            result = service_serializer.data
+
+            result['order_count'] = order_service.count
+            lst_service.append(result)
+
+        return lst_service
