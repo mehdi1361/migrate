@@ -287,7 +287,7 @@ class OrderViewSet(DefaultsMixin, AuthMixin, mixins.RetrieveModelMixin, mixins.L
             if state is None or state not in ('pickup', 'delivery'):
                 raise Exception('state not valid')
 
-            order = get_object_or_404(Order, user=request.user, defaults={'status': 'draft'})
+            order = Order.objects.get(user=request.user, status__in=('draft', 'pickup'))
 
             OrderAddress.objects.create(
                 order=order,

@@ -50,7 +50,6 @@ class OrderStatus(Base):
     STATUS_TYPE = (
         ('draft', 'draft'),
         ('confirmed', 'confirmed'),
-        ('confirmed', 'confirmed'),
         ('paid', 'paid'),
         ('pickup', 'pickup'),
         ('progress', 'progress'),
@@ -95,8 +94,8 @@ class OrderAddress(Base):
         ('pickup', 'pickup'),
         ('delivery', 'delivery')
     )
-    lat = models.DecimalField(_('lat'), max_digits=20, decimal_places=20)
-    long = models.DecimalField(_('long'), max_digits=20, decimal_places=20)
+    lat = models.FloatField(_('lat'), default=0.0)
+    long = models.FloatField(_('long'), default=0.0)
     address = models.TextField(_('address'), null=True, blank=True)
     status = models.CharField(_('status'), max_length=10, choices=STATE, default='pickup')
     order = models.ForeignKey(Order, verbose_name=_('order'), related_name='addresses')

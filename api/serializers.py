@@ -1,8 +1,8 @@
 from django.contrib.auth import get_user_model
 from user_data.models import Account, Profile
 from swash_service.models import Category, Service
-from swash_order.models import Order, OrderService, OrderStatus
-from rest_framework import serializers
+from swash_order.models import Order, OrderStatus, OrderAddress
+from rest_framework import serializers, status
 
 
 class UserSerializer(serializers.ModelSerializer):
@@ -93,15 +93,31 @@ class OrderSerializer(serializers.ModelSerializer):
         )
 
     def get_pick_up_address(self, requests):
-        return None
+        try:
+            order = Order.objects.get(user=requests.user, status='pickup')
+            order_pickup_address = OrderAddress.objects.get(order=order, status='pickup')
+            serializer = OrderAddressSerializer(order_pickup_address)
+
+            return serializer.data
+
+        except Exception as e:
+            return {}
 
     def get_delivery_address(self, requests):
-        return None
+        try:
+            order = Order.objects.get(user=requests.user, status='pickup')
+            order_pickup_address = OrderAddress.objects.get(order=order, status='delivery')
+            serializer = OrderAddressSerializer(order_pickup_address)
+
+            return serializer.data
+
+        except Exception as e:
+            return {}
 
     def get_services(self, requests):
         order = Order.objects.get(
             user=requests.user,
-            status__in=('draft', 'pending')
+            status__in=('draft', 'pending', 'pickup')
         )
         lst_service = []
 
@@ -114,3 +130,15 @@ class OrderSerializer(serializers.ModelSerializer):
             lst_service.append(result)
 
         return lst_service
+
+
+class OrderAddressSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = OrderAddress
+
+        fields = (
+            'lat',
+            'long',
+            'address',
+            'status'
+        )
