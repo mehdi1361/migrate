@@ -304,7 +304,7 @@ class OrderViewSet(DefaultsMixin, AuthMixin, mixins.RetrieveModelMixin, mixins.L
             return Response({"id": 200, "message": serializer.data}, status=status.HTTP_200_OK)
 
         except Exception as e:
-            return Response({"id": 400, "message": e}, status=status.HTTP_400_BAD_REQUEST)
+            return Response({"id": 400, "message": e.args[0]}, status=status.HTTP_400_BAD_REQUEST)
 
     @list_route(methods=['post'])
     def pend_or_cancel(self, request):
