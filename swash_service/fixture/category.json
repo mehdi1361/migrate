@@ -1,0 +1,142 @@
+[
+{
+  "model": "swash_service.category",
+  "pk": 1,
+  "fields": {
+    "created_date": "2018-09-26T21:22:04.867Z",
+    "updated_date": "2018-09-26T21:22:04.867Z",
+    "name": "Dry Cleaning",
+    "icon": "category_icon/Asset_2.png",
+    "details": "Descriptions",
+    "discount": 5,
+    "notification": "2",
+    "parent": null
+  }
+},
+{
+  "model": "swash_service.category",
+  "pk": 2,
+  "fields": {
+    "created_date": "2018-09-26T21:22:46.308Z",
+    "updated_date": "2018-09-26T21:22:46.308Z",
+    "name": "Shoes Repair",
+    "icon": "category_icon/Asset_1.png",
+    "details": "Descriptions",
+    "discount": 0,
+    "notification": null,
+    "parent": null
+  }
+},
+{
+  "model": "swash_service.category",
+  "pk": 3,
+  "fields": {
+    "created_date": "2018-09-26T21:23:12.234Z",
+    "updated_date": "2018-09-26T21:23:12.234Z",
+    "name": "Tailor",
+    "icon": "category_icon/Asset_4.png",
+    "details": "Descriptions",
+    "discount": 0,
+    "notification": null,
+    "parent": null
+  }
+},
+{
+  "model": "swash_service.category",
+  "pk": 4,
+  "fields": {
+    "created_date": "2018-09-26T21:23:36.164Z",
+    "updated_date": "2018-09-26T21:23:36.164Z",
+    "name": "Carpet",
+    "icon": "category_icon/Asset_3.png",
+    "details": "Descriptions",
+    "discount": 0,
+    "notification": null,
+    "parent": null
+  }
+},
+{
+  "model": "swash_service.category",
+  "pk": 5,
+  "fields": {
+    "created_date": "2018-09-26T21:27:13.948Z",
+    "updated_date": "2018-09-26T21:27:13.948Z",
+    "name": "Women",
+    "icon": "category_icon/Asset_16.png",
+    "details": "Descriptions of women category",
+    "discount": 0,
+    "notification": null,
+    "parent": 1
+  }
+},
+{
+  "model": "swash_service.category",
+  "pk": 6,
+  "fields": {
+    "created_date": "2018-09-27T06:28:00.066Z",
+    "updated_date": "2018-09-27T06:28:00.066Z",
+    "name": "Men",
+    "icon": "category_icon/Asset_17.png",
+    "details": "Description of Men category",
+    "discount": 0,
+    "notification": null,
+    "parent": 1
+  }
+},
+{
+  "model": "swash_service.category",
+  "pk": 7,
+  "fields": {
+    "created_date": "2018-09-27T06:34:15.466Z",
+    "updated_date": "2018-09-27T06:34:15.466Z",
+    "name": "Unisex",
+    "icon": "category_icon/bgAsset_1.png",
+    "details": "Unisex Descriptions and ...",
+    "discount": 0,
+    "notification": null,
+    "parent": 1
+  }
+},
+{
+  "model": "swash_service.category",
+  "pk": 8,
+  "fields": {
+    "created_date": "2018-09-27T06:39:17.337Z",
+    "updated_date": "2018-09-27T06:39:17.337Z",
+    "name": "Outerwear",
+    "icon": "category_icon/Asset_1_jsx1NYi.png",
+    "details": "Outerwear description and info...",
+    "discount": 0,
+    "notification": null,
+    "parent": 1
+  }
+},
+{
+  "model": "swash_service.category",
+  "pk": 9,
+  "fields": {
+    "created_date": "2018-09-27T06:55:27.245Z",
+    "updated_date": "2018-09-27T06:55:27.245Z",
+    "name": "Home",
+    "icon": "category_icon/home.png",
+    "details": "Home descriptions",
+    "discount": 0,
+    "notification": null,
+    "parent": 1
+  }
+},
+{
+  "model": "swash_service.category",
+  "pk": 10,
+  "fields": {
+    "created_date": "2018-09-27T06:56:15.501Z",
+    "updated_date": "2018-09-27T06:56:15.501Z",
+    "name": "Household laundry",
+    "icon": "category_icon/householdlaundry.png",
+    "details": "Household laundry description",
+    "discount": 0,
+    "notification": null,
+    "parent": 1
+  }
+}
+]

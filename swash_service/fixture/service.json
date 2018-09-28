@@ -1,0 +1,466 @@
+[
+{
+  "model": "swash_service.service",
+  "pk": 1,
+  "fields": {
+    "created_date": "2018-09-27T06:58:35.524Z",
+    "updated_date": "2018-09-27T11:21:02.592Z",
+    "name": "wedding dress",
+    "icon": "service_icon/weddingdress.png",
+    "notification": null,
+    "details": "all information wedding dress",
+    "price": 15,
+    "discount": 0,
+    "duration": null,
+    "category": 5
+  }
+},
+{
+  "model": "swash_service.service",
+  "pk": 2,
+  "fields": {
+    "created_date": "2018-09-27T11:20:38.856Z",
+    "updated_date": "2018-09-27T11:20:38.856Z",
+    "name": "Tuxedo shirt",
+    "icon": "service_icon/tuxedoshirt.png",
+    "notification": null,
+    "details": "Tuxedo shirt description",
+    "price": 10,
+    "discount": 0,
+    "duration": null,
+    "category": 5
+  }
+},
+{
+  "model": "swash_service.service",
+  "pk": 3,
+  "fields": {
+    "created_date": "2018-09-27T11:21:43.495Z",
+    "updated_date": "2018-09-27T11:21:43.495Z",
+    "name": "Waistcoat",
+    "icon": "service_icon/waistcoat.png",
+    "notification": null,
+    "details": "Waistcoat description",
+    "price": 5,
+    "discount": 0,
+    "duration": null,
+    "category": 5
+  }
+},
+{
+  "model": "swash_service.service",
+  "pk": 4,
+  "fields": {
+    "created_date": "2018-09-27T11:22:54.569Z",
+    "updated_date": "2018-09-27T11:22:54.570Z",
+    "name": "Tailcoat",
+    "icon": "service_icon/tailcoat.png",
+    "notification": null,
+    "details": "Tailcoat description",
+    "price": 12,
+    "discount": 0,
+    "duration": null,
+    "category": 5
+  }
+},
+{
+  "model": "swash_service.service",
+  "pk": 5,
+  "fields": {
+    "created_date": "2018-09-27T11:23:43.479Z",
+    "updated_date": "2018-09-27T11:23:43.479Z",
+    "name": "Bow Tie",
+    "icon": "service_icon/bowtie.png",
+    "notification": null,
+    "details": "Bow Tie description and info",
+    "price": 2,
+    "discount": 0,
+    "duration": null,
+    "category": 5
+  }
+},
+{
+  "model": "swash_service.service",
+  "pk": 6,
+  "fields": {
+    "created_date": "2018-09-27T11:26:20.444Z",
+    "updated_date": "2018-09-27T11:26:20.444Z",
+    "name": "Shirt",
+    "icon": "service_icon/shirt.png",
+    "notification": null,
+    "details": "Shirt information and notes...",
+    "price": 4,
+    "discount": 0,
+    "duration": null,
+    "category": 6
+  }
+},
+{
+  "model": "swash_service.service",
+  "pk": 7,
+  "fields": {
+    "created_date": "2018-09-27T11:28:56.469Z",
+    "updated_date": "2018-09-27T11:28:56.469Z",
+    "name": "Shirts 10 pcs",
+    "icon": "service_icon/shirts_10_pcs.png",
+    "notification": null,
+    "details": "Shirts 10 pcs, add your notes here",
+    "price": 2,
+    "discount": 0,
+    "duration": null,
+    "category": 6
+  }
+},
+{
+  "model": "swash_service.service",
+  "pk": 8,
+  "fields": {
+    "created_date": "2018-09-27T11:30:40.259Z",
+    "updated_date": "2018-09-27T11:30:40.259Z",
+    "name": "Suit",
+    "icon": "service_icon/suit.png",
+    "notification": null,
+    "details": "Tell us about your services",
+    "price": 11,
+    "discount": 0,
+    "duration": null,
+    "category": 6
+  }
+},
+{
+  "model": "swash_service.service",
+  "pk": 9,
+  "fields": {
+    "created_date": "2018-09-27T11:32:51.296Z",
+    "updated_date": "2018-09-27T11:32:51.296Z",
+    "name": "Jacket",
+    "icon": "service_icon/jacket.png",
+    "notification": null,
+    "details": "How you do this?",
+    "price": 5,
+    "discount": 0,
+    "duration": null,
+    "category": 6
+  }
+},
+{
+  "model": "swash_service.service",
+  "pk": 10,
+  "fields": {
+    "created_date": "2018-09-27T11:33:48.577Z",
+    "updated_date": "2018-09-27T11:33:48.578Z",
+    "name": "Pants",
+    "icon": "service_icon/pant.png",
+    "notification": null,
+    "details": "You are a perfect company in Sweden",
+    "price": 13,
+    "discount": 0,
+    "duration": null,
+    "category": 6
+  }
+},
+{
+  "model": "swash_service.service",
+  "pk": 11,
+  "fields": {
+    "created_date": "2018-09-27T11:35:04.497Z",
+    "updated_date": "2018-09-27T11:35:04.497Z",
+    "name": "Sweater",
+    "icon": "service_icon/sweather.png",
+    "notification": null,
+    "details": "We deliver your sweater better than...",
+    "price": 16,
+    "discount": 0,
+    "duration": null,
+    "category": 6
+  }
+},
+{
+  "model": "swash_service.service",
+  "pk": 12,
+  "fields": {
+    "created_date": "2018-09-27T11:36:59.559Z",
+    "updated_date": "2018-09-27T11:36:59.559Z",
+    "name": "Thin / Rain Jacket",
+    "icon": "service_icon/thinrainjacket.png",
+    "notification": null,
+    "details": "Keep your Thin / Rain Jacket for long time",
+    "price": 24,
+    "discount": 0,
+    "duration": null,
+    "category": 7
+  }
+},
+{
+  "model": "swash_service.service",
+  "pk": 13,
+  "fields": {
+    "created_date": "2018-09-27T11:39:09.191Z",
+    "updated_date": "2018-09-27T11:39:09.191Z",
+    "name": "Down Jacket",
+    "icon": "service_icon/downjacket.png",
+    "notification": null,
+    "details": "Down Jacket for winter/fall and ...",
+    "price": 18,
+    "discount": 0,
+    "duration": null,
+    "category": 7
+  }
+},
+{
+  "model": "swash_service.service",
+  "pk": 14,
+  "fields": {
+    "created_date": "2018-09-27T11:42:17.775Z",
+    "updated_date": "2018-09-27T11:42:17.775Z",
+    "name": "Leather Jacket",
+    "icon": "service_icon/leatherjacket.png",
+    "notification": null,
+    "details": "Polish your Leather Jacket with best washing liquid",
+    "price": 12,
+    "discount": 0,
+    "duration": null,
+    "category": 7
+  }
+},
+{
+  "model": "swash_service.service",
+  "pk": 15,
+  "fields": {
+    "created_date": "2018-09-27T11:45:06.828Z",
+    "updated_date": "2018-09-27T11:45:06.828Z",
+    "name": "Coat",
+    "icon": "service_icon/coat.png",
+    "notification": null,
+    "details": "Coat and other clothes for cold weather",
+    "price": 12,
+    "discount": 0,
+    "duration": null,
+    "category": 7
+  }
+},
+{
+  "model": "swash_service.service",
+  "pk": 16,
+  "fields": {
+    "created_date": "2018-09-27T11:47:21.989Z",
+    "updated_date": "2018-09-27T11:47:21.989Z",
+    "name": "Linens ( per Kilo )",
+    "icon": "service_icon/washbasin.png",
+    "notification": null,
+    "details": "You can order by the kilogram",
+    "price": 6,
+    "discount": 0,
+    "duration": null,
+    "category": 8
+  }
+},
+{
+  "model": "swash_service.service",
+  "pk": 17,
+  "fields": {
+    "created_date": "2018-09-27T11:48:52.607Z",
+    "updated_date": "2018-09-27T11:48:52.607Z",
+    "name": "Bedspread Single",
+    "icon": "service_icon/washbasin_VajXiSq.png",
+    "notification": null,
+    "details": "Collect your Bedspread Single",
+    "price": 18,
+    "discount": 0,
+    "duration": null,
+    "category": 8
+  }
+},
+{
+  "model": "swash_service.service",
+  "pk": 18,
+  "fields": {
+    "created_date": "2018-09-27T12:08:20.169Z",
+    "updated_date": "2018-09-27T12:08:20.169Z",
+    "name": "Bedspread double",
+    "icon": "service_icon/washbasin_chqE3U7.png",
+    "notification": null,
+    "details": "Bedspread double with accessories",
+    "price": 35,
+    "discount": 0,
+    "duration": null,
+    "category": 9
+  }
+},
+{
+  "model": "swash_service.service",
+  "pk": 19,
+  "fields": {
+    "created_date": "2018-09-27T12:09:32.024Z",
+    "updated_date": "2018-09-27T12:09:32.024Z",
+    "name": "Blanket",
+    "icon": "service_icon/blanket.png",
+    "notification": null,
+    "details": "All type of blankets",
+    "price": 21,
+    "discount": 0,
+    "duration": null,
+    "category": 9
+  }
+},
+{
+  "model": "swash_service.service",
+  "pk": 20,
+  "fields": {
+    "created_date": "2018-09-27T12:10:23.859Z",
+    "updated_date": "2018-09-27T12:10:23.859Z",
+    "name": "Pillow",
+    "icon": "service_icon/pillow.png",
+    "notification": null,
+    "details": "Pillow and other bedroom acce...",
+    "price": 9,
+    "discount": 0,
+    "duration": null,
+    "category": 9
+  }
+},
+{
+  "model": "swash_service.service",
+  "pk": 21,
+  "fields": {
+    "created_date": "2018-09-27T12:11:28.032Z",
+    "updated_date": "2018-09-27T12:11:28.032Z",
+    "name": "Sofa Cover 8 pcs",
+    "icon": "service_icon/sofacover8pcs.png",
+    "notification": null,
+    "details": "8 Pcs, Sofa Cover and feetsor...",
+    "price": 38,
+    "discount": 0,
+    "duration": null,
+    "category": 9
+  }
+},
+{
+  "model": "swash_service.service",
+  "pk": 22,
+  "fields": {
+    "created_date": "2018-09-27T12:12:21.605Z",
+    "updated_date": "2018-09-27T12:12:21.605Z",
+    "name": "Sofa cover up to 80 cm",
+    "icon": "service_icon/sofacoverupto80cm.png",
+    "notification": null,
+    "details": "Up to 80 cm, Sofa cover...",
+    "price": 12,
+    "discount": 0,
+    "duration": null,
+    "category": 9
+  }
+},
+{
+  "model": "swash_service.service",
+  "pk": 23,
+  "fields": {
+    "created_date": "2018-09-27T12:14:30.450Z",
+    "updated_date": "2018-09-27T12:14:30.450Z",
+    "name": "Sofa cover 80-120 cm",
+    "icon": "service_icon/sofacover80-120cm.png",
+    "notification": null,
+    "details": "80-120 cm, Sofa covers...",
+    "price": 35,
+    "discount": 0,
+    "duration": null,
+    "category": 9
+  }
+},
+{
+  "model": "swash_service.service",
+  "pk": 24,
+  "fields": {
+    "created_date": "2018-09-27T12:16:01.648Z",
+    "updated_date": "2018-09-27T12:16:01.648Z",
+    "name": "Sofa cover bigger than 120 cm",
+    "icon": "service_icon/sofacoverbigger_than120cm.png",
+    "notification": null,
+    "details": "Bigger than 120 cm, Sofa cover",
+    "price": 30,
+    "discount": 0,
+    "duration": null,
+    "category": 9
+  }
+},
+{
+  "model": "swash_service.service",
+  "pk": 25,
+  "fields": {
+    "created_date": "2018-09-27T12:16:59.427Z",
+    "updated_date": "2018-09-27T12:16:59.427Z",
+    "name": "Curtain",
+    "icon": "service_icon/curtain.png",
+    "notification": null,
+    "details": "Iron and Steam your Curtain",
+    "price": 12,
+    "discount": 0,
+    "duration": null,
+    "category": 9
+  }
+},
+{
+  "model": "swash_service.service",
+  "pk": 26,
+  "fields": {
+    "created_date": "2018-09-27T12:19:58.279Z",
+    "updated_date": "2018-09-27T12:19:58.279Z",
+    "name": "Household laundry mixed 5 kilos",
+    "icon": "service_icon/householdlaundrymixed5kilos.png",
+    "notification": null,
+    "details": "Mixed 5 kilos of Household laundry",
+    "price": 45,
+    "discount": 0,
+    "duration": null,
+    "category": 10
+  }
+},
+{
+  "model": "swash_service.service",
+  "pk": 27,
+  "fields": {
+    "created_date": "2018-09-27T12:20:43.790Z",
+    "updated_date": "2018-09-27T12:20:43.790Z",
+    "name": "Household laundry mixed 10 kilos",
+    "icon": "service_icon/householdlaundrymixed10kilos.png",
+    "notification": null,
+    "details": "Mixed 10 kilos, Household laundry...",
+    "price": 26,
+    "discount": 0,
+    "duration": null,
+    "category": 10
+  }
+},
+{
+  "model": "swash_service.service",
+  "pk": 28,
+  "fields": {
+    "created_date": "2018-09-27T12:21:43.393Z",
+    "updated_date": "2018-09-27T12:21:43.393Z",
+    "name": "Household laundry mixed 15 kilos",
+    "icon": "service_icon/householdlaundrymixed15kilos.png",
+    "notification": null,
+    "details": "Mixed 15 kilos, Household laundry...",
+    "price": 42,
+    "discount": 0,
+    "duration": null,
+    "category": 10
+  }
+},
+{
+  "model": "swash_service.service",
+  "pk": 29,
+  "fields": {
+    "created_date": "2018-09-27T12:22:39.467Z",
+    "updated_date": "2018-09-27T12:22:39.468Z",
+    "name": "Household laundry mixed 20 kilos",
+    "icon": "service_icon/householdlaundrymixed20kilos.png",
+    "notification": null,
+    "details": "Mixed 20 kilos, Household laundry",
+    "price": 50,
+    "discount": 0,
+    "duration": null,
+    "category": 10
+  }
+}
+]

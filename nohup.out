@@ -370,3 +370,1275 @@ Not Found: /favicon.ico
 [27/Sep/2018 11:32:52] "GET /admin/jsi18n/ HTTP/1.1" 200 3189
 [27/Sep/2018 11:33:00] "GET /admin/swash_service/service/add/ HTTP/1.1" 200 8382
 [27/Sep/2018 11:33:00] "GET /admin/jsi18n/ HTTP/1.1" 200 3189
+[27/Sep/2018 11:33:48] "POST /admin/swash_service/service/add/ HTTP/1.1" 302 0
+[27/Sep/2018 11:33:49] "GET /admin/swash_service/service/ HTTP/1.1" 200 25969
+[27/Sep/2018 11:33:49] "GET /admin/jsi18n/ HTTP/1.1" 200 3189
+[27/Sep/2018 11:34:00] "GET /admin/swash_service/service/add/ HTTP/1.1" 200 8382
+[27/Sep/2018 11:34:00] "GET /admin/jsi18n/ HTTP/1.1" 200 3189
+[27/Sep/2018 11:35:04] "POST /admin/swash_service/service/add/ HTTP/1.1" 302 0
+[27/Sep/2018 11:35:05] "GET /admin/swash_service/service/ HTTP/1.1" 200 28014
+[27/Sep/2018 11:35:05] "GET /admin/jsi18n/ HTTP/1.1" 200 3189
+[27/Sep/2018 11:35:46] "GET /admin/swash_service/service/add/ HTTP/1.1" 200 8382
+[27/Sep/2018 11:35:46] "GET /admin/jsi18n/ HTTP/1.1" 200 3189
+[27/Sep/2018 11:36:59] "POST /admin/swash_service/service/add/ HTTP/1.1" 302 0
+[27/Sep/2018 11:37:00] "GET /admin/swash_service/service/ HTTP/1.1" 200 30079
+[27/Sep/2018 11:37:00] "GET /admin/jsi18n/ HTTP/1.1" 200 3189
+[27/Sep/2018 11:38:08] "GET /admin/swash_service/service/add/ HTTP/1.1" 200 8382
+[27/Sep/2018 11:38:08] "GET /admin/jsi18n/ HTTP/1.1" 200 3189
+[27/Sep/2018 11:39:09] "POST /admin/swash_service/service/add/ HTTP/1.1" 302 0
+[27/Sep/2018 11:39:09] "GET /admin/swash_service/service/ HTTP/1.1" 200 32119
+[27/Sep/2018 11:39:10] "GET /admin/jsi18n/ HTTP/1.1" 200 3189
+[27/Sep/2018 11:40:18] "GET /admin/swash_service/service/add/ HTTP/1.1" 200 8382
+[27/Sep/2018 11:40:18] "GET /admin/jsi18n/ HTTP/1.1" 200 3189
+[27/Sep/2018 11:42:18] "POST /admin/swash_service/service/add/ HTTP/1.1" 302 0
+[27/Sep/2018 11:42:18] "GET /admin/swash_service/service/ HTTP/1.1" 200 34172
+[27/Sep/2018 11:42:18] "GET /admin/jsi18n/ HTTP/1.1" 200 3189
+[27/Sep/2018 11:44:09] "GET /admin/swash_service/service/?o=6 HTTP/1.1" 200 34608
+[27/Sep/2018 11:44:09] "GET /admin/jsi18n/ HTTP/1.1" 200 3189
+[27/Sep/2018 11:44:10] "GET /static/admin/img/sorting-icons.svg HTTP/1.1" 200 1097
+[27/Sep/2018 11:44:13] "GET /admin/swash_service/service/?o=-6 HTTP/1.1" 200 34628
+[27/Sep/2018 11:44:13] "GET /admin/jsi18n/ HTTP/1.1" 200 3189
+[27/Sep/2018 11:44:15] "GET /admin/swash_service/service/add/?_changelist_filters=o%3D-6 HTTP/1.1" 200 8409
+[27/Sep/2018 11:44:15] "GET /admin/jsi18n/ HTTP/1.1" 200 3189
+[27/Sep/2018 11:45:07] "POST /admin/swash_service/service/add/?_changelist_filters=o%3D-6 HTTP/1.1" 302 0
+[27/Sep/2018 11:45:07] "GET /admin/swash_service/service/?o=-6 HTTP/1.1" 200 36883
+[27/Sep/2018 11:45:08] "GET /admin/jsi18n/ HTTP/1.1" 200 3189
+[27/Sep/2018 11:45:11] "GET /admin/swash_service/service/add/?_changelist_filters=o%3D-6 HTTP/1.1" 200 8409
+[27/Sep/2018 11:45:12] "GET /admin/jsi18n/ HTTP/1.1" 200 3189
+[27/Sep/2018 11:47:22] "POST /admin/swash_service/service/add/?_changelist_filters=o%3D-6 HTTP/1.1" 302 0
+[27/Sep/2018 11:47:22] "GET /admin/swash_service/service/?o=-6 HTTP/1.1" 200 38979
+[27/Sep/2018 11:47:22] "GET /admin/jsi18n/ HTTP/1.1" 200 3189
+[27/Sep/2018 11:47:33] "GET /admin/swash_service/service/add/?_changelist_filters=o%3D-6 HTTP/1.1" 200 8409
+[27/Sep/2018 11:47:33] "GET /admin/jsi18n/ HTTP/1.1" 200 3189
+[27/Sep/2018 11:47:57] "POST /admin/swash_service/service/add/?_changelist_filters=o%3D-6 HTTP/1.1" 200 8616
+[27/Sep/2018 11:47:57] "GET /admin/jsi18n/ HTTP/1.1" 200 3189
+[27/Sep/2018 11:48:52] "POST /admin/swash_service/service/add/?_changelist_filters=o%3D-6 HTTP/1.1" 302 0
+[27/Sep/2018 11:48:53] "GET /admin/swash_service/service/?o=-6 HTTP/1.1" 200 41055
+[27/Sep/2018 11:48:53] "GET /admin/jsi18n/ HTTP/1.1" 200 3189
+[27/Sep/2018 12:07:11] "GET /admin/swash_service/service/add/?_changelist_filters=o%3D-6 HTTP/1.1" 200 8409
+[27/Sep/2018 12:07:11] "GET /admin/jsi18n/ HTTP/1.1" 200 3189
+[27/Sep/2018 12:08:20] "POST /admin/swash_service/service/add/?_changelist_filters=o%3D-6 HTTP/1.1" 302 0
+[27/Sep/2018 12:08:20] "GET /admin/swash_service/service/?o=-6 HTTP/1.1" 200 43134
+[27/Sep/2018 12:08:21] "GET /admin/jsi18n/ HTTP/1.1" 200 3189
+[27/Sep/2018 12:09:00] "GET /admin/swash_service/service/add/?_changelist_filters=o%3D-6 HTTP/1.1" 200 8409
+[27/Sep/2018 12:09:00] "GET /admin/jsi18n/ HTTP/1.1" 200 3189
+[27/Sep/2018 12:09:32] "POST /admin/swash_service/service/add/?_changelist_filters=o%3D-6 HTTP/1.1" 302 0
+[27/Sep/2018 12:09:32] "GET /admin/swash_service/service/?o=-6 HTTP/1.1" 200 45195
+[27/Sep/2018 12:09:32] "GET /admin/jsi18n/ HTTP/1.1" 200 3189
+[27/Sep/2018 12:09:38] "GET /admin/swash_service/service/add/?_changelist_filters=o%3D-6 HTTP/1.1" 200 8409
+[27/Sep/2018 12:09:38] "GET /admin/jsi18n/ HTTP/1.1" 200 3189
+[27/Sep/2018 12:10:24] "POST /admin/swash_service/service/add/?_changelist_filters=o%3D-6 HTTP/1.1" 302 0
+[27/Sep/2018 12:10:25] "GET /admin/swash_service/service/?o=-6 HTTP/1.1" 200 47262
+[27/Sep/2018 12:10:25] "GET /admin/jsi18n/ HTTP/1.1" 200 3189
+[27/Sep/2018 12:10:33] "GET /admin/swash_service/service/add/?_changelist_filters=o%3D-6 HTTP/1.1" 200 8409
+[27/Sep/2018 12:10:34] "GET /admin/jsi18n/ HTTP/1.1" 200 3189
+[27/Sep/2018 12:11:28] "POST /admin/swash_service/service/add/?_changelist_filters=o%3D-6 HTTP/1.1" 302 0
+[27/Sep/2018 12:11:29] "GET /admin/swash_service/service/?o=-6 HTTP/1.1" 200 49351
+[27/Sep/2018 12:11:29] "GET /admin/jsi18n/ HTTP/1.1" 200 3189
+[27/Sep/2018 12:11:31] "GET /admin/swash_service/service/add/?_changelist_filters=o%3D-6 HTTP/1.1" 200 8409
+[27/Sep/2018 12:11:31] "GET /admin/jsi18n/ HTTP/1.1" 200 3189
+[27/Sep/2018 12:12:21] "POST /admin/swash_service/service/add/?_changelist_filters=o%3D-6 HTTP/1.1" 302 0
+[27/Sep/2018 12:12:22] "GET /admin/swash_service/service/?o=-6 HTTP/1.1" 200 51442
+[27/Sep/2018 12:12:22] "GET /admin/jsi18n/ HTTP/1.1" 200 3189
+[27/Sep/2018 12:13:45] "GET /admin/swash_service/service/add/?_changelist_filters=o%3D-6 HTTP/1.1" 200 8409
+[27/Sep/2018 12:13:45] "GET /admin/jsi18n/ HTTP/1.1" 200 3189
+[27/Sep/2018 12:14:30] "POST /admin/swash_service/service/add/?_changelist_filters=o%3D-6 HTTP/1.1" 302 0
+[27/Sep/2018 12:14:31] "GET /admin/swash_service/service/?o=-6 HTTP/1.1" 200 53523
+[27/Sep/2018 12:14:31] "GET /admin/jsi18n/ HTTP/1.1" 200 3189
+[27/Sep/2018 12:15:00] "GET /admin/swash_service/service/add/?_changelist_filters=o%3D-6 HTTP/1.1" 200 8409
+[27/Sep/2018 12:15:01] "GET /admin/jsi18n/ HTTP/1.1" 200 3189
+[27/Sep/2018 12:15:33] "POST /api/account/set_account/ HTTP/1.1" 401 58
+[27/Sep/2018 12:15:46] "POST /admin/swash_service/service/add/?_changelist_filters=o%3D-6 HTTP/1.1" 200 8630
+[27/Sep/2018 12:15:47] "GET /admin/jsi18n/ HTTP/1.1" 200 3189
+[27/Sep/2018 12:15:47] "POST /login/ HTTP/1.1" 200 204
+[27/Sep/2018 12:15:54] "POST /api/account/set_account/ HTTP/1.1" 401 58
+[27/Sep/2018 12:16:01] "POST /admin/swash_service/service/add/?_changelist_filters=o%3D-6 HTTP/1.1" 302 0
+[27/Sep/2018 12:16:02] "GET /admin/swash_service/service/?o=-6 HTTP/1.1" 200 55624
+[27/Sep/2018 12:16:02] "GET /admin/jsi18n/ HTTP/1.1" 200 3189
+[27/Sep/2018 12:16:07] "GET /admin/swash_service/service/add/?_changelist_filters=o%3D-6 HTTP/1.1" 200 8409
+[27/Sep/2018 12:16:07] "GET /admin/jsi18n/ HTTP/1.1" 200 3189
+[27/Sep/2018 12:16:59] "POST /admin/swash_service/service/add/?_changelist_filters=o%3D-6 HTTP/1.1" 302 0
+[27/Sep/2018 12:17:00] "GET /admin/swash_service/service/?o=-6 HTTP/1.1" 200 57672
+[27/Sep/2018 12:17:00] "GET /admin/jsi18n/ HTTP/1.1" 200 3189
+[27/Sep/2018 12:19:14] "GET /admin/swash_service/service/add/?_changelist_filters=o%3D-6 HTTP/1.1" 200 8409
+[27/Sep/2018 12:19:14] "GET /admin/jsi18n/ HTTP/1.1" 200 3189
+[27/Sep/2018 12:19:40] "POST /admin/swash_service/service/add/?_changelist_filters=o%3D-6 HTTP/1.1" 200 8637
+[27/Sep/2018 12:19:41] "GET /admin/jsi18n/ HTTP/1.1" 200 3189
+[27/Sep/2018 12:19:58] "POST /admin/swash_service/service/add/?_changelist_filters=o%3D-6 HTTP/1.1" 302 0
+[27/Sep/2018 12:19:59] "GET /admin/swash_service/service/?o=-6 HTTP/1.1" 200 59790
+[27/Sep/2018 12:19:59] "GET /admin/jsi18n/ HTTP/1.1" 200 3189
+[27/Sep/2018 12:20:00] "GET /admin/swash_service/service/add/?_changelist_filters=o%3D-6 HTTP/1.1" 200 8409
+[27/Sep/2018 12:20:00] "GET /admin/jsi18n/ HTTP/1.1" 200 3189
+[27/Sep/2018 12:20:43] "POST /admin/swash_service/service/add/?_changelist_filters=o%3D-6 HTTP/1.1" 302 0
+[27/Sep/2018 12:20:44] "GET /admin/swash_service/service/?o=-6 HTTP/1.1" 200 61886
+[27/Sep/2018 12:20:44] "GET /admin/jsi18n/ HTTP/1.1" 200 3189
+[27/Sep/2018 12:21:05] "GET /admin/swash_service/service/add/?_changelist_filters=o%3D-6 HTTP/1.1" 200 8409
+[27/Sep/2018 12:21:05] "GET /admin/jsi18n/ HTTP/1.1" 200 3189
+[27/Sep/2018 12:21:34] "POST /admin/swash_service/service/add/?_changelist_filters=o%3D-6 HTTP/1.1" 200 8639
+[27/Sep/2018 12:21:34] "GET /admin/jsi18n/ HTTP/1.1" 200 3189
+[27/Sep/2018 12:21:43] "POST /admin/swash_service/service/add/?_changelist_filters=o%3D-6 HTTP/1.1" 302 0
+[27/Sep/2018 12:21:44] "GET /admin/swash_service/service/?o=-6 HTTP/1.1" 200 63981
+[27/Sep/2018 12:21:44] "GET /admin/jsi18n/ HTTP/1.1" 200 3189
+[27/Sep/2018 12:22:05] "GET /admin/swash_service/service/add/?_changelist_filters=o%3D-6 HTTP/1.1" 200 8409
+[27/Sep/2018 12:22:05] "GET /admin/jsi18n/ HTTP/1.1" 200 3189
+[27/Sep/2018 12:22:39] "POST /admin/swash_service/service/add/?_changelist_filters=o%3D-6 HTTP/1.1" 302 0
+[27/Sep/2018 12:22:40] "GET /admin/swash_service/service/?o=-6 HTTP/1.1" 200 66076
+[27/Sep/2018 12:22:40] "GET /admin/jsi18n/ HTTP/1.1" 200 3189
+[27/Sep/2018 12:22:43] "GET /admin/swash_service/ HTTP/1.1" 200 2722
+[27/Sep/2018 12:22:44] "GET /admin/ HTTP/1.1" 200 7055
+[27/Sep/2018 12:26:22] "POST /api/account/set_account/ HTTP/1.1" 401 58
+[27/Sep/2018 12:26:42] "POST /login/ HTTP/1.1" 200 204
+[27/Sep/2018 12:27:13] "POST /api/account/set_account/ HTTP/1.1" 401 58
+[27/Sep/2018 12:27:26] "POST /api/account/set_account/ HTTP/1.1" 401 58
+[27/Sep/2018 12:27:44] "POST /api/account/set_account/ HTTP/1.1" 401 58
+[27/Sep/2018 12:29:35] "GET /admin/swash_service/ HTTP/1.1" 302 0
+[27/Sep/2018 12:29:35] "GET /admin/login/?next=/admin/swash_service/ HTTP/1.1" 200 1678
+Not Found: /favicon.ico
+[27/Sep/2018 12:29:37] "GET /favicon.ico HTTP/1.1" 404 2285
+Not Found: /favicon.ico
+[27/Sep/2018 12:29:37] "GET /favicon.ico HTTP/1.1" 404 2285
+[27/Sep/2018 12:32:49] "POST /admin/login/?next=/admin/swash_service/ HTTP/1.1" 302 0
+[27/Sep/2018 12:32:49] "GET /admin/swash_service/ HTTP/1.1" 200 2722
+[27/Sep/2018 12:35:58] "POST /api/account/set_account/ HTTP/1.1" 401 35
+[27/Sep/2018 12:36:08] "GET /admin/ HTTP/1.1" 200 7055
+[27/Sep/2018 12:36:16] "GET /admin/jsi18n/ HTTP/1.1" 200 3189
+[27/Sep/2018 12:36:16] "GET /admin/swash_service/service/ HTTP/1.1" 200 64801
+[27/Sep/2018 12:36:16] "GET /static/admin/css/widgets.css HTTP/1.1" 200 10340
+[27/Sep/2018 12:36:17] "GET /static/admin/img/tooltag-add.svg HTTP/1.1" 200 331
+[27/Sep/2018 12:36:18] "GET /static/admin/img/icon-calendar.svg HTTP/1.1" 200 1086
+[27/Sep/2018 12:36:25] "POST /api/account/set_account/ HTTP/1.1" 401 58
+[27/Sep/2018 12:43:42] "POST /api/user/ HTTP/1.1" 201 52
+[27/Sep/2018 12:43:46] "POST /api/user/ HTTP/1.1" 201 52
+[27/Sep/2018 12:44:03] "POST /api/user/ HTTP/1.1" 201 52
+[27/Sep/2018 12:45:27] "POST /login/ HTTP/1.1" 200 207
+[27/Sep/2018 12:45:45] "POST /api/account/set_account/ HTTP/1.1" 401 58
+[27/Sep/2018 12:46:36] "GET /admin/ HTTP/1.1" 200 7055
+[27/Sep/2018 12:48:48] "POST /login/ HTTP/1.1" 200 207
+[27/Sep/2018 12:50:29] "POST /api/account/set_account/ HTTP/1.1" 200 122
+[27/Sep/2018 12:52:00] "POST /api/account/set_account/ HTTP/1.1" 401 35
+[27/Sep/2018 12:52:09] "POST /login/ HTTP/1.1" 200 207
+[27/Sep/2018 12:52:24] "POST /api/account/set_account/ HTTP/1.1" 400 66
+[27/Sep/2018 12:52:36] "POST /api/account/set_account/ HTTP/1.1" 400 66
+[27/Sep/2018 12:53:00] "POST /api/account/set_account/ HTTP/1.1" 400 52
+[27/Sep/2018 12:53:02] "POST /api/account/set_account/ HTTP/1.1" 400 52
+[27/Sep/2018 12:53:12] "POST /api/account/set_account/ HTTP/1.1" 400 66
+[27/Sep/2018 12:54:58] "POST /api/user/ HTTP/1.1" 201 52
+[27/Sep/2018 12:56:09] "POST /login/ HTTP/1.1" 200 207
+Internal Server Error: /api/account/set_account/
+Traceback (most recent call last):
+  File "/home/mehdi/python-project/migrate/api/views.py", line 84, in set_account
+    account_id=request.data.get('account_id')
+  File "/home/mehdi/python-project/mig_env/lib64/python3.6/site-packages/django/db/models/manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/home/mehdi/python-project/mig_env/lib64/python3.6/site-packages/django/db/models/query.py", line 379, in get
+    self.model._meta.object_name
+user_data.models.DoesNotExist: Account matching query does not exist.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/mehdi/python-project/mig_env/lib64/python3.6/site-packages/django/db/backends/utils.py", line 65, in execute
+    return self.cursor.execute(sql, params)
+  File "/home/mehdi/python-project/mig_env/lib64/python3.6/site-packages/django/db/backends/sqlite3/base.py", line 328, in execute
+    return Database.Cursor.execute(self, query, params)
+sqlite3.IntegrityError: columns account_type, account_id are not unique
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/mehdi/python-project/mig_env/lib64/python3.6/site-packages/django/core/handlers/exception.py", line 41, in inner
+    response = get_response(request)
+  File "/home/mehdi/python-project/mig_env/lib64/python3.6/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/mehdi/python-project/mig_env/lib64/python3.6/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/mehdi/python-project/mig_env/lib64/python3.6/site-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/mehdi/python-project/mig_env/lib64/python3.6/site-packages/rest_framework/viewsets.py", line 87, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/mehdi/python-project/mig_env/lib64/python3.6/site-packages/rest_framework/views.py", line 466, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/mehdi/python-project/mig_env/lib64/python3.6/site-packages/rest_framework/views.py", line 463, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/mehdi/python-project/migrate/api/views.py", line 100, in set_account
+    account_id=request.data.get('account_id')
+  File "/home/mehdi/python-project/mig_env/lib64/python3.6/site-packages/django/db/models/manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/home/mehdi/python-project/mig_env/lib64/python3.6/site-packages/django/db/models/query.py", line 393, in create
+    obj.save(force_insert=True, using=self.db)
+  File "/home/mehdi/python-project/mig_env/lib64/python3.6/site-packages/django/db/models/base.py", line 806, in save
+    force_update=force_update, update_fields=update_fields)
+  File "/home/mehdi/python-project/mig_env/lib64/python3.6/site-packages/django/db/models/base.py", line 836, in save_base
+    updated = self._save_table(raw, cls, force_insert, force_update, using, update_fields)
+  File "/home/mehdi/python-project/mig_env/lib64/python3.6/site-packages/django/db/models/base.py", line 922, in _save_table
+    result = self._do_insert(cls._base_manager, using, fields, update_pk, raw)
+  File "/home/mehdi/python-project/mig_env/lib64/python3.6/site-packages/django/db/models/base.py", line 961, in _do_insert
+    using=using, raw=raw)
+  File "/home/mehdi/python-project/mig_env/lib64/python3.6/site-packages/django/db/models/manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/home/mehdi/python-project/mig_env/lib64/python3.6/site-packages/django/db/models/query.py", line 1060, in _insert
+    return query.get_compiler(using=using).execute_sql(return_id)
+  File "/home/mehdi/python-project/mig_env/lib64/python3.6/site-packages/django/db/models/sql/compiler.py", line 1099, in execute_sql
+    cursor.execute(sql, params)
+  File "/home/mehdi/python-project/mig_env/lib64/python3.6/site-packages/django/db/backends/utils.py", line 80, in execute
+    return super(CursorDebugWrapper, self).execute(sql, params)
+  File "/home/mehdi/python-project/mig_env/lib64/python3.6/site-packages/django/db/backends/utils.py", line 65, in execute
+    return self.cursor.execute(sql, params)
+  File "/home/mehdi/python-project/mig_env/lib64/python3.6/site-packages/django/db/utils.py", line 94, in __exit__
+    six.reraise(dj_exc_type, dj_exc_value, traceback)
+  File "/home/mehdi/python-project/mig_env/lib64/python3.6/site-packages/django/utils/six.py", line 685, in reraise
+    raise value.with_traceback(tb)
+  File "/home/mehdi/python-project/mig_env/lib64/python3.6/site-packages/django/db/backends/utils.py", line 65, in execute
+    return self.cursor.execute(sql, params)
+  File "/home/mehdi/python-project/mig_env/lib64/python3.6/site-packages/django/db/backends/sqlite3/base.py", line 328, in execute
+    return Database.Cursor.execute(self, query, params)
+django.db.utils.IntegrityError: columns account_type, account_id are not unique
+[27/Sep/2018 12:56:25] "POST /api/account/set_account/ HTTP/1.1" 500 176870
+[27/Sep/2018 12:57:20] "POST /api/account/set_account/ HTTP/1.1" 200 127
+[27/Sep/2018 13:02:24] "GET /api/category/main/ HTTP/1.1" 401 3578
+[27/Sep/2018 13:02:24] "GET /static/rest_framework/css/bootstrap-tweaks.css HTTP/1.1" 200 3399
+[27/Sep/2018 13:02:24] "GET /static/rest_framework/css/prettify.css HTTP/1.1" 200 817
+[27/Sep/2018 13:02:24] "GET /static/rest_framework/css/default.css HTTP/1.1" 200 1132
+[27/Sep/2018 13:02:24] "GET /static/rest_framework/js/ajax-form.js HTTP/1.1" 200 2876
+[27/Sep/2018 13:02:25] "GET /static/rest_framework/js/csrf.js HTTP/1.1" 200 1723
+[27/Sep/2018 13:02:25] "GET /static/rest_framework/css/bootstrap.min.css HTTP/1.1" 200 122540
+[27/Sep/2018 13:02:25] "GET /static/rest_framework/js/bootstrap.min.js HTTP/1.1" 200 36816
+[27/Sep/2018 13:02:25] "GET /static/rest_framework/js/jquery-1.12.4.min.js HTTP/1.1" 200 97163
+[27/Sep/2018 13:02:25] "GET /static/rest_framework/js/prettify-min.js HTTP/1.1" 200 13632
+[27/Sep/2018 13:02:25] "GET /static/rest_framework/js/default.js HTTP/1.1" 200 1262
+[27/Sep/2018 13:02:26] "GET /static/rest_framework/img/grid.png HTTP/1.1" 200 1458
+Not Found: /favicon.ico
+[27/Sep/2018 13:02:26] "GET /favicon.ico HTTP/1.1" 404 2285
+[27/Sep/2018 13:03:21] "POST /api/category/main/ HTTP/1.1" 401 35
+[27/Sep/2018 13:03:37] "POST /api/category/main/ HTTP/1.1" 401 35
+[27/Sep/2018 13:03:41] "POST /login/ HTTP/1.1" 200 207
+[27/Sep/2018 13:03:51] "POST /api/category/main/ HTTP/1.1" 200 512
+[27/Sep/2018 13:04:38] "POST /api/category/sub/ HTTP/1.1" 200 850
+[27/Sep/2018 13:06:01] "POST /login/ HTTP/1.1" 200 207
+[27/Sep/2018 13:06:52] "POST /api/category/main/ HTTP/1.1" 200 512
+Not Found: /category_icon/Asset_17.png
+[27/Sep/2018 13:08:09] "GET /category_icon/Asset_17.png HTTP/1.1" 404 2330
+[27/Sep/2018 13:08:26] "GET /static/category_icon/Asset_17.png HTTP/1.1" 404 1694
+Not Found: /category_icon/Asset_17.png
+[27/Sep/2018 13:08:55] "GET /category_icon/Asset_17.png HTTP/1.1" 404 2330
+[27/Sep/2018 13:09:09] "GET /static/category_icon/Asset_17.png HTTP/1.1" 404 1694
+[27/Sep/2018 13:09:15] "GET /static/category_icon/Asset_17.png HTTP/1.1" 404 1694
+Not Found: /category_icon/Asset_17.png
+[27/Sep/2018 13:09:19] "GET /category_icon/Asset_17.png HTTP/1.1" 404 2330
+[27/Sep/2018 13:11:59] "POST /api/category/service/ HTTP/1.1" 401 35
+[27/Sep/2018 13:16:17] "POST /login/ HTTP/1.1" 200 207
+[27/Sep/2018 13:16:31] "POST /api/category/service/ HTTP/1.1" 200 2
+[27/Sep/2018 13:17:24] "POST /api/category/service/ HTTP/1.1" 200 2
+[27/Sep/2018 13:17:26] "POST /api/category/service/ HTTP/1.1" 200 2
+[27/Sep/2018 13:17:37] "GET /api/category/service/ HTTP/1.1" 401 3584
+[27/Sep/2018 13:19:08] "GET /admin/swash_service/ HTTP/1.1" 200 2722
+[27/Sep/2018 13:19:10] "GET /admin/swash_service/category/ HTTP/1.1" 200 22539
+[27/Sep/2018 13:19:10] "GET /admin/jsi18n/ HTTP/1.1" 200 3189
+[27/Sep/2018 13:19:10] "POST /api/category/service/ HTTP/1.1" 200 2
+[27/Sep/2018 13:19:11] "GET /static/admin/css/widgets.css HTTP/1.1" 200 10340
+[27/Sep/2018 13:19:16] "GET /admin/swash_service/category/10/change/ HTTP/1.1" 200 7671
+[27/Sep/2018 13:19:16] "GET /admin/jsi18n/ HTTP/1.1" 200 3189
+[27/Sep/2018 13:19:16] "GET /static/admin/js/change_form.js HTTP/1.1" 200 712
+[27/Sep/2018 13:19:16] "GET /static/admin/js/prepopulate_init.js HTTP/1.1" 200 495
+[27/Sep/2018 13:19:57] "POST /api/category/service/ HTTP/1.1" 200 882
+[27/Sep/2018 13:21:02] "GET /admin/swash_service/ HTTP/1.1" 200 2722
+[27/Sep/2018 13:21:04] "GET /admin/jsi18n/ HTTP/1.1" 200 3189
+[27/Sep/2018 13:21:04] "GET /admin/swash_service/service/ HTTP/1.1" 200 64801
+[27/Sep/2018 13:21:24] "GET /admin/ HTTP/1.1" 200 7055
+[27/Sep/2018 13:21:28] "GET /admin/swash_service/category/ HTTP/1.1" 200 22539
+[27/Sep/2018 13:21:28] "GET /admin/jsi18n/ HTTP/1.1" 200 3189
+[27/Sep/2018 13:21:36] "GET /admin/swash_service/category/10/change/ HTTP/1.1" 200 7671
+[27/Sep/2018 13:21:37] "GET /admin/jsi18n/ HTTP/1.1" 200 3189
+[27/Sep/2018 13:21:40] "GET /admin/swash_service/category/ HTTP/1.1" 200 22539
+[27/Sep/2018 13:27:25] "GET /api/account/get_account/ HTTP/1.1" 401 3585
+[27/Sep/2018 13:28:47] "GET /admin/ HTTP/1.1" 200 7055
+[27/Sep/2018 13:28:50] "GET /admin/ HTTP/1.1" 200 7055
+Not Found: /
+[27/Sep/2018 13:29:01] "GET / HTTP/1.1" 404 2234
+[27/Sep/2018 13:29:05] "GET /admin/ HTTP/1.1" 200 7055
+[27/Sep/2018 13:29:08] "GET /admin/password_change/ HTTP/1.1" 200 2588
+[27/Sep/2018 13:29:13] "GET /admin/ HTTP/1.1" 200 7055
+[27/Sep/2018 13:29:18] "GET /admin/logout/ HTTP/1.1" 200 1010
+[27/Sep/2018 13:29:21] "GET /admin/ HTTP/1.1" 302 0
+[27/Sep/2018 13:29:21] "GET /admin/login/?next=/admin/ HTTP/1.1" 200 1650
+[27/Sep/2018 13:29:22] "GET /static/admin/css/login.css HTTP/1.1" 200 1203
+[27/Sep/2018 13:29:25] "POST /admin/login/?next=/admin/ HTTP/1.1" 302 0
+[27/Sep/2018 13:29:25] "GET /admin/ HTTP/1.1" 200 7055
+[27/Sep/2018 14:01:07] "POST /api/user/ HTTP/1.1" 201 52
+Performing system checks...
+
+System check identified no issues (0 silenced).
+September 26, 2018 - 20:07:15
+Django version 1.11, using settings 'mig_back.settings'
+Starting development server at http://0.0.0.0:8000/
+Quit the server with CONTROL-C.
+[27/Sep/2018 14:56:10] "GET /admin/ HTTP/1.1" 200 7055
+[27/Sep/2018 14:56:16] "GET /admin/swash_service/category/ HTTP/1.1" 200 22539
+[27/Sep/2018 14:56:16] "GET /admin/jsi18n/ HTTP/1.1" 200 3189
+[27/Sep/2018 15:01:08] "GET /admin/swash_service/category/ HTTP/1.1" 200 22539
+[27/Sep/2018 15:01:09] "GET /admin/jsi18n/ HTTP/1.1" 200 3189
+[27/Sep/2018 15:01:12] "GET /admin/ HTTP/1.1" 200 7055
+Performing system checks...
+
+System check identified no issues (0 silenced).
+September 27, 2018 - 14:55:15
+Django version 1.11, using settings 'mig_back.settings'
+Starting development server at http://0.0.0.0:8000/
+Quit the server with CONTROL-C.
+[27/Sep/2018 16:11:44] "GET /admin/ HTTP/1.1" 200 7055
+[27/Sep/2018 16:44:10] "POST /api/user/ HTTP/1.1" 201 52
+[27/Sep/2018 16:45:01] "POST /api/user/ HTTP/1.1" 201 52
+[27/Sep/2018 17:00:30] "POST /api/user/ HTTP/1.1" 201 52
+[27/Sep/2018 17:00:30] "POST /login/ HTTP/1.1" 200 207
+[27/Sep/2018 17:00:30] "POST /api/category/main/ HTTP/1.1" 401 67
+[27/Sep/2018 17:01:02] "POST /api/user/ HTTP/1.1" 201 52
+[27/Sep/2018 17:01:02] "POST /login/ HTTP/1.1" 200 207
+[27/Sep/2018 17:01:02] "POST /api/category/main/ HTTP/1.1" 200 540
+[27/Sep/2018 17:02:14] "POST /api/category/main/ HTTP/1.1" 401 35
+[27/Sep/2018 17:02:20] "POST /login/ HTTP/1.1" 200 207
+[27/Sep/2018 17:02:43] "POST /api/category/main/ HTTP/1.1" 200 540
+[27/Sep/2018 17:04:10] "POST /api/user/ HTTP/1.1" 201 52
+[27/Sep/2018 17:04:10] "POST /login/ HTTP/1.1" 200 207
+[27/Sep/2018 17:04:10] "POST /api/category/main/ HTTP/1.1" 200 540
+[27/Sep/2018 17:56:07] "POST /api/user/ HTTP/1.1" 201 52
+[27/Sep/2018 17:56:07] "POST /login/ HTTP/1.1" 200 207
+[27/Sep/2018 17:56:07] "POST /api/category/main/ HTTP/1.1" 200 540
+[27/Sep/2018 18:00:22] "POST /api/user/ HTTP/1.1" 201 52
+[27/Sep/2018 18:00:23] "POST /login/ HTTP/1.1" 200 207
+[27/Sep/2018 18:00:23] "POST /api/category/main/ HTTP/1.1" 200 540
+[27/Sep/2018 18:03:47] "POST /api/user/ HTTP/1.1" 201 52
+[27/Sep/2018 18:03:47] "POST /login/ HTTP/1.1" 200 207
+[27/Sep/2018 18:03:47] "POST /api/category/main/ HTTP/1.1" 200 540
+[27/Sep/2018 18:04:44] "POST /api/category/main/ HTTP/1.1" 401 35
+[27/Sep/2018 18:05:59] "POST /api/user/ HTTP/1.1" 201 52
+[27/Sep/2018 18:05:59] "POST /login/ HTTP/1.1" 200 207
+[27/Sep/2018 18:05:59] "POST /api/category/main/ HTTP/1.1" 200 540
+Invalid HTTP_HOST header: 'Mohajeran:8000'. You may need to add 'mohajeran' to ALLOWED_HOSTS.
+[27/Sep/2018 18:06:23] "GET / HTTP/1.0" 400 60551
+Traceback (most recent call last):
+  File "/usr/lib64/python3.6/wsgiref/handlers.py", line 138, in run
+    self.finish_response()
+  File "/usr/lib64/python3.6/wsgiref/handlers.py", line 180, in finish_response
+    self.write(data)
+  File "/usr/lib64/python3.6/wsgiref/handlers.py", line 279, in write
+    self._write(data)
+  File "/usr/lib64/python3.6/wsgiref/handlers.py", line 453, in _write
+    result = self.stdout.write(data)
+  File "/usr/lib64/python3.6/socketserver.py", line 775, in write
+    self._sock.sendall(b)
+ConnectionResetError: [Errno 104] Connection reset by peer
+[27/Sep/2018 18:06:23] "GET / HTTP/1.0" 500 59
+----------------------------------------
+Exception happened during processing of request from ('189.128.71.118', 47556)
+Traceback (most recent call last):
+  File "/usr/lib64/python3.6/wsgiref/handlers.py", line 138, in run
+    self.finish_response()
+  File "/usr/lib64/python3.6/wsgiref/handlers.py", line 180, in finish_response
+    self.write(data)
+  File "/usr/lib64/python3.6/wsgiref/handlers.py", line 279, in write
+    self._write(data)
+  File "/usr/lib64/python3.6/wsgiref/handlers.py", line 453, in _write
+    result = self.stdout.write(data)
+  File "/usr/lib64/python3.6/socketserver.py", line 775, in write
+    self._sock.sendall(b)
+ConnectionResetError: [Errno 104] Connection reset by peer
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/lib64/python3.6/wsgiref/handlers.py", line 141, in run
+    self.handle_error()
+  File "/home/mehdi/python-project/mig_env/lib64/python3.6/site-packages/django/core/servers/basehttp.py", line 88, in handle_error
+    super(ServerHandler, self).handle_error()
+  File "/usr/lib64/python3.6/wsgiref/handlers.py", line 368, in handle_error
+    self.finish_response()
+  File "/usr/lib64/python3.6/wsgiref/handlers.py", line 180, in finish_response
+    self.write(data)
+  File "/usr/lib64/python3.6/wsgiref/handlers.py", line 274, in write
+    self.send_headers()
+  File "/usr/lib64/python3.6/wsgiref/handlers.py", line 331, in send_headers
+    if not self.origin_server or self.client_is_modern():
+  File "/usr/lib64/python3.6/wsgiref/handlers.py", line 344, in client_is_modern
+    return self.environ['SERVER_PROTOCOL'].upper() != 'HTTP/0.9'
+TypeError: 'NoneType' object is not subscriptable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/lib64/python3.6/socketserver.py", line 639, in process_request_thread
+    self.finish_request(request, client_address)
+  File "/usr/lib64/python3.6/socketserver.py", line 361, in finish_request
+    self.RequestHandlerClass(request, client_address, self)
+  File "/usr/lib64/python3.6/socketserver.py", line 696, in __init__
+    self.handle()
+  File "/home/mehdi/python-project/mig_env/lib64/python3.6/site-packages/django/core/servers/basehttp.py", line 155, in handle
+    handler.run(self.server.get_app())
+  File "/usr/lib64/python3.6/wsgiref/handlers.py", line 144, in run
+    self.close()
+  File "/usr/lib64/python3.6/wsgiref/simple_server.py", line 35, in close
+    self.status.split(' ',1)[0], self.bytes_sent
+AttributeError: 'NoneType' object has no attribute 'split'
+----------------------------------------
+[27/Sep/2018 19:34:53] "GET /admin/ HTTP/1.1" 200 7055
+[27/Sep/2018 19:34:56] "GET /admin/ HTTP/1.1" 200 7055
+Not Found: /
+[27/Sep/2018 20:20:53] "GET / HTTP/1.1" 404 2234
+[27/Sep/2018 21:26:06] "GET /admin/ HTTP/1.1" 200 7055
+[27/Sep/2018 21:45:36] code 400, message Bad HTTP/0.9 request type ('\x03\x00\x00/*à\x00\x00\x00\x00\x00Cookie:')
+[27/Sep/2018 21:45:36] "  /*à     Cookie: mstshash=Administr" 400 -
+[27/Sep/2018 22:04:43] "GET /admin/ HTTP/1.1" 200 7055
+[27/Sep/2018 23:24:07] "POST /api/user/ HTTP/1.1" 201 52
+[27/Sep/2018 23:24:07] "POST /login/ HTTP/1.1" 200 207
+[27/Sep/2018 23:27:05] "GET /static/category_icon/Asset_17.png HTTP/1.1" 404 1694
+Not Found: /favicon.ico
+[27/Sep/2018 23:27:05] "GET /favicon.ico HTTP/1.1" 404 2285
+Not Found: /category_icon/Asset_17.png
+[27/Sep/2018 23:27:12] "GET /category_icon/Asset_17.png HTTP/1.1" 404 2330
+[27/Sep/2018 23:27:15] "GET /static/category_icon/Asset_17.png HTTP/1.1" 404 1694
+[27/Sep/2018 23:58:52] "POST /login/ HTTP/1.1" 200 207
+[27/Sep/2018 23:59:02] "POST /api/category/main/ HTTP/1.1" 200 540
+[28/Sep/2018 00:45:07] "POST /api/category/sub/ HTTP/1.1" 401 35
+[28/Sep/2018 00:47:01] "POST /api/category/sub/ HTTP/1.1" 401 35
+[28/Sep/2018 00:50:45] "POST /api/category/sub/ HTTP/1.1" 401 35
+[28/Sep/2018 00:51:02] "POST /api/category/sub/ HTTP/1.1" 401 35
+[28/Sep/2018 00:53:02] "POST /api/category/sub/ HTTP/1.1" 401 35
+[28/Sep/2018 00:53:51] "POST /api/category/sub/ HTTP/1.1" 401 35
+[28/Sep/2018 00:54:19] "POST /api/category/sub/ HTTP/1.1" 401 35
+[28/Sep/2018 00:54:36] "POST /api/category/sub/ HTTP/1.1" 401 35
+[28/Sep/2018 00:54:51] "POST /api/category/sub/ HTTP/1.1" 401 35
+[28/Sep/2018 00:55:07] "POST /api/category/sub/ HTTP/1.1" 401 35
+[28/Sep/2018 00:55:38] "POST /api/category/sub/ HTTP/1.1" 401 35
+[28/Sep/2018 00:56:01] "POST /api/category/sub/ HTTP/1.1" 401 35
+[28/Sep/2018 00:57:11] "POST /api/category/sub/ HTTP/1.1" 401 35
+[28/Sep/2018 00:58:22] "POST /api/category/sub/ HTTP/1.1" 401 35
+[28/Sep/2018 00:58:22] "POST /login/ HTTP/1.1" 200 207
+[28/Sep/2018 00:58:54] "POST /login/ HTTP/1.1" 200 207
+[28/Sep/2018 00:58:54] "POST /api/category/sub/ HTTP/1.1" 401 35
+[28/Sep/2018 01:00:15] "POST /api/category/sub/ HTTP/1.1" 401 35
+[28/Sep/2018 01:02:27] "POST /api/category/sub/ HTTP/1.1" 401 35
+[28/Sep/2018 01:03:17] "POST /api/category/sub/ HTTP/1.1" 401 35
+[28/Sep/2018 01:05:27] "POST /api/category/sub/ HTTP/1.1" 401 35
+----------------------------------------
+Exception happened during processing of request from ('5.117.86.3', 48607)
+Traceback (most recent call last):
+  File "/usr/lib64/python3.6/socketserver.py", line 639, in process_request_thread
+    self.finish_request(request, client_address)
+  File "/usr/lib64/python3.6/socketserver.py", line 361, in finish_request
+    self.RequestHandlerClass(request, client_address, self)
+  File "/usr/lib64/python3.6/socketserver.py", line 696, in __init__
+    self.handle()
+  File "/home/mehdi/python-project/mig_env/lib64/python3.6/site-packages/django/core/servers/basehttp.py", line 140, in handle
+    self.raw_requestline = self.rfile.readline(65537)
+  File "/usr/lib64/python3.6/socket.py", line 586, in readinto
+    return self._sock.recv_into(b)
+ConnectionResetError: [Errno 104] Connection reset by peer
+----------------------------------------
+----------------------------------------
+Exception happened during processing of request from ('5.117.86.3', 64920)
+Traceback (most recent call last):
+  File "/usr/lib64/python3.6/socketserver.py", line 639, in process_request_thread
+    self.finish_request(request, client_address)
+  File "/usr/lib64/python3.6/socketserver.py", line 361, in finish_request
+    self.RequestHandlerClass(request, client_address, self)
+  File "/usr/lib64/python3.6/socketserver.py", line 696, in __init__
+    self.handle()
+  File "/home/mehdi/python-project/mig_env/lib64/python3.6/site-packages/django/core/servers/basehttp.py", line 140, in handle
+    self.raw_requestline = self.rfile.readline(65537)
+  File "/usr/lib64/python3.6/socket.py", line 586, in readinto
+    return self._sock.recv_into(b)
+ConnectionResetError: [Errno 104] Connection reset by peer
+----------------------------------------
+----------------------------------------
+Exception happened during processing of request from ('5.117.86.3', 48608)
+Traceback (most recent call last):
+  File "/usr/lib64/python3.6/socketserver.py", line 639, in process_request_thread
+    self.finish_request(request, client_address)
+  File "/usr/lib64/python3.6/socketserver.py", line 361, in finish_request
+    self.RequestHandlerClass(request, client_address, self)
+  File "/usr/lib64/python3.6/socketserver.py", line 696, in __init__
+    self.handle()
+  File "/home/mehdi/python-project/mig_env/lib64/python3.6/site-packages/django/core/servers/basehttp.py", line 140, in handle
+    self.raw_requestline = self.rfile.readline(65537)
+  File "/usr/lib64/python3.6/socket.py", line 586, in readinto
+    return self._sock.recv_into(b)
+ConnectionResetError: [Errno 104] Connection reset by peer
+----------------------------------------
+[28/Sep/2018 01:10:59] "POST /api/category/sub/ HTTP/1.1" 401 35
+[28/Sep/2018 01:12:00] "POST /login/ HTTP/1.1" 200 207
+[28/Sep/2018 01:12:05] "POST /api/category/sub/ HTTP/1.1" 401 35
+[28/Sep/2018 01:12:12] "POST /login/ HTTP/1.1" 200 207
+[28/Sep/2018 01:13:05] "POST /api/category/sub/ HTTP/1.1" 200 2
+[28/Sep/2018 01:13:38] "POST /api/category/sub/ HTTP/1.1" 200 2
+[28/Sep/2018 01:13:58] "POST /api/category/sub/ HTTP/1.1" 200 2
+[28/Sep/2018 01:15:34] "POST /api/category/sub/ HTTP/1.1" 401 35
+[28/Sep/2018 01:15:42] "POST /login/ HTTP/1.1" 200 207
+[28/Sep/2018 01:15:56] "POST /api/category/sub/ HTTP/1.1" 200 2
+[28/Sep/2018 01:16:04] "POST /api/category/sub/ HTTP/1.1" 200 893
+[28/Sep/2018 01:20:24] "POST /api/category/sub/ HTTP/1.1" 200 893
+[28/Sep/2018 01:22:39] "POST /api/category/sub/ HTTP/1.1" 200 893
+[28/Sep/2018 01:23:56] "POST /api/category/main/ HTTP/1.1" 401 35
+[28/Sep/2018 01:24:00] "POST /login/ HTTP/1.1" 200 207
+[28/Sep/2018 01:24:15] "POST /api/category/sub/ HTTP/1.1" 200 893
+[28/Sep/2018 01:24:54] "POST /api/category/sub/ HTTP/1.1" 200 893
+[28/Sep/2018 01:25:17] "POST /api/category/sub/ HTTP/1.1" 200 893
+[28/Sep/2018 01:25:59] "POST /api/category/sub/ HTTP/1.1" 200 893
+[28/Sep/2018 01:26:00] "POST /api/category/service/ HTTP/1.1" 200 876
+[28/Sep/2018 01:26:00] "POST /api/category/service/ HTTP/1.1" 200 1052
+[28/Sep/2018 01:26:00] "POST /api/category/service/ HTTP/1.1" 200 788
+[28/Sep/2018 01:26:00] "POST /api/category/service/ HTTP/1.1" 200 385
+[28/Sep/2018 01:26:10] "POST /api/category/service/ HTTP/1.1" 401 35
+[28/Sep/2018 01:26:24] "POST /api/category/service/ HTTP/1.1" 200 914
+[28/Sep/2018 01:27:15] "POST /api/category/sub/ HTTP/1.1" 200 893
+[28/Sep/2018 01:27:16] "POST /api/category/service/ HTTP/1.1" 200 876
+[28/Sep/2018 01:27:16] "POST /api/category/service/ HTTP/1.1" 200 385
+[28/Sep/2018 01:27:16] "POST /api/category/service/ HTTP/1.1" 200 1052
+[28/Sep/2018 01:27:16] "POST /api/category/service/ HTTP/1.1" 200 788
+[28/Sep/2018 01:27:17] "POST /api/category/service/ HTTP/1.1" 200 1521
+[28/Sep/2018 01:27:17] "POST /api/category/service/ HTTP/1.1" 200 914
+[28/Sep/2018 01:29:56] "POST /api/category/sub/ HTTP/1.1" 200 893
+[28/Sep/2018 01:29:56] "POST /api/category/service/ HTTP/1.1" 200 876
+[28/Sep/2018 01:29:56] "POST /api/category/service/ HTTP/1.1" 200 385
+[28/Sep/2018 01:29:56] "POST /api/category/service/ HTTP/1.1" 200 788
+[28/Sep/2018 01:29:56] "POST /api/category/service/ HTTP/1.1" 200 1052
+[28/Sep/2018 01:29:56] "POST /api/category/service/ HTTP/1.1" 200 1521
+[28/Sep/2018 01:29:56] "POST /api/category/service/ HTTP/1.1" 200 914
+[28/Sep/2018 01:30:58] "POST /api/category/sub/ HTTP/1.1" 200 893
+[28/Sep/2018 01:30:58] "POST /api/category/service/ HTTP/1.1" 200 876
+[28/Sep/2018 01:30:58] "POST /api/category/service/ HTTP/1.1" 200 1052
+[28/Sep/2018 01:30:58] "POST /api/category/service/ HTTP/1.1" 200 788
+[28/Sep/2018 01:30:58] "POST /api/category/service/ HTTP/1.1" 200 385
+[28/Sep/2018 01:30:58] "POST /api/category/service/ HTTP/1.1" 200 1521
+[28/Sep/2018 01:30:58] "POST /api/category/service/ HTTP/1.1" 200 914
+[28/Sep/2018 01:32:11] "POST /api/category/sub/ HTTP/1.1" 200 893
+[28/Sep/2018 01:32:11] "POST /api/category/service/ HTTP/1.1" 200 385
+[28/Sep/2018 01:32:11] "POST /api/category/service/ HTTP/1.1" 200 876
+[28/Sep/2018 01:32:11] "POST /api/category/service/ HTTP/1.1" 200 1052
+[28/Sep/2018 01:32:11] "POST /api/category/service/ HTTP/1.1" 200 788
+[28/Sep/2018 01:32:12] "POST /api/category/service/ HTTP/1.1" 200 1521
+[28/Sep/2018 01:32:12] "POST /api/category/service/ HTTP/1.1" 200 914
+[28/Sep/2018 01:32:40] "POST /api/category/sub/ HTTP/1.1" 200 893
+[28/Sep/2018 01:32:40] "POST /api/category/service/ HTTP/1.1" 200 1052
+[28/Sep/2018 01:32:40] "POST /api/category/service/ HTTP/1.1" 200 876
+[28/Sep/2018 01:32:40] "POST /api/category/service/ HTTP/1.1" 200 385
+[28/Sep/2018 01:32:40] "POST /api/category/service/ HTTP/1.1" 200 788
+[28/Sep/2018 01:32:40] "POST /api/category/service/ HTTP/1.1" 200 1521
+[28/Sep/2018 01:32:40] "POST /api/category/service/ HTTP/1.1" 200 914
+[28/Sep/2018 01:33:11] "POST /api/category/sub/ HTTP/1.1" 200 893
+[28/Sep/2018 01:33:11] "POST /api/category/service/ HTTP/1.1" 200 385
+[28/Sep/2018 01:33:11] "POST /api/category/service/ HTTP/1.1" 200 876
+[28/Sep/2018 01:33:11] "POST /api/category/service/ HTTP/1.1" 200 1052
+[28/Sep/2018 01:33:11] "POST /api/category/service/ HTTP/1.1" 200 788
+[28/Sep/2018 01:33:11] "POST /api/category/service/ HTTP/1.1" 200 1521
+[28/Sep/2018 01:33:11] "POST /api/category/service/ HTTP/1.1" 200 914
+[28/Sep/2018 01:33:38] "POST /api/category/sub/ HTTP/1.1" 200 893
+[28/Sep/2018 01:33:38] "POST /api/category/service/ HTTP/1.1" 200 876
+[28/Sep/2018 01:33:38] "POST /api/category/service/ HTTP/1.1" 200 385
+[28/Sep/2018 01:33:38] "POST /api/category/service/ HTTP/1.1" 200 788
+[28/Sep/2018 01:33:38] "POST /api/category/service/ HTTP/1.1" 200 1052
+[28/Sep/2018 01:33:39] "POST /api/category/service/ HTTP/1.1" 200 1521
+[28/Sep/2018 01:33:39] "POST /api/category/service/ HTTP/1.1" 200 914
+[28/Sep/2018 01:33:57] "POST /api/category/sub/ HTTP/1.1" 200 893
+[28/Sep/2018 01:33:58] "POST /api/category/service/ HTTP/1.1" 200 1052
+[28/Sep/2018 01:33:58] "POST /api/category/service/ HTTP/1.1" 200 385
+[28/Sep/2018 01:33:58] "POST /api/category/service/ HTTP/1.1" 200 876
+[28/Sep/2018 01:33:58] "POST /api/category/service/ HTTP/1.1" 200 788
+[28/Sep/2018 01:33:58] "POST /api/category/service/ HTTP/1.1" 200 1521
+[28/Sep/2018 01:33:58] "POST /api/category/service/ HTTP/1.1" 200 914
+[28/Sep/2018 01:34:28] "POST /api/category/sub/ HTTP/1.1" 200 893
+[28/Sep/2018 01:34:28] "POST /api/category/service/ HTTP/1.1" 200 1052
+[28/Sep/2018 01:34:28] "POST /api/category/service/ HTTP/1.1" 200 385
+[28/Sep/2018 01:34:28] "POST /api/category/service/ HTTP/1.1" 200 788
+[28/Sep/2018 01:34:28] "POST /api/category/service/ HTTP/1.1" 200 876
+[28/Sep/2018 01:34:28] "POST /api/category/service/ HTTP/1.1" 200 1521
+[28/Sep/2018 01:34:28] "POST /api/category/service/ HTTP/1.1" 200 914
+[28/Sep/2018 01:36:01] "POST /api/category/sub/ HTTP/1.1" 200 893
+[28/Sep/2018 01:36:02] "POST /api/category/service/ HTTP/1.1" 200 876
+[28/Sep/2018 01:36:02] "POST /api/category/service/ HTTP/1.1" 200 1052
+[28/Sep/2018 01:36:02] "POST /api/category/service/ HTTP/1.1" 200 788
+[28/Sep/2018 01:36:02] "POST /api/category/service/ HTTP/1.1" 200 385
+[28/Sep/2018 01:36:02] "POST /api/category/service/ HTTP/1.1" 200 1521
+[28/Sep/2018 01:36:02] "POST /api/category/service/ HTTP/1.1" 200 914
+[28/Sep/2018 01:38:01] "POST /api/category/sub/ HTTP/1.1" 200 893
+[28/Sep/2018 01:42:10] "POST /api/category/sub/ HTTP/1.1" 200 893
+[28/Sep/2018 01:42:10] "POST /api/category/service/ HTTP/1.1" 200 876
+[28/Sep/2018 01:42:10] "POST /api/category/service/ HTTP/1.1" 200 385
+[28/Sep/2018 01:42:10] "POST /api/category/service/ HTTP/1.1" 200 788
+[28/Sep/2018 01:42:10] "POST /api/category/service/ HTTP/1.1" 200 1052
+[28/Sep/2018 01:42:10] "POST /api/category/service/ HTTP/1.1" 200 914
+[28/Sep/2018 01:42:10] "POST /api/category/service/ HTTP/1.1" 200 1521
+[28/Sep/2018 01:47:36] "POST /api/category/sub/ HTTP/1.1" 200 893
+[28/Sep/2018 01:47:36] "POST /api/category/service/ HTTP/1.1" 200 876
+[28/Sep/2018 01:47:36] "POST /api/category/service/ HTTP/1.1" 200 385
+[28/Sep/2018 01:47:36] "POST /api/category/service/ HTTP/1.1" 200 788
+[28/Sep/2018 01:47:36] "POST /api/category/service/ HTTP/1.1" 200 1052
+[28/Sep/2018 01:47:36] "POST /api/category/service/ HTTP/1.1" 200 1521
+[28/Sep/2018 01:47:36] "POST /api/category/service/ HTTP/1.1" 200 914
+[28/Sep/2018 01:48:57] "POST /api/category/sub/ HTTP/1.1" 200 893
+[28/Sep/2018 01:48:57] "POST /api/category/service/ HTTP/1.1" 200 876
+[28/Sep/2018 01:48:57] "POST /api/category/service/ HTTP/1.1" 200 1052
+[28/Sep/2018 01:48:57] "POST /api/category/service/ HTTP/1.1" 200 788
+[28/Sep/2018 01:48:57] "POST /api/category/service/ HTTP/1.1" 200 385
+[28/Sep/2018 01:48:57] "POST /api/category/service/ HTTP/1.1" 200 1521
+[28/Sep/2018 01:48:57] "POST /api/category/service/ HTTP/1.1" 200 914
+[28/Sep/2018 01:49:18] "POST /api/category/sub/ HTTP/1.1" 200 893
+[28/Sep/2018 01:49:18] "POST /api/category/service/ HTTP/1.1" 200 876
+[28/Sep/2018 01:49:18] "POST /api/category/service/ HTTP/1.1" 200 1052
+[28/Sep/2018 01:49:18] "POST /api/category/service/ HTTP/1.1" 200 788
+[28/Sep/2018 01:49:18] "POST /api/category/service/ HTTP/1.1" 200 385
+[28/Sep/2018 01:49:19] "POST /api/category/service/ HTTP/1.1" 200 1521
+[28/Sep/2018 01:49:19] "POST /api/category/service/ HTTP/1.1" 200 914
+[28/Sep/2018 01:49:32] "POST /api/category/sub/ HTTP/1.1" 200 893
+[28/Sep/2018 01:49:32] "POST /api/category/service/ HTTP/1.1" 200 876
+[28/Sep/2018 01:49:32] "POST /api/category/service/ HTTP/1.1" 200 1052
+[28/Sep/2018 01:49:32] "POST /api/category/service/ HTTP/1.1" 200 385
+[28/Sep/2018 01:49:32] "POST /api/category/service/ HTTP/1.1" 200 788
+[28/Sep/2018 01:49:32] "POST /api/category/service/ HTTP/1.1" 200 1521
+[28/Sep/2018 01:49:32] "POST /api/category/service/ HTTP/1.1" 200 914
+[28/Sep/2018 01:51:07] "POST /api/category/sub/ HTTP/1.1" 200 893
+[28/Sep/2018 01:51:07] "POST /api/category/service/ HTTP/1.1" 200 788
+[28/Sep/2018 01:51:07] "POST /api/category/service/ HTTP/1.1" 200 1052
+[28/Sep/2018 01:51:07] "POST /api/category/service/ HTTP/1.1" 200 385
+[28/Sep/2018 01:51:07] "POST /api/category/service/ HTTP/1.1" 200 876
+[28/Sep/2018 01:51:08] "POST /api/category/service/ HTTP/1.1" 200 914
+[28/Sep/2018 01:51:08] "POST /api/category/service/ HTTP/1.1" 200 1521
+[28/Sep/2018 01:51:37] "POST /api/category/sub/ HTTP/1.1" 200 893
+[28/Sep/2018 01:51:42] "POST /api/category/service/ HTTP/1.1" 200 385
+[28/Sep/2018 01:51:42] "POST /api/category/service/ HTTP/1.1" 200 876
+[28/Sep/2018 01:51:42] "POST /api/category/service/ HTTP/1.1" 200 1052
+[28/Sep/2018 01:51:42] "POST /api/category/service/ HTTP/1.1" 200 788
+[28/Sep/2018 01:51:42] "POST /api/category/service/ HTTP/1.1" 200 1521
+[28/Sep/2018 01:51:42] "POST /api/category/service/ HTTP/1.1" 200 914
+[28/Sep/2018 01:52:13] "POST /api/category/sub/ HTTP/1.1" 200 893
+[28/Sep/2018 01:52:14] "POST /api/category/service/ HTTP/1.1" 200 876
+[28/Sep/2018 01:52:14] "POST /api/category/service/ HTTP/1.1" 200 1052
+[28/Sep/2018 01:52:14] "POST /api/category/service/ HTTP/1.1" 200 385
+[28/Sep/2018 01:52:14] "POST /api/category/service/ HTTP/1.1" 200 788
+[28/Sep/2018 01:52:14] "POST /api/category/service/ HTTP/1.1" 200 1521
+[28/Sep/2018 01:52:14] "POST /api/category/service/ HTTP/1.1" 200 914
+[28/Sep/2018 01:52:40] "POST /api/category/sub/ HTTP/1.1" 200 893
+[28/Sep/2018 01:54:14] "POST /api/category/sub/ HTTP/1.1" 200 893
+[28/Sep/2018 01:54:51] "POST /api/category/sub/ HTTP/1.1" 200 893
+[28/Sep/2018 01:54:51] "POST /api/category/service/ HTTP/1.1" 200 876
+[28/Sep/2018 01:54:52] "POST /api/category/service/ HTTP/1.1" 200 1052
+[28/Sep/2018 01:54:52] "POST /api/category/service/ HTTP/1.1" 200 385
+[28/Sep/2018 01:54:52] "POST /api/category/service/ HTTP/1.1" 200 788
+[28/Sep/2018 01:54:52] "POST /api/category/service/ HTTP/1.1" 200 1521
+[28/Sep/2018 01:54:52] "POST /api/category/service/ HTTP/1.1" 200 914
+[28/Sep/2018 01:59:17] "POST /api/category/sub/ HTTP/1.1" 200 893
+[28/Sep/2018 01:59:17] "POST /api/category/service/ HTTP/1.1" 200 876
+[28/Sep/2018 01:59:17] "POST /api/category/service/ HTTP/1.1" 200 1052
+[28/Sep/2018 01:59:17] "POST /api/category/service/ HTTP/1.1" 200 788
+[28/Sep/2018 01:59:17] "POST /api/category/service/ HTTP/1.1" 200 385
+[28/Sep/2018 02:17:20] "POST /api/category/sub/ HTTP/1.1" 401 35
+[28/Sep/2018 02:17:20] "POST /login/ HTTP/1.1" 200 207
+[28/Sep/2018 02:17:20] "POST /api/category/sub/ HTTP/1.1" 401 35
+[28/Sep/2018 02:17:21] "POST /login/ HTTP/1.1" 200 207
+[28/Sep/2018 02:17:21] "POST /api/category/sub/ HTTP/1.1" 401 35
+[28/Sep/2018 02:17:21] "POST /login/ HTTP/1.1" 200 207
+[28/Sep/2018 02:17:22] "POST /api/category/sub/ HTTP/1.1" 401 35
+[28/Sep/2018 02:17:22] "POST /login/ HTTP/1.1" 200 207
+[28/Sep/2018 02:17:22] "POST /api/category/sub/ HTTP/1.1" 401 35
+[28/Sep/2018 02:17:22] "POST /login/ HTTP/1.1" 200 207
+[28/Sep/2018 02:17:23] "POST /api/category/sub/ HTTP/1.1" 401 35
+[28/Sep/2018 02:17:23] "POST /login/ HTTP/1.1" 200 207
+[28/Sep/2018 02:17:23] "POST /api/category/sub/ HTTP/1.1" 401 35
+[28/Sep/2018 02:17:24] "POST /login/ HTTP/1.1" 200 207
+[28/Sep/2018 02:17:24] "POST /api/category/sub/ HTTP/1.1" 401 35
+[28/Sep/2018 02:17:24] "POST /login/ HTTP/1.1" 200 207
+[28/Sep/2018 02:17:24] "POST /api/category/sub/ HTTP/1.1" 401 35
+[28/Sep/2018 02:17:25] "POST /login/ HTTP/1.1" 200 207
+[28/Sep/2018 02:17:25] "POST /api/category/sub/ HTTP/1.1" 401 35
+[28/Sep/2018 02:17:25] "POST /login/ HTTP/1.1" 200 207
+[28/Sep/2018 02:17:25] "POST /api/category/sub/ HTTP/1.1" 401 35
+[28/Sep/2018 02:17:26] "POST /login/ HTTP/1.1" 200 207
+[28/Sep/2018 02:17:26] "POST /api/category/sub/ HTTP/1.1" 401 35
+[28/Sep/2018 02:17:26] "POST /login/ HTTP/1.1" 200 207
+[28/Sep/2018 02:17:27] "POST /api/category/sub/ HTTP/1.1" 401 35
+[28/Sep/2018 02:17:27] "POST /login/ HTTP/1.1" 200 207
+[28/Sep/2018 02:17:27] "POST /api/category/sub/ HTTP/1.1" 401 35
+[28/Sep/2018 02:17:27] "POST /login/ HTTP/1.1" 200 207
+[28/Sep/2018 02:17:28] "POST /api/category/sub/ HTTP/1.1" 401 35
+[28/Sep/2018 02:17:28] "POST /login/ HTTP/1.1" 200 207
+[28/Sep/2018 02:17:28] "POST /api/category/sub/ HTTP/1.1" 401 35
+[28/Sep/2018 02:17:28] "POST /login/ HTTP/1.1" 200 207
+[28/Sep/2018 02:17:29] "POST /api/category/sub/ HTTP/1.1" 401 35
+[28/Sep/2018 02:17:56] "POST /api/category/sub/ HTTP/1.1" 200 893
+[28/Sep/2018 02:17:57] "POST /api/category/service/ HTTP/1.1" 200 876
+[28/Sep/2018 02:17:57] "POST /api/category/service/ HTTP/1.1" 200 385
+[28/Sep/2018 02:17:57] "POST /api/category/service/ HTTP/1.1" 200 788
+[28/Sep/2018 02:17:57] "POST /api/category/service/ HTTP/1.1" 200 1052
+[28/Sep/2018 02:17:57] "POST /api/category/service/ HTTP/1.1" 200 1521
+[28/Sep/2018 02:17:57] "POST /api/category/service/ HTTP/1.1" 200 914
+[28/Sep/2018 02:20:04] "POST /login/ HTTP/1.1" 200 207
+[28/Sep/2018 02:20:26] "POST /api/category/sub/ HTTP/1.1" 200 893
+[28/Sep/2018 02:20:26] "POST /api/category/service/ HTTP/1.1" 200 788
+[28/Sep/2018 02:20:26] "POST /api/category/service/ HTTP/1.1" 200 385
+[28/Sep/2018 02:20:26] "POST /api/category/service/ HTTP/1.1" 200 1052
+[28/Sep/2018 02:20:26] "POST /api/category/service/ HTTP/1.1" 200 876
+[28/Sep/2018 02:20:26] "POST /api/category/service/ HTTP/1.1" 200 914
+[28/Sep/2018 02:20:26] "POST /api/category/service/ HTTP/1.1" 200 1521
+[28/Sep/2018 02:21:26] "POST /api/category/sub/ HTTP/1.1" 200 893
+[28/Sep/2018 02:21:27] "POST /api/category/service/ HTTP/1.1" 200 876
+[28/Sep/2018 02:21:27] "POST /api/category/service/ HTTP/1.1" 200 788
+[28/Sep/2018 02:21:27] "POST /api/category/service/ HTTP/1.1" 200 385
+[28/Sep/2018 02:21:27] "POST /api/category/service/ HTTP/1.1" 200 1052
+[28/Sep/2018 02:21:27] "POST /api/category/service/ HTTP/1.1" 200 1521
+[28/Sep/2018 02:21:27] "POST /api/category/service/ HTTP/1.1" 200 914
+[28/Sep/2018 02:22:23] "POST /api/category/sub/ HTTP/1.1" 200 893
+[28/Sep/2018 02:22:23] "POST /api/category/service/ HTTP/1.1" 200 876
+[28/Sep/2018 02:22:23] "POST /api/category/service/ HTTP/1.1" 200 1052
+[28/Sep/2018 02:22:23] "POST /api/category/service/ HTTP/1.1" 200 788
+[28/Sep/2018 02:22:23] "POST /api/category/service/ HTTP/1.1" 200 385
+[28/Sep/2018 02:22:23] "POST /api/category/service/ HTTP/1.1" 200 1521
+[28/Sep/2018 02:22:23] "POST /api/category/service/ HTTP/1.1" 200 914
+[28/Sep/2018 02:23:37] "POST /api/category/sub/ HTTP/1.1" 200 893
+[28/Sep/2018 02:23:38] "POST /api/category/service/ HTTP/1.1" 200 876
+[28/Sep/2018 02:23:38] "POST /api/category/service/ HTTP/1.1" 200 788
+[28/Sep/2018 02:23:38] "POST /api/category/service/ HTTP/1.1" 200 385
+[28/Sep/2018 02:23:38] "POST /api/category/service/ HTTP/1.1" 200 1052
+[28/Sep/2018 02:23:38] "POST /api/category/service/ HTTP/1.1" 200 1521
+[28/Sep/2018 02:23:38] "POST /api/category/service/ HTTP/1.1" 200 914
+[28/Sep/2018 02:26:43] "POST /api/category/sub/ HTTP/1.1" 200 893
+[28/Sep/2018 02:26:43] "POST /api/category/service/ HTTP/1.1" 200 876
+[28/Sep/2018 02:26:43] "POST /api/category/service/ HTTP/1.1" 200 788
+[28/Sep/2018 02:26:43] "POST /api/category/service/ HTTP/1.1" 200 1052
+[28/Sep/2018 02:26:43] "POST /api/category/service/ HTTP/1.1" 200 385
+[28/Sep/2018 02:26:44] "POST /api/category/service/ HTTP/1.1" 200 1521
+[28/Sep/2018 02:26:44] "POST /api/category/service/ HTTP/1.1" 200 914
+[28/Sep/2018 02:29:33] "POST /api/category/sub/ HTTP/1.1" 200 893
+[28/Sep/2018 02:29:34] "POST /api/category/service/ HTTP/1.1" 200 876
+[28/Sep/2018 02:29:34] "POST /api/category/service/ HTTP/1.1" 200 788
+[28/Sep/2018 02:29:34] "POST /api/category/service/ HTTP/1.1" 200 1052
+[28/Sep/2018 02:29:34] "POST /api/category/service/ HTTP/1.1" 200 385
+[28/Sep/2018 02:29:34] "POST /api/category/service/ HTTP/1.1" 200 1521
+[28/Sep/2018 02:29:34] "POST /api/category/service/ HTTP/1.1" 200 914
+[28/Sep/2018 02:57:01] "POST /api/category/sub/ HTTP/1.1" 200 893
+[28/Sep/2018 02:57:01] "POST /api/category/service/ HTTP/1.1" 200 876
+[28/Sep/2018 02:57:01] "POST /api/category/service/ HTTP/1.1" 200 788
+[28/Sep/2018 02:57:01] "POST /api/category/service/ HTTP/1.1" 200 1052
+[28/Sep/2018 02:57:01] "POST /api/category/service/ HTTP/1.1" 200 385
+[28/Sep/2018 02:57:01] "POST /api/category/service/ HTTP/1.1" 200 1521
+[28/Sep/2018 02:57:01] "POST /api/category/service/ HTTP/1.1" 200 914
+[28/Sep/2018 02:58:42] "POST /api/category/sub/ HTTP/1.1" 200 893
+[28/Sep/2018 02:58:42] "POST /api/category/service/ HTTP/1.1" 200 788
+[28/Sep/2018 02:58:42] "POST /api/category/service/ HTTP/1.1" 200 876
+[28/Sep/2018 02:58:42] "POST /api/category/service/ HTTP/1.1" 200 385
+[28/Sep/2018 02:58:42] "POST /api/category/service/ HTTP/1.1" 200 1052
+[28/Sep/2018 02:58:43] "POST /api/category/service/ HTTP/1.1" 200 914
+[28/Sep/2018 02:58:43] "POST /api/category/service/ HTTP/1.1" 200 1521
+[28/Sep/2018 02:58:48] "POST /api/category/sub/ HTTP/1.1" 200 893
+[28/Sep/2018 02:58:48] "POST /api/category/service/ HTTP/1.1" 200 876
+[28/Sep/2018 02:58:48] "POST /api/category/service/ HTTP/1.1" 200 1052
+[28/Sep/2018 02:58:48] "POST /api/category/service/ HTTP/1.1" 200 385
+[28/Sep/2018 02:58:48] "POST /api/category/service/ HTTP/1.1" 200 788
+[28/Sep/2018 02:58:48] "POST /api/category/service/ HTTP/1.1" 200 1521
+[28/Sep/2018 02:58:48] "POST /api/category/service/ HTTP/1.1" 200 914
+[28/Sep/2018 02:59:30] "POST /api/category/sub/ HTTP/1.1" 200 893
+[28/Sep/2018 02:59:30] "POST /api/category/service/ HTTP/1.1" 200 876
+[28/Sep/2018 02:59:30] "POST /api/category/service/ HTTP/1.1" 200 788
+[28/Sep/2018 02:59:30] "POST /api/category/service/ HTTP/1.1" 200 385
+[28/Sep/2018 02:59:30] "POST /api/category/service/ HTTP/1.1" 200 1052
+[28/Sep/2018 02:59:30] "POST /api/category/service/ HTTP/1.1" 200 1521
+[28/Sep/2018 02:59:30] "POST /api/category/service/ HTTP/1.1" 200 914
+[28/Sep/2018 03:00:53] "POST /api/category/sub/ HTTP/1.1" 200 893
+[28/Sep/2018 03:00:54] "POST /api/category/service/ HTTP/1.1" 200 876
+[28/Sep/2018 03:00:54] "POST /api/category/service/ HTTP/1.1" 200 1052
+[28/Sep/2018 03:00:54] "POST /api/category/service/ HTTP/1.1" 200 788
+[28/Sep/2018 03:00:54] "POST /api/category/service/ HTTP/1.1" 200 385
+[28/Sep/2018 03:00:54] "POST /api/category/service/ HTTP/1.1" 200 1521
+[28/Sep/2018 03:00:54] "POST /api/category/service/ HTTP/1.1" 200 914
+[28/Sep/2018 03:01:40] "POST /api/category/sub/ HTTP/1.1" 200 893
+[28/Sep/2018 03:01:40] "POST /api/category/service/ HTTP/1.1" 200 385
+[28/Sep/2018 03:01:40] "POST /api/category/service/ HTTP/1.1" 200 1052
+[28/Sep/2018 03:01:40] "POST /api/category/service/ HTTP/1.1" 200 788
+[28/Sep/2018 03:01:40] "POST /api/category/service/ HTTP/1.1" 200 876
+[28/Sep/2018 03:01:40] "POST /api/category/service/ HTTP/1.1" 200 1521
+[28/Sep/2018 03:01:40] "POST /api/category/service/ HTTP/1.1" 200 914
+[28/Sep/2018 03:04:35] "POST /api/category/sub/ HTTP/1.1" 200 893
+[28/Sep/2018 03:04:36] "POST /api/category/service/ HTTP/1.1" 200 385
+[28/Sep/2018 03:04:36] "POST /api/category/service/ HTTP/1.1" 200 788
+[28/Sep/2018 03:04:36] "POST /api/category/service/ HTTP/1.1" 200 1052
+[28/Sep/2018 03:04:36] "POST /api/category/service/ HTTP/1.1" 200 876
+[28/Sep/2018 03:04:36] "POST /api/category/service/ HTTP/1.1" 200 1521
+[28/Sep/2018 03:04:36] "POST /api/category/service/ HTTP/1.1" 200 914
+[28/Sep/2018 03:09:52] "POST /api/category/sub/ HTTP/1.1" 200 893
+[28/Sep/2018 03:09:53] "POST /api/category/service/ HTTP/1.1" 200 876
+[28/Sep/2018 03:09:53] "POST /api/category/service/ HTTP/1.1" 200 1052
+[28/Sep/2018 03:09:53] "POST /api/category/service/ HTTP/1.1" 200 788
+[28/Sep/2018 03:09:53] "POST /api/category/service/ HTTP/1.1" 200 385
+[28/Sep/2018 03:09:53] "POST /api/category/service/ HTTP/1.1" 200 1521
+[28/Sep/2018 03:09:53] "POST /api/category/service/ HTTP/1.1" 200 914
+[28/Sep/2018 03:11:07] "POST /api/category/sub/ HTTP/1.1" 200 893
+[28/Sep/2018 03:11:07] "POST /api/category/service/ HTTP/1.1" 200 788
+[28/Sep/2018 03:11:07] "POST /api/category/service/ HTTP/1.1" 200 385
+[28/Sep/2018 03:11:07] "POST /api/category/service/ HTTP/1.1" 200 876
+[28/Sep/2018 03:11:07] "POST /api/category/service/ HTTP/1.1" 200 1052
+[28/Sep/2018 03:11:07] "POST /api/category/service/ HTTP/1.1" 200 914
+[28/Sep/2018 03:11:07] "POST /api/category/service/ HTTP/1.1" 200 1521
+[28/Sep/2018 03:37:48] "POST /api/category/sub/ HTTP/1.1" 401 35
+[28/Sep/2018 03:37:55] "POST /login/ HTTP/1.1" 200 207
+[28/Sep/2018 03:37:59] "POST /api/category/sub/ HTTP/1.1" 401 35
+[28/Sep/2018 03:38:26] "POST /api/category/sub/ HTTP/1.1" 200 893
+[28/Sep/2018 03:38:27] "POST /api/category/service/ HTTP/1.1" 200 876
+[28/Sep/2018 03:38:27] "POST /api/category/service/ HTTP/1.1" 200 1052
+[28/Sep/2018 03:38:27] "POST /api/category/service/ HTTP/1.1" 200 788
+[28/Sep/2018 03:38:27] "POST /api/category/service/ HTTP/1.1" 200 385
+[28/Sep/2018 03:38:27] "POST /api/category/service/ HTTP/1.1" 200 1521
+[28/Sep/2018 03:38:27] "POST /api/category/service/ HTTP/1.1" 200 914
+[28/Sep/2018 03:39:58] "POST /api/category/sub/ HTTP/1.1" 200 893
+[28/Sep/2018 03:39:58] "POST /api/category/service/ HTTP/1.1" 200 1052
+[28/Sep/2018 03:39:58] "POST /api/category/service/ HTTP/1.1" 200 788
+[28/Sep/2018 03:39:58] "POST /api/category/service/ HTTP/1.1" 200 876
+[28/Sep/2018 03:39:58] "POST /api/category/service/ HTTP/1.1" 200 385
+[28/Sep/2018 03:39:58] "POST /api/category/service/ HTTP/1.1" 200 1521
+[28/Sep/2018 03:39:58] "POST /api/category/service/ HTTP/1.1" 200 914
+[28/Sep/2018 03:48:09] "POST /api/user/ HTTP/1.1" 201 52
+[28/Sep/2018 03:48:09] "POST /login/ HTTP/1.1" 200 207
+[28/Sep/2018 03:48:24] "POST /api/account/set_account/ HTTP/1.1" 401 67
+[28/Sep/2018 03:56:23] "POST /api/user/ HTTP/1.1" 201 52
+[28/Sep/2018 03:56:23] "POST /login/ HTTP/1.1" 200 207
+[28/Sep/2018 03:57:36] "POST /api/user/ HTTP/1.1" 201 52
+[28/Sep/2018 03:57:37] "POST /login/ HTTP/1.1" 200 207
+[28/Sep/2018 03:57:45] "POST /api/account/set_account/ HTTP/1.1" 401 67
+[28/Sep/2018 03:57:45] "POST /login/ HTTP/1.1" 200 207
+[28/Sep/2018 03:57:48] "POST /api/account/set_account/ HTTP/1.1" 401 67
+[28/Sep/2018 03:57:48] "POST /login/ HTTP/1.1" 200 207
+[28/Sep/2018 03:57:51] "POST /api/account/set_account/ HTTP/1.1" 401 67
+[28/Sep/2018 03:57:51] "POST /login/ HTTP/1.1" 200 207
+[28/Sep/2018 03:57:53] "POST /api/account/set_account/ HTTP/1.1" 401 67
+[28/Sep/2018 03:57:54] "POST /login/ HTTP/1.1" 200 207
+[28/Sep/2018 03:57:56] "POST /api/account/set_account/ HTTP/1.1" 401 67
+[28/Sep/2018 03:57:56] "POST /login/ HTTP/1.1" 200 207
+[28/Sep/2018 03:59:06] "POST /api/user/ HTTP/1.1" 201 52
+[28/Sep/2018 03:59:06] "POST /login/ HTTP/1.1" 200 207
+[28/Sep/2018 03:59:14] "POST /api/account/set_account/ HTTP/1.1" 401 67
+[28/Sep/2018 03:59:14] "POST /login/ HTTP/1.1" 200 207
+[28/Sep/2018 03:59:17] "POST /api/account/set_account/ HTTP/1.1" 401 67
+[28/Sep/2018 03:59:17] "POST /login/ HTTP/1.1" 200 207
+[28/Sep/2018 03:59:20] "POST /api/account/set_account/ HTTP/1.1" 401 67
+[28/Sep/2018 03:59:20] "POST /login/ HTTP/1.1" 200 207
+[28/Sep/2018 03:59:22] "POST /api/account/set_account/ HTTP/1.1" 401 67
+[28/Sep/2018 03:59:23] "POST /login/ HTTP/1.1" 200 207
+[28/Sep/2018 04:01:09] "POST /api/user/ HTTP/1.1" 201 52
+[28/Sep/2018 04:01:09] "POST /login/ HTTP/1.1" 200 207
+[28/Sep/2018 04:01:18] "POST /api/account/set_account/ HTTP/1.1" 401 67
+[28/Sep/2018 04:04:03] "POST /login/ HTTP/1.1" 200 207
+[28/Sep/2018 04:05:06] "POST /api/user/ HTTP/1.1" 201 52
+[28/Sep/2018 04:05:07] "POST /login/ HTTP/1.1" 200 207
+[28/Sep/2018 04:05:15] "POST /api/account/set_account/ HTTP/1.1" 401 67
+[28/Sep/2018 04:05:21] "POST /login/ HTTP/1.1" 200 207
+[28/Sep/2018 04:05:27] "POST /api/account/set_account/ HTTP/1.1" 401 67
+[28/Sep/2018 04:05:30] "POST /login/ HTTP/1.1" 200 207
+[28/Sep/2018 04:05:35] "POST /api/account/set_account/ HTTP/1.1" 401 67
+[28/Sep/2018 04:07:33] "POST /api/user/ HTTP/1.1" 201 51
+[28/Sep/2018 04:07:33] "POST /login/ HTTP/1.1" 200 205
+[28/Sep/2018 04:07:42] "POST /api/account/set_account/ HTTP/1.1" 200 122
+[28/Sep/2018 04:08:39] "POST /api/user/ HTTP/1.1" 201 52
+[28/Sep/2018 04:08:39] "POST /login/ HTTP/1.1" 200 207
+Internal Server Error: /api/account/set_account/
+Traceback (most recent call last):
+  File "/home/mehdi/python-project/migrate/api/views.py", line 84, in set_account
+    account_id=request.data.get('account_id')
+  File "/home/mehdi/python-project/mig_env/lib64/python3.6/site-packages/django/db/models/manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/home/mehdi/python-project/mig_env/lib64/python3.6/site-packages/django/db/models/query.py", line 379, in get
+    self.model._meta.object_name
+user_data.models.DoesNotExist: Account matching query does not exist.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/mehdi/python-project/mig_env/lib64/python3.6/site-packages/django/db/backends/utils.py", line 65, in execute
+    return self.cursor.execute(sql, params)
+  File "/home/mehdi/python-project/mig_env/lib64/python3.6/site-packages/django/db/backends/sqlite3/base.py", line 328, in execute
+    return Database.Cursor.execute(self, query, params)
+sqlite3.IntegrityError: columns account_type, account_id are not unique
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/mehdi/python-project/mig_env/lib64/python3.6/site-packages/django/core/handlers/exception.py", line 41, in inner
+    response = get_response(request)
+  File "/home/mehdi/python-project/mig_env/lib64/python3.6/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/mehdi/python-project/mig_env/lib64/python3.6/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/mehdi/python-project/mig_env/lib64/python3.6/site-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/mehdi/python-project/mig_env/lib64/python3.6/site-packages/rest_framework/viewsets.py", line 87, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/mehdi/python-project/mig_env/lib64/python3.6/site-packages/rest_framework/views.py", line 466, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/mehdi/python-project/mig_env/lib64/python3.6/site-packages/rest_framework/views.py", line 463, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/mehdi/python-project/migrate/api/views.py", line 100, in set_account
+    account_id=request.data.get('account_id')
+  File "/home/mehdi/python-project/mig_env/lib64/python3.6/site-packages/django/db/models/manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/home/mehdi/python-project/mig_env/lib64/python3.6/site-packages/django/db/models/query.py", line 393, in create
+    obj.save(force_insert=True, using=self.db)
+  File "/home/mehdi/python-project/mig_env/lib64/python3.6/site-packages/django/db/models/base.py", line 806, in save
+    force_update=force_update, update_fields=update_fields)
+  File "/home/mehdi/python-project/mig_env/lib64/python3.6/site-packages/django/db/models/base.py", line 836, in save_base
+    updated = self._save_table(raw, cls, force_insert, force_update, using, update_fields)
+  File "/home/mehdi/python-project/mig_env/lib64/python3.6/site-packages/django/db/models/base.py", line 922, in _save_table
+    result = self._do_insert(cls._base_manager, using, fields, update_pk, raw)
+  File "/home/mehdi/python-project/mig_env/lib64/python3.6/site-packages/django/db/models/base.py", line 961, in _do_insert
+    using=using, raw=raw)
+  File "/home/mehdi/python-project/mig_env/lib64/python3.6/site-packages/django/db/models/manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/home/mehdi/python-project/mig_env/lib64/python3.6/site-packages/django/db/models/query.py", line 1060, in _insert
+    return query.get_compiler(using=using).execute_sql(return_id)
+  File "/home/mehdi/python-project/mig_env/lib64/python3.6/site-packages/django/db/models/sql/compiler.py", line 1099, in execute_sql
+    cursor.execute(sql, params)
+  File "/home/mehdi/python-project/mig_env/lib64/python3.6/site-packages/django/db/backends/utils.py", line 80, in execute
+    return super(CursorDebugWrapper, self).execute(sql, params)
+  File "/home/mehdi/python-project/mig_env/lib64/python3.6/site-packages/django/db/backends/utils.py", line 65, in execute
+    return self.cursor.execute(sql, params)
+  File "/home/mehdi/python-project/mig_env/lib64/python3.6/site-packages/django/db/utils.py", line 94, in __exit__
+    six.reraise(dj_exc_type, dj_exc_value, traceback)
+  File "/home/mehdi/python-project/mig_env/lib64/python3.6/site-packages/django/utils/six.py", line 685, in reraise
+    raise value.with_traceback(tb)
+  File "/home/mehdi/python-project/mig_env/lib64/python3.6/site-packages/django/db/backends/utils.py", line 65, in execute
+    return self.cursor.execute(sql, params)
+  File "/home/mehdi/python-project/mig_env/lib64/python3.6/site-packages/django/db/backends/sqlite3/base.py", line 328, in execute
+    return Database.Cursor.execute(self, query, params)
+django.db.utils.IntegrityError: columns account_type, account_id are not unique
+[28/Sep/2018 04:08:48] "POST /api/account/set_account/ HTTP/1.1" 500 177838
+[28/Sep/2018 04:10:04] "POST /api/user/ HTTP/1.1" 201 52
+[28/Sep/2018 04:10:04] "POST /login/ HTTP/1.1" 200 207
+Internal Server Error: /api/account/set_account/
+Traceback (most recent call last):
+  File "/home/mehdi/python-project/migrate/api/views.py", line 84, in set_account
+    account_id=request.data.get('account_id')
+  File "/home/mehdi/python-project/mig_env/lib64/python3.6/site-packages/django/db/models/manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/home/mehdi/python-project/mig_env/lib64/python3.6/site-packages/django/db/models/query.py", line 379, in get
+    self.model._meta.object_name
+user_data.models.DoesNotExist: Account matching query does not exist.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/mehdi/python-project/mig_env/lib64/python3.6/site-packages/django/db/backends/utils.py", line 65, in execute
+    return self.cursor.execute(sql, params)
+  File "/home/mehdi/python-project/mig_env/lib64/python3.6/site-packages/django/db/backends/sqlite3/base.py", line 328, in execute
+    return Database.Cursor.execute(self, query, params)
+sqlite3.IntegrityError: columns account_type, account_id are not unique
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/mehdi/python-project/mig_env/lib64/python3.6/site-packages/django/core/handlers/exception.py", line 41, in inner
+    response = get_response(request)
+  File "/home/mehdi/python-project/mig_env/lib64/python3.6/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/mehdi/python-project/mig_env/lib64/python3.6/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/mehdi/python-project/mig_env/lib64/python3.6/site-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/mehdi/python-project/mig_env/lib64/python3.6/site-packages/rest_framework/viewsets.py", line 87, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/mehdi/python-project/mig_env/lib64/python3.6/site-packages/rest_framework/views.py", line 466, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/mehdi/python-project/mig_env/lib64/python3.6/site-packages/rest_framework/views.py", line 463, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/mehdi/python-project/migrate/api/views.py", line 100, in set_account
+    account_id=request.data.get('account_id')
+  File "/home/mehdi/python-project/mig_env/lib64/python3.6/site-packages/django/db/models/manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/home/mehdi/python-project/mig_env/lib64/python3.6/site-packages/django/db/models/query.py", line 393, in create
+    obj.save(force_insert=True, using=self.db)
+  File "/home/mehdi/python-project/mig_env/lib64/python3.6/site-packages/django/db/models/base.py", line 806, in save
+    force_update=force_update, update_fields=update_fields)
+  File "/home/mehdi/python-project/mig_env/lib64/python3.6/site-packages/django/db/models/base.py", line 836, in save_base
+    updated = self._save_table(raw, cls, force_insert, force_update, using, update_fields)
+  File "/home/mehdi/python-project/mig_env/lib64/python3.6/site-packages/django/db/models/base.py", line 922, in _save_table
+    result = self._do_insert(cls._base_manager, using, fields, update_pk, raw)
+  File "/home/mehdi/python-project/mig_env/lib64/python3.6/site-packages/django/db/models/base.py", line 961, in _do_insert
+    using=using, raw=raw)
+  File "/home/mehdi/python-project/mig_env/lib64/python3.6/site-packages/django/db/models/manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/home/mehdi/python-project/mig_env/lib64/python3.6/site-packages/django/db/models/query.py", line 1060, in _insert
+    return query.get_compiler(using=using).execute_sql(return_id)
+  File "/home/mehdi/python-project/mig_env/lib64/python3.6/site-packages/django/db/models/sql/compiler.py", line 1099, in execute_sql
+    cursor.execute(sql, params)
+  File "/home/mehdi/python-project/mig_env/lib64/python3.6/site-packages/django/db/backends/utils.py", line 80, in execute
+    return super(CursorDebugWrapper, self).execute(sql, params)
+  File "/home/mehdi/python-project/mig_env/lib64/python3.6/site-packages/django/db/backends/utils.py", line 65, in execute
+    return self.cursor.execute(sql, params)
+  File "/home/mehdi/python-project/mig_env/lib64/python3.6/site-packages/django/db/utils.py", line 94, in __exit__
+    six.reraise(dj_exc_type, dj_exc_value, traceback)
+  File "/home/mehdi/python-project/mig_env/lib64/python3.6/site-packages/django/utils/six.py", line 685, in reraise
+    raise value.with_traceback(tb)
+  File "/home/mehdi/python-project/mig_env/lib64/python3.6/site-packages/django/db/backends/utils.py", line 65, in execute
+    return self.cursor.execute(sql, params)
+  File "/home/mehdi/python-project/mig_env/lib64/python3.6/site-packages/django/db/backends/sqlite3/base.py", line 328, in execute
+    return Database.Cursor.execute(self, query, params)
+django.db.utils.IntegrityError: columns account_type, account_id are not unique
+[28/Sep/2018 04:10:12] "POST /api/account/set_account/ HTTP/1.1" 500 177840
+[28/Sep/2018 04:12:14] "GET /admin/ HTTP/1.1" 200 7055
+[28/Sep/2018 04:12:15] "GET /static/admin/css/base.css HTTP/1.1" 200 16066
+[28/Sep/2018 04:12:15] "GET /static/admin/css/dashboard.css HTTP/1.1" 200 412
+[28/Sep/2018 04:12:15] "GET /static/admin/css/fonts.css HTTP/1.1" 200 423
+[28/Sep/2018 04:12:15] "GET /static/admin/img/icon-changelink.svg HTTP/1.1" 200 380
+[28/Sep/2018 04:12:15] "GET /static/admin/img/icon-addlink.svg HTTP/1.1" 200 331
+[28/Sep/2018 04:12:15] "GET /static/admin/fonts/Roboto-Light-webfont.woff HTTP/1.1" 200 81348
+[28/Sep/2018 04:12:15] "GET /static/admin/fonts/Roboto-Bold-webfont.woff HTTP/1.1" 200 82564
+[28/Sep/2018 04:12:15] "GET /static/admin/fonts/Roboto-Regular-webfont.woff HTTP/1.1" 200 80304
+[28/Sep/2018 04:12:18] "GET /admin/auth/user/ HTTP/1.1" 200 20210
+[28/Sep/2018 04:12:18] "GET /static/admin/css/changelists.css HTTP/1.1" 200 6170
+[28/Sep/2018 04:12:18] "GET /admin/jsi18n/ HTTP/1.1" 200 3189
+[28/Sep/2018 04:12:18] "GET /static/admin/js/core.js HTTP/1.1" 200 7976
+[28/Sep/2018 04:12:18] "GET /static/admin/js/jquery.init.js HTTP/1.1" 200 363
+[28/Sep/2018 04:12:19] "GET /static/admin/js/admin/RelatedObjectLookups.js HTTP/1.1" 200 6591
+[28/Sep/2018 04:12:19] "GET /static/admin/js/actions.js HTTP/1.1" 200 6501
+[28/Sep/2018 04:12:19] "GET /static/admin/js/urlify.js HTTP/1.1" 200 8186
+[28/Sep/2018 04:12:19] "GET /static/admin/js/prepopulate.js HTTP/1.1" 200 1538
+[28/Sep/2018 04:12:19] "GET /static/admin/img/search.svg HTTP/1.1" 200 458
+[28/Sep/2018 04:12:19] "GET /static/admin/img/icon-no.svg HTTP/1.1" 200 560
+[28/Sep/2018 04:12:19] "GET /static/admin/js/vendor/jquery/jquery.js HTTP/1.1" 200 258648
+[28/Sep/2018 04:12:19] "GET /static/admin/js/vendor/xregexp/xregexp.js HTTP/1.1" 200 128820
+[28/Sep/2018 04:12:19] "GET /static/admin/img/icon-yes.svg HTTP/1.1" 200 436
+[28/Sep/2018 04:12:20] "GET /static/admin/img/sorting-icons.svg HTTP/1.1" 200 1097
+[28/Sep/2018 04:12:20] "GET /static/admin/img/tooltag-add.svg HTTP/1.1" 200 331
+[28/Sep/2018 04:12:32] "POST /admin/auth/user/ HTTP/1.1" 200 10661
+[28/Sep/2018 04:12:32] "GET /static/admin/js/cancel.js HTTP/1.1" 200 204
+[28/Sep/2018 04:12:54] "POST /admin/auth/user/ HTTP/1.1" 302 0
+[28/Sep/2018 04:12:54] "GET /admin/auth/user/ HTTP/1.1" 200 6585
+[28/Sep/2018 04:12:55] "GET /admin/jsi18n/ HTTP/1.1" 200 3189
+[28/Sep/2018 04:13:01] "GET /admin/auth/user/ HTTP/1.1" 200 6463
+[28/Sep/2018 04:13:01] "GET /admin/jsi18n/ HTTP/1.1" 200 3189
+[28/Sep/2018 04:13:04] "POST /api/user/ HTTP/1.1" 201 52
+[28/Sep/2018 04:13:04] "POST /login/ HTTP/1.1" 200 207
+[28/Sep/2018 04:13:05] "GET /admin/auth/user/ HTTP/1.1" 200 6908
+[28/Sep/2018 04:13:05] "GET /admin/jsi18n/ HTTP/1.1" 200 3189
+[28/Sep/2018 04:13:10] "GET /admin/auth/user/33/change/ HTTP/1.1" 200 14828
+[28/Sep/2018 04:13:10] "GET /static/admin/css/forms.css HTTP/1.1" 200 8173
+[28/Sep/2018 04:13:10] "GET /admin/jsi18n/ HTTP/1.1" 200 3189
+[28/Sep/2018 04:13:10] "GET /static/admin/js/SelectBox.js HTTP/1.1" 200 5755
+[28/Sep/2018 04:13:10] "GET /static/admin/js/SelectFilter2.js HTTP/1.1" 200 12389
+[28/Sep/2018 04:13:10] "GET /static/admin/js/calendar.js HTTP/1.1" 200 7790
+[28/Sep/2018 04:13:10] "GET /static/admin/css/widgets.css HTTP/1.1" 200 10340
+[28/Sep/2018 04:13:10] "GET /static/admin/js/admin/DateTimeShortcuts.js HTTP/1.1" 200 20529
+[28/Sep/2018 04:13:10] "GET /static/admin/js/change_form.js HTTP/1.1" 200 712
+[28/Sep/2018 04:13:10] "GET /static/admin/js/prepopulate_init.js HTTP/1.1" 200 495
+[28/Sep/2018 04:13:11] "GET /static/admin/img/selector-icons.svg HTTP/1.1" 200 3291
+[28/Sep/2018 04:13:11] "GET /static/admin/img/icon-unknown.svg HTTP/1.1" 200 655
+[28/Sep/2018 04:13:11] "GET /static/admin/img/icon-unknown-alt.svg HTTP/1.1" 200 655
+[28/Sep/2018 04:13:11] "GET /static/admin/img/icon-clock.svg HTTP/1.1" 200 677
+[28/Sep/2018 04:13:11] "GET /static/admin/img/icon-calendar.svg HTTP/1.1" 200 1086
+[28/Sep/2018 04:13:33] "GET /admin/auth/user/ HTTP/1.1" 200 6908
+[28/Sep/2018 04:13:41] "POST /api/account/set_account/ HTTP/1.1" 200 122
+[28/Sep/2018 04:13:57] "GET /admin/auth/user/ HTTP/1.1" 200 6908
+[28/Sep/2018 04:13:57] "GET /admin/jsi18n/ HTTP/1.1" 200 3189
+[28/Sep/2018 04:14:46] "GET /admin/auth/user/ HTTP/1.1" 200 6908
+[28/Sep/2018 04:14:46] "GET /admin/jsi18n/ HTTP/1.1" 200 3189
+[28/Sep/2018 04:14:50] "POST /admin/auth/user/ HTTP/1.1" 200 3388
+[28/Sep/2018 04:14:51] "POST /admin/auth/user/ HTTP/1.1" 302 0
+[28/Sep/2018 04:14:52] "GET /admin/auth/user/ HTTP/1.1" 200 6583
+[28/Sep/2018 04:14:52] "GET /admin/jsi18n/ HTTP/1.1" 200 3189
+[28/Sep/2018 04:15:16] "POST /api/user/ HTTP/1.1" 201 51
+[28/Sep/2018 04:15:17] "POST /login/ HTTP/1.1" 200 205
+[28/Sep/2018 04:15:27] "POST /api/account/set_account/ HTTP/1.1" 200 122
+[28/Sep/2018 04:16:53] "POST /api/user/ HTTP/1.1" 201 52
+[28/Sep/2018 04:16:53] "POST /login/ HTTP/1.1" 200 207
+Internal Server Error: /api/account/set_account/
+Traceback (most recent call last):
+  File "/home/mehdi/python-project/migrate/api/views.py", line 84, in set_account
+    account_id=request.data.get('account_id')
+  File "/home/mehdi/python-project/mig_env/lib64/python3.6/site-packages/django/db/models/manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/home/mehdi/python-project/mig_env/lib64/python3.6/site-packages/django/db/models/query.py", line 379, in get
+    self.model._meta.object_name
+user_data.models.DoesNotExist: Account matching query does not exist.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/mehdi/python-project/mig_env/lib64/python3.6/site-packages/django/db/backends/utils.py", line 65, in execute
+    return self.cursor.execute(sql, params)
+  File "/home/mehdi/python-project/mig_env/lib64/python3.6/site-packages/django/db/backends/sqlite3/base.py", line 328, in execute
+    return Database.Cursor.execute(self, query, params)
+sqlite3.IntegrityError: columns account_type, account_id are not unique
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/mehdi/python-project/mig_env/lib64/python3.6/site-packages/django/core/handlers/exception.py", line 41, in inner
+    response = get_response(request)
+  File "/home/mehdi/python-project/mig_env/lib64/python3.6/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/mehdi/python-project/mig_env/lib64/python3.6/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/mehdi/python-project/mig_env/lib64/python3.6/site-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/mehdi/python-project/mig_env/lib64/python3.6/site-packages/rest_framework/viewsets.py", line 87, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/mehdi/python-project/mig_env/lib64/python3.6/site-packages/rest_framework/views.py", line 466, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/mehdi/python-project/mig_env/lib64/python3.6/site-packages/rest_framework/views.py", line 463, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/mehdi/python-project/migrate/api/views.py", line 100, in set_account
+    account_id=request.data.get('account_id')
+  File "/home/mehdi/python-project/mig_env/lib64/python3.6/site-packages/django/db/models/manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/home/mehdi/python-project/mig_env/lib64/python3.6/site-packages/django/db/models/query.py", line 393, in create
+    obj.save(force_insert=True, using=self.db)
+  File "/home/mehdi/python-project/mig_env/lib64/python3.6/site-packages/django/db/models/base.py", line 806, in save
+    force_update=force_update, update_fields=update_fields)
+  File "/home/mehdi/python-project/mig_env/lib64/python3.6/site-packages/django/db/models/base.py", line 836, in save_base
+    updated = self._save_table(raw, cls, force_insert, force_update, using, update_fields)
+  File "/home/mehdi/python-project/mig_env/lib64/python3.6/site-packages/django/db/models/base.py", line 922, in _save_table
+    result = self._do_insert(cls._base_manager, using, fields, update_pk, raw)
+  File "/home/mehdi/python-project/mig_env/lib64/python3.6/site-packages/django/db/models/base.py", line 961, in _do_insert
+    using=using, raw=raw)
+  File "/home/mehdi/python-project/mig_env/lib64/python3.6/site-packages/django/db/models/manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/home/mehdi/python-project/mig_env/lib64/python3.6/site-packages/django/db/models/query.py", line 1060, in _insert
+    return query.get_compiler(using=using).execute_sql(return_id)
+  File "/home/mehdi/python-project/mig_env/lib64/python3.6/site-packages/django/db/models/sql/compiler.py", line 1099, in execute_sql
+    cursor.execute(sql, params)
+  File "/home/mehdi/python-project/mig_env/lib64/python3.6/site-packages/django/db/backends/utils.py", line 80, in execute
+    return super(CursorDebugWrapper, self).execute(sql, params)
+  File "/home/mehdi/python-project/mig_env/lib64/python3.6/site-packages/django/db/backends/utils.py", line 65, in execute
+    return self.cursor.execute(sql, params)
+  File "/home/mehdi/python-project/mig_env/lib64/python3.6/site-packages/django/db/utils.py", line 94, in __exit__
+    six.reraise(dj_exc_type, dj_exc_value, traceback)
+  File "/home/mehdi/python-project/mig_env/lib64/python3.6/site-packages/django/utils/six.py", line 685, in reraise
+    raise value.with_traceback(tb)
+  File "/home/mehdi/python-project/mig_env/lib64/python3.6/site-packages/django/db/backends/utils.py", line 65, in execute
+    return self.cursor.execute(sql, params)
+  File "/home/mehdi/python-project/mig_env/lib64/python3.6/site-packages/django/db/backends/sqlite3/base.py", line 328, in execute
+    return Database.Cursor.execute(self, query, params)
+django.db.utils.IntegrityError: columns account_type, account_id are not unique
+[28/Sep/2018 04:17:01] "POST /api/account/set_account/ HTTP/1.1" 500 177539
+[28/Sep/2018 04:17:24] "GET /admin/auth/user/ HTTP/1.1" 200 7351
+[28/Sep/2018 04:17:24] "GET /admin/jsi18n/ HTTP/1.1" 200 3189
+[28/Sep/2018 04:17:32] "POST /admin/auth/user/ HTTP/1.1" 200 3652
+[28/Sep/2018 04:17:34] "POST /admin/auth/user/ HTTP/1.1" 302 0
+[28/Sep/2018 04:17:34] "GET /admin/auth/user/ HTTP/1.1" 200 6584
+[28/Sep/2018 04:17:34] "GET /admin/jsi18n/ HTTP/1.1" 200 3189
+[28/Sep/2018 04:17:51] "POST /api/user/ HTTP/1.1" 201 52
+[28/Sep/2018 04:17:51] "POST /login/ HTTP/1.1" 200 207
+[28/Sep/2018 04:18:00] "POST /api/account/set_account/ HTTP/1.1" 200 122
+[28/Sep/2018 04:19:24] "GET /admin/auth/user/ HTTP/1.1" 200 6908
+[28/Sep/2018 04:19:24] "GET /admin/jsi18n/ HTTP/1.1" 200 3189
+[28/Sep/2018 04:19:28] "POST /admin/auth/user/ HTTP/1.1" 200 3388
+[28/Sep/2018 04:19:30] "POST /admin/auth/user/ HTTP/1.1" 302 0
+[28/Sep/2018 04:19:30] "GET /admin/auth/user/ HTTP/1.1" 200 6583
+[28/Sep/2018 04:19:30] "GET /admin/jsi18n/ HTTP/1.1" 200 3189
+[28/Sep/2018 04:19:47] "POST /api/user/ HTTP/1.1" 201 52
+[28/Sep/2018 04:19:48] "POST /login/ HTTP/1.1" 200 207
+[28/Sep/2018 04:19:56] "POST /api/account/set_account/ HTTP/1.1" 200 122
+[28/Sep/2018 04:22:42] "POST /api/user/ HTTP/1.1" 201 52
+[28/Sep/2018 04:22:42] "POST /login/ HTTP/1.1" 200 207
+Internal Server Error: /api/account/set_account/
+Traceback (most recent call last):
+  File "/home/mehdi/python-project/migrate/api/views.py", line 84, in set_account
+    account_id=request.data.get('account_id')
+  File "/home/mehdi/python-project/mig_env/lib64/python3.6/site-packages/django/db/models/manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/home/mehdi/python-project/mig_env/lib64/python3.6/site-packages/django/db/models/query.py", line 379, in get
+    self.model._meta.object_name
+user_data.models.DoesNotExist: Account matching query does not exist.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/mehdi/python-project/mig_env/lib64/python3.6/site-packages/django/db/backends/utils.py", line 65, in execute
+    return self.cursor.execute(sql, params)
+  File "/home/mehdi/python-project/mig_env/lib64/python3.6/site-packages/django/db/backends/sqlite3/base.py", line 328, in execute
+    return Database.Cursor.execute(self, query, params)
+sqlite3.IntegrityError: columns account_type, account_id are not unique
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/mehdi/python-project/mig_env/lib64/python3.6/site-packages/django/core/handlers/exception.py", line 41, in inner
+    response = get_response(request)
+  File "/home/mehdi/python-project/mig_env/lib64/python3.6/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/mehdi/python-project/mig_env/lib64/python3.6/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/mehdi/python-project/mig_env/lib64/python3.6/site-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/mehdi/python-project/mig_env/lib64/python3.6/site-packages/rest_framework/viewsets.py", line 87, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/mehdi/python-project/mig_env/lib64/python3.6/site-packages/rest_framework/views.py", line 466, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/mehdi/python-project/mig_env/lib64/python3.6/site-packages/rest_framework/views.py", line 463, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/mehdi/python-project/migrate/api/views.py", line 100, in set_account
+    account_id=request.data.get('account_id')
+  File "/home/mehdi/python-project/mig_env/lib64/python3.6/site-packages/django/db/models/manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/home/mehdi/python-project/mig_env/lib64/python3.6/site-packages/django/db/models/query.py", line 393, in create
+    obj.save(force_insert=True, using=self.db)
+  File "/home/mehdi/python-project/mig_env/lib64/python3.6/site-packages/django/db/models/base.py", line 806, in save
+    force_update=force_update, update_fields=update_fields)
+  File "/home/mehdi/python-project/mig_env/lib64/python3.6/site-packages/django/db/models/base.py", line 836, in save_base
+    updated = self._save_table(raw, cls, force_insert, force_update, using, update_fields)
+  File "/home/mehdi/python-project/mig_env/lib64/python3.6/site-packages/django/db/models/base.py", line 922, in _save_table
+    result = self._do_insert(cls._base_manager, using, fields, update_pk, raw)
+  File "/home/mehdi/python-project/mig_env/lib64/python3.6/site-packages/django/db/models/base.py", line 961, in _do_insert
+    using=using, raw=raw)
+  File "/home/mehdi/python-project/mig_env/lib64/python3.6/site-packages/django/db/models/manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/home/mehdi/python-project/mig_env/lib64/python3.6/site-packages/django/db/models/query.py", line 1060, in _insert
+    return query.get_compiler(using=using).execute_sql(return_id)
+  File "/home/mehdi/python-project/mig_env/lib64/python3.6/site-packages/django/db/models/sql/compiler.py", line 1099, in execute_sql
+    cursor.execute(sql, params)
+  File "/home/mehdi/python-project/mig_env/lib64/python3.6/site-packages/django/db/backends/utils.py", line 80, in execute
+    return super(CursorDebugWrapper, self).execute(sql, params)
+  File "/home/mehdi/python-project/mig_env/lib64/python3.6/site-packages/django/db/backends/utils.py", line 65, in execute
+    return self.cursor.execute(sql, params)
+  File "/home/mehdi/python-project/mig_env/lib64/python3.6/site-packages/django/db/utils.py", line 94, in __exit__
+    six.reraise(dj_exc_type, dj_exc_value, traceback)
+  File "/home/mehdi/python-project/mig_env/lib64/python3.6/site-packages/django/utils/six.py", line 685, in reraise
+    raise value.with_traceback(tb)
+  File "/home/mehdi/python-project/mig_env/lib64/python3.6/site-packages/django/db/backends/utils.py", line 65, in execute
+    return self.cursor.execute(sql, params)
+  File "/home/mehdi/python-project/mig_env/lib64/python3.6/site-packages/django/db/backends/sqlite3/base.py", line 328, in execute
+    return Database.Cursor.execute(self, query, params)
+django.db.utils.IntegrityError: columns account_type, account_id are not unique
+[28/Sep/2018 04:22:52] "POST /api/account/set_account/ HTTP/1.1" 500 177542
+[28/Sep/2018 04:41:41] "POST /api/category/sub/ HTTP/1.1" 200 893
+[28/Sep/2018 04:41:42] "POST /api/category/service/ HTTP/1.1" 200 385
+[28/Sep/2018 04:41:42] "POST /api/category/service/ HTTP/1.1" 200 1052
+[28/Sep/2018 04:41:42] "POST /api/category/service/ HTTP/1.1" 200 876
+[28/Sep/2018 04:41:42] "POST /api/category/service/ HTTP/1.1" 200 788
+[28/Sep/2018 04:41:42] "POST /api/category/service/ HTTP/1.1" 200 914
+[28/Sep/2018 04:41:42] "POST /api/category/service/ HTTP/1.1" 200 1521
+[28/Sep/2018 04:41:56] "POST /api/category/sub/ HTTP/1.1" 200 893
+[28/Sep/2018 04:41:56] "POST /api/category/service/ HTTP/1.1" 200 876
+[28/Sep/2018 04:41:56] "POST /api/category/service/ HTTP/1.1" 200 788
+[28/Sep/2018 04:41:56] "POST /api/category/service/ HTTP/1.1" 200 385
+[28/Sep/2018 04:41:56] "POST /api/category/service/ HTTP/1.1" 200 1052
+[28/Sep/2018 04:41:57] "POST /api/category/service/ HTTP/1.1" 200 1521
+[28/Sep/2018 04:41:57] "POST /api/category/service/ HTTP/1.1" 200 914
+[28/Sep/2018 04:54:38] "GET /admin/swash_service/ HTTP/1.1" 200 2722
+[28/Sep/2018 04:54:38] "GET /static/admin/css/base.css HTTP/1.1" 200 16066
+[28/Sep/2018 04:54:38] "GET /static/admin/css/dashboard.css HTTP/1.1" 200 412
+[28/Sep/2018 04:54:39] "GET /static/admin/css/fonts.css HTTP/1.1" 200 423
+[28/Sep/2018 04:54:39] "GET /static/admin/img/icon-changelink.svg HTTP/1.1" 200 380
+[28/Sep/2018 04:54:39] "GET /static/admin/img/icon-addlink.svg HTTP/1.1" 200 331
+[28/Sep/2018 04:54:42] "GET /admin/swash_service/service/ HTTP/1.1" 200 64801
+[28/Sep/2018 04:54:42] "GET /static/admin/css/changelists.css HTTP/1.1" 200 6170
+[28/Sep/2018 04:54:42] "GET /static/admin/css/forms.css HTTP/1.1" 200 8173
+[28/Sep/2018 04:54:42] "GET /admin/jsi18n/ HTTP/1.1" 200 3189
+[28/Sep/2018 04:54:42] "GET /static/admin/js/jquery.init.js HTTP/1.1" 200 363
+[28/Sep/2018 04:54:42] "GET /static/admin/js/calendar.js HTTP/1.1" 200 7790
+[28/Sep/2018 04:54:42] "GET /static/admin/js/admin/DateTimeShortcuts.js HTTP/1.1" 200 20529
+[28/Sep/2018 04:54:42] "GET /static/admin/js/core.js HTTP/1.1" 304 0
+[28/Sep/2018 04:54:42] "GET /static/admin/js/vendor/jquery/jquery.js HTTP/1.1" 304 0
+[28/Sep/2018 04:54:43] "GET /static/admin/js/admin/RelatedObjectLookups.js HTTP/1.1" 304 0
+[28/Sep/2018 04:54:43] "GET /static/admin/js/actions.js HTTP/1.1" 304 0
+[28/Sep/2018 04:54:43] "GET /static/admin/js/urlify.js HTTP/1.1" 304 0
+[28/Sep/2018 04:54:43] "GET /static/admin/js/vendor/xregexp/xregexp.js HTTP/1.1" 304 0
+[28/Sep/2018 04:54:43] "GET /static/admin/js/prepopulate.js HTTP/1.1" 304 0
+[28/Sep/2018 04:54:43] "GET /static/admin/css/widgets.css HTTP/1.1" 200 10340
+[28/Sep/2018 04:54:44] "GET /static/admin/img/tooltag-add.svg HTTP/1.1" 200 331
+[28/Sep/2018 04:54:59] "GET /admin/swash_service/ HTTP/1.1" 200 2722
+[28/Sep/2018 04:55:01] "GET /admin/swash_service/category/ HTTP/1.1" 200 22539
+[28/Sep/2018 04:55:02] "GET /admin/jsi18n/ HTTP/1.1" 200 3189
