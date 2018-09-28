@@ -25,7 +25,7 @@ SECRET_KEY = '7hmr#*#9oh#@2@(ypf9&#z63p)wnh%&h=xmkk92r3mf114)5+$'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['176.9.37.188']
+ALLOWED_HOSTS = ['176.9.37.188', '127.0.0.1']
 
 
 # Application definition
@@ -40,6 +40,7 @@ INSTALLED_APPS = [
     'rest_framework',
     'user_data',
     'swash_service',
+    'swash_order',
     'rest_framework_docs',
 ]
 
@@ -132,3 +133,6 @@ JWT_AUTH = {
     'JWT_AUTH_HEADER_PREFIX': 'JWT',
     'JWT_EXPIRATION_DELTA': datetime.timedelta(seconds=3600)
 }
+
+MEDIA_ROOT = '{}/media'.format(BASE_DIR)
+MEDIA_URL = '/media/'

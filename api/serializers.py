@@ -1,6 +1,7 @@
 from django.contrib.auth import get_user_model
 from user_data.models import Account, Profile
 from swash_service.models import Category, Service
+from swash_order.models import Order, OrderService, OrderStatus
 from rest_framework import serializers
 
 
@@ -70,3 +71,32 @@ class ServiceSerializer(serializers.ModelSerializer):
             'duration',
             'category'
         )
+
+
+class OrderSerializer(serializers.ModelSerializer):
+    pick_up_address = serializers.SerializerMethodField()
+    delivery_address = serializers.SerializerMethodField()
+    services = serializers.SerializerMethodField()
+
+    class Meta:
+        model = Order
+
+        fields = (
+            'id',
+            'status',
+            'price',
+            'discount',
+            'pure',
+            'pick_up_address',
+            'delivery_address',
+            'services'
+        )
+
+    def get_pick_up_address(self, requests):
+        return None
+
+    def get_delivery_address(self, requests):
+        return None
+
+    def get_services(self, requests):
+        return None
