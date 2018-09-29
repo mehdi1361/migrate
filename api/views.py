@@ -14,9 +14,9 @@ from rest_framework.authentication import TokenAuthentication
 from rest_framework.permissions import IsAuthenticated
 from django.conf import settings
 from .serializers import UserSerializer, AccountSerializer, ProfileSerializer, CategorySerializer, \
-    ServiceSerializer, OrderSerializer
+    ServiceSerializer, OrderSerializer, PeriodTimeSerializer
 from user_data.models import Device, Account, Profile
-from swash_service.models import Category, Service
+from swash_service.models import Category, Service, PeriodTime
 from swash_order.models import Order, OrderService, OrderStatus, OrderAddress
 
 
@@ -274,6 +274,7 @@ class OrderViewSet(DefaultsMixin, AuthMixin, mixins.RetrieveModelMixin, mixins.L
             long = request.data.get('long')
             address = request.data.get('address')
             state = request.data.get('status')
+            period_time = request.data.get('period_time')
 
             if lat is None:
                 raise Exception('lat cant null')
@@ -284,8 +285,11 @@ class OrderViewSet(DefaultsMixin, AuthMixin, mixins.RetrieveModelMixin, mixins.L
             if address is None:
                 raise Exception('address cant null')
 
-            if state is None or state not in ('pickup', 'delivery'):
+            if state is None or state not in ('pickup', 'delivery', 'alternative'):
                 raise Exception('state not valid')
+
+            if period_time is None:
+                raise Exception('period_time not valid')
 
             order = Order.objects.get(user=request.user, status__in=('draft', 'pickup'))
 
@@ -319,7 +323,7 @@ class OrderViewSet(DefaultsMixin, AuthMixin, mixins.RetrieveModelMixin, mixins.L
                 raise Exception('state not valid')
 
             selected_order = order[0]
-            selected_order.status = 'pending'
+            selected_order.status = state
             selected_order.save()
 
             serializer = self.serializer_class(selected_order)
@@ -330,7 +334,7 @@ class OrderViewSet(DefaultsMixin, AuthMixin, mixins.RetrieveModelMixin, mixins.L
             return Response({"id": 400, "message": e}, status=status.HTTP_400_BAD_REQUEST)
 
 
-
-
-
-
+class PeriodViewSet(DefaultsMixin, AuthMixin, mixins.RetrieveModelMixin, mixins.ListModelMixin,
+                     viewsets.GenericViewSet):
+    queryset = PeriodTime.objects.all()
+    serializer_class = PeriodTimeSerializer

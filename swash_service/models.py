@@ -3,6 +3,7 @@ from django.utils.encoding import python_2_unicode_compatible
 
 from base.models import Base
 from django.utils.translation import ugettext_lazy as _
+from django.core.validators import MaxValueValidator, MinValueValidator
 
 
 @python_2_unicode_compatible
@@ -41,3 +42,17 @@ class Service(Base):
 
     def __str__(self):
         return '{}'.format(self.name)
+
+
+@python_2_unicode_compatible
+class PeriodTime(Base):
+    start_time = models.PositiveIntegerField(_('start time'), validators=[MaxValueValidator(24), MinValueValidator(1)])
+    end_time = models.PositiveIntegerField(_('end time'), validators=[MaxValueValidator(24), MinValueValidator(1)])
+
+    class Meta:
+        db_table = 'period_times'
+        verbose_name = _('period_time')
+        verbose_name_plural = _('period_times')
+
+    def __str__(self):
+        return '{}-{}'.format(self.start_time, self.end_time)

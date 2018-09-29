@@ -1,6 +1,6 @@
 from django.contrib.auth import get_user_model
 from user_data.models import Account, Profile
-from swash_service.models import Category, Service
+from swash_service.models import Category, Service, PeriodTime
 from swash_order.models import Order, OrderStatus, OrderAddress
 from rest_framework import serializers, status
 
@@ -140,5 +140,19 @@ class OrderAddressSerializer(serializers.ModelSerializer):
             'lat',
             'long',
             'address',
-            'status'
+            'status',
+            'start_time',
+            'end_time',
+            'pickup_date'
+        )
+
+
+class PeriodTimeSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = PeriodTime
+
+        fields = (
+            'id',
+            'start_time',
+            'end_time'
         )

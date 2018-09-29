@@ -23,6 +23,10 @@ class Order(Base):
 
     status = models.CharField(_('status'), max_length=20, choices=STATUS_TYPE, default='draft')
     user = models.ForeignKey(User, verbose_name=_('user'), related_name='orders')
+    start_time = models.PositiveIntegerField(_('start time'), null=True, blank=True)
+    end_time = models.PositiveIntegerField(_('end time'), null=True, blank=True)
+
+    pickup_date = models.DateField(_('pickup date'), null=True)
 
     class Meta:
         verbose_name = _('order')
@@ -92,7 +96,8 @@ class OrderService(Base):
 class OrderAddress(Base):
     STATE = (
         ('pickup', 'pickup'),
-        ('delivery', 'delivery')
+        ('delivery', 'delivery'),
+        ('alternative', 'alternative')
     )
     lat = models.FloatField(_('lat'), default=0.0)
     long = models.FloatField(_('long'), default=0.0)
