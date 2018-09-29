@@ -275,6 +275,7 @@ class OrderViewSet(DefaultsMixin, AuthMixin, mixins.RetrieveModelMixin, mixins.L
             address = request.data.get('address')
             state = request.data.get('status')
             period_time = request.data.get('period_time')
+            date_pickup = request.data.get('period_time')
 
             if lat is None:
                 raise Exception('lat cant null')
@@ -291,15 +292,30 @@ class OrderViewSet(DefaultsMixin, AuthMixin, mixins.RetrieveModelMixin, mixins.L
             if period_time is None:
                 raise Exception('period_time not valid')
 
-            order = Order.objects.get(user=request.user, status__in=('draft', 'pickup'))
+            if date_pickup is None:
+                raise Exception('date pickup not valid')
 
-            OrderAddress.objects.create(
-                order=order,
-                lat=lat,
-                long=long,
-                address=address,
-                status=state
-            )
+            order = Order.objects.get(user=request.user, status__in=('draft', 'pickup'))
+            period_time_entity = get_object_or_404(PeriodTime, id=period_time)
+            order.start_time = period_time_entity.start_time
+            order.end_time = period_time_entity.end_time
+            order.pickup_date = date_pickup
+
+            try:
+                order_address = OrderAddress.objects.get(order=order, status=status)
+                order_address.address = address
+                order_address.lat = lat
+                order_address.long = long
+                order_address.save()
+
+            except:
+                OrderAddress.objects.create(
+                    order=order,
+                    lat=lat,
+                    long=long,
+                    address=address,
+                    status=state
+                )
             OrderStatus.objects.create(order=order, status='pickup')
             order.status = 'pickup'
             order.save()
@@ -332,6 +348,31 @@ class OrderViewSet(DefaultsMixin, AuthMixin, mixins.RetrieveModelMixin, mixins.L
 
         except Exception as e:
             return Response({"id": 400, "message": e}, status=status.HTTP_400_BAD_REQUEST)
+
+    @list_route(methods=['post'])
+    def paid(self, request):
+        order = get_object_or_404(Order, user=request.user, status='pickup')
+        order.status = 'paid'
+        order.save()
+        serializer = self.serializer_class(order)
+
+        return Response({"id": 200, "message": serializer.data}, status=status.HTTP_200_OK)
+
+    @list_route(methods=['post'])
+    def confirm(self, request):
+        order = get_object_or_404(Order, user=request.user, status='paid')
+        order.status = 'confirmed'
+        order.save()
+
+        serializer = self.serializer_class(order)
+
+        return Response({"id": 200, "message": serializer.data}, status=status.HTTP_200_OK)
+
+    @list_route(methods=['post'])
+    def order_list(self, request):
+        orders = Order.objects.filter(status='confirmed')
+        serializer = OrderSerializer(orders, many=True)
+        return Response({"id": 200, "message": serializer.data}, status=status.HTTP_200_OK)
 
 
 class PeriodViewSet(DefaultsMixin, AuthMixin, mixins.RetrieveModelMixin, mixins.ListModelMixin,
