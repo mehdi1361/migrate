@@ -1,0 +1,42 @@
+[
+{
+  "model": "swash_service.periodtime",
+  "pk": 1,
+  "fields": {
+    "created_date": "2018-09-29T20:36:02.469Z",
+    "updated_date": "2018-09-29T20:36:02.469Z",
+    "start_time": 8,
+    "end_time": 10
+  }
+},
+{
+  "model": "swash_service.periodtime",
+  "pk": 2,
+  "fields": {
+    "created_date": "2018-09-29T20:36:08.446Z",
+    "updated_date": "2018-09-29T20:36:08.446Z",
+    "start_time": 10,
+    "end_time": 12
+  }
+},
+{
+  "model": "swash_service.periodtime",
+  "pk": 3,
+  "fields": {
+    "created_date": "2018-09-29T20:36:15.498Z",
+    "updated_date": "2018-09-29T20:36:15.498Z",
+    "start_time": 12,
+    "end_time": 14
+  }
+},
+{
+  "model": "swash_service.periodtime",
+  "pk": 4,
+  "fields": {
+    "created_date": "2018-09-29T20:36:48.421Z",
+    "updated_date": "2018-09-29T20:36:48.421Z",
+    "start_time": 14,
+    "end_time": 16
+  }
+}
+]
