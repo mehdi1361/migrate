@@ -52,6 +52,7 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    'swash_order.middle.FilterIPMiddleware'
 ]
 
 ROOT_URLCONF = 'mig_back.urls'
