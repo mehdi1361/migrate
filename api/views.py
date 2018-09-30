@@ -1,5 +1,5 @@
 import uuid
-import datetime
+import datetime as main_datetime
 from datetime import datetime, timedelta
 from django.contrib.auth import get_user_model
 from django.contrib.auth.models import User
@@ -309,7 +309,7 @@ class OrderViewSet(DefaultsMixin, AuthMixin, mixins.RetrieveModelMixin, mixins.L
             period_time_entity = get_object_or_404(PeriodTime, id=period_time)
             order.start_time = period_time_entity.start_time
             order.end_time = period_time_entity.end_time
-            order.pickup_date = datetime.datetime.strptime(date_pickup, "%Y-%m-%d").date()
+            order.pickup_date = main_datetime.datetime.strptime(date_pickup, "%Y-%m-%d").date()
 
             try:
                 order_address = OrderAddress.objects.get(order=order, status=status)
