@@ -1642,3 +1642,72 @@ django.db.utils.IntegrityError: columns account_type, account_id are not unique
 [28/Sep/2018 04:54:59] "GET /admin/swash_service/ HTTP/1.1" 200 2722
 [28/Sep/2018 04:55:01] "GET /admin/swash_service/category/ HTTP/1.1" 200 22539
 [28/Sep/2018 04:55:02] "GET /admin/jsi18n/ HTTP/1.1" 200 3189
+[29/Sep/2018 22:41:16] "GET /admin/ HTTP/1.1" 200 7685
+Not Found: /api/order/confirm/
+[29/Sep/2018 22:41:55] "POST /api/order/confirm/ HTTP/1.1" 404 23
+[29/Sep/2018 22:42:29] "POST /api/order/add/ HTTP/1.1" 200 384
+[29/Sep/2018 22:42:29] "POST /api/order/add/ HTTP/1.1" 200 384
+[29/Sep/2018 22:42:30] "POST /api/order/add/ HTTP/1.1" 200 384
+[29/Sep/2018 22:42:31] "POST /api/order/add/ HTTP/1.1" 200 384
+Not Found: /api/order/confirm/
+[29/Sep/2018 22:42:35] "POST /api/order/confirm/ HTTP/1.1" 404 23
+Internal Server Error: /api/order/paid/
+Traceback (most recent call last):
+  File "/home/mehdi/python-project/mig_env/lib64/python3.6/site-packages/django/core/handlers/exception.py", line 41, in inner
+    response = get_response(request)
+  File "/home/mehdi/python-project/mig_env/lib64/python3.6/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/mehdi/python-project/mig_env/lib64/python3.6/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/mehdi/python-project/mig_env/lib64/python3.6/site-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/mehdi/python-project/mig_env/lib64/python3.6/site-packages/rest_framework/viewsets.py", line 87, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/mehdi/python-project/mig_env/lib64/python3.6/site-packages/rest_framework/views.py", line 466, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/mehdi/python-project/mig_env/lib64/python3.6/site-packages/rest_framework/views.py", line 463, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/mehdi/python-project/migrate/api/views.py", line 359, in paid
+    return Response({"id": 200, "message": serializer.data}, status=status.HTTP_200_OK)
+  File "/home/mehdi/python-project/mig_env/lib64/python3.6/site-packages/rest_framework/serializers.py", line 507, in data
+    ret = super(Serializer, self).data
+  File "/home/mehdi/python-project/mig_env/lib64/python3.6/site-packages/rest_framework/serializers.py", line 239, in data
+    self._data = self.to_representation(self.instance)
+  File "/home/mehdi/python-project/mig_env/lib64/python3.6/site-packages/rest_framework/serializers.py", line 476, in to_representation
+    ret[field.field_name] = field.to_representation(attribute)
+  File "/home/mehdi/python-project/mig_env/lib64/python3.6/site-packages/rest_framework/fields.py", line 1664, in to_representation
+    return method(value)
+  File "/home/mehdi/python-project/migrate/api/serializers.py", line 120, in get_services
+    status__in=('draft', 'pending', 'pickup')
+  File "/home/mehdi/python-project/mig_env/lib64/python3.6/site-packages/django/db/models/manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/home/mehdi/python-project/mig_env/lib64/python3.6/site-packages/django/db/models/query.py", line 379, in get
+    self.model._meta.object_name
+swash_order.models.DoesNotExist: Order matching query does not exist.
+[29/Sep/2018 22:47:34] "POST /api/order/paid/ HTTP/1.1" 500 116531
+Not Found: /favicon.ico
+[29/Sep/2018 22:47:34] "GET /favicon.ico HTTP/1.1" 404 2412
+Not Found: /api/pickup/paid/
+[29/Sep/2018 22:49:00] "POST /api/pickup/paid/ HTTP/1.1" 404 12624
+Not Found: /favicon.ico
+[29/Sep/2018 22:49:01] "GET /favicon.ico HTTP/1.1" 404 2412
+[29/Sep/2018 22:49:25] "GET /admin/ HTTP/1.1" 200 7685
+[29/Sep/2018 22:56:05] "GET /admin/ HTTP/1.1" 200 8357
+[29/Sep/2018 22:56:05] "GET /static/admin/css/base.css HTTP/1.1" 304 0
+[29/Sep/2018 22:56:05] "GET /static/admin/css/dashboard.css HTTP/1.1" 200 412
+[29/Sep/2018 22:56:06] "GET /static/admin/css/fonts.css HTTP/1.1" 304 0
+[29/Sep/2018 22:56:06] "GET /static/admin/img/icon-changelink.svg HTTP/1.1" 304 0
+[29/Sep/2018 22:56:06] "GET /static/admin/img/icon-addlink.svg HTTP/1.1" 304 0
+[29/Sep/2018 22:56:06] "GET /static/admin/img/icon-deletelink.svg HTTP/1.1" 304 0
+[29/Sep/2018 22:56:10] "GET /admin/swash_order/order/ HTTP/1.1" 200 7331
+[29/Sep/2018 22:56:10] "GET /static/admin/css/changelists.css HTTP/1.1" 200 6170
+[29/Sep/2018 22:56:10] "GET /admin/jsi18n/ HTTP/1.1" 200 3189
+[29/Sep/2018 22:56:10] "GET /static/admin/js/jquery.init.js HTTP/1.1" 200 363
+[29/Sep/2018 22:56:11] "GET /static/admin/js/vendor/jquery/jquery.js HTTP/1.1" 304 0
+[29/Sep/2018 22:56:11] "GET /static/admin/js/core.js HTTP/1.1" 304 0
+[29/Sep/2018 22:56:11] "GET /static/admin/js/admin/RelatedObjectLookups.js HTTP/1.1" 304 0
+[29/Sep/2018 22:56:11] "GET /static/admin/js/urlify.js HTTP/1.1" 304 0
+[29/Sep/2018 22:56:11] "GET /static/admin/js/actions.js HTTP/1.1" 304 0
+[29/Sep/2018 22:56:11] "GET /static/admin/js/prepopulate.js HTTP/1.1" 304 0
+[29/Sep/2018 22:56:11] "GET /static/admin/js/vendor/xregexp/xregexp.js HTTP/1.1" 304 0
+[29/Sep/2018 22:56:12] "GET /static/admin/img/tooltag-add.svg HTTP/1.1" 200 331
