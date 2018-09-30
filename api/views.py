@@ -15,10 +15,10 @@ from rest_framework.authentication import TokenAuthentication
 from rest_framework.permissions import IsAuthenticated
 from django.conf import settings
 from .serializers import UserSerializer, AccountSerializer, ProfileSerializer, CategorySerializer, \
-    ServiceSerializer, OrderSerializer, PeriodTimeSerializer
+    ServiceSerializer, OrderSerializer, PeriodTimeSerializer, OrderMessageSerializer
 from user_data.models import Device, Account, Profile
 from swash_service.models import Category, Service, PeriodTime
-from swash_order.models import Order, OrderService, OrderStatus, OrderAddress
+from swash_order.models import Order, OrderService, OrderStatus, OrderAddress, OrderMessage
 
 
 class DefaultsMixin(object):
@@ -398,7 +398,7 @@ class OrderViewSet(DefaultsMixin, AuthMixin, mixins.RetrieveModelMixin, mixins.L
             state = request.data.get('state')
             order_id = request.data.get('order_id')
 
-            if state is None and state not in ('on_the_way', 'delivered', 'pickedup'):
+            if state is None and state not in ('on_the_way_delivered', 'delivered', 'pickedup', 'on_the_way_pickedup'):
                 raise Exception('state not valid')
 
             if order_id is None:
@@ -419,3 +419,47 @@ class PeriodViewSet(DefaultsMixin, AuthMixin, mixins.RetrieveModelMixin, mixins.
                      viewsets.GenericViewSet):
     queryset = PeriodTime.objects.all()
     serializer_class = PeriodTimeSerializer
+
+
+class OrderMessageViewSet(DefaultsMixin, AuthMixin, mixins.RetrieveModelMixin, mixins.ListModelMixin,
+                     viewsets.GenericViewSet):
+    queryset = OrderMessage.objects.all()
+    serializer_class = OrderMessageSerializer
+
+    @list_route(methods=['post'])
+    def send(self, request):
+        try:
+            order_id = request.data.get('order_id')
+            text_message = request.data.get('text_message')
+
+            if order_id is None:
+                raise Exception('order id not found')
+
+            if text_message is None:
+                raise Exception('text message not found')
+
+            order = Order.objects.get(id=order_id)
+            OrderMessage.objects.create(sender=request.user, order=order, text_message=text_message)
+
+            return Response({"id": 200, "message": "message sent!!!"}, status=status.HTTP_200_OK)
+
+        except Exception as e:
+            return Response({"id": 400, "message": e}, status=status.HTTP_400_BAD_REQUEST)
+
+    @list_route(methods=['post'])
+    def inbox(self, request):
+        try:
+            order_id = request.data.get('order_id')
+
+            if order_id is None:
+                raise Exception('order id not found')
+
+            order = Order.objects.get(id=order_id)
+            messages = OrderMessage.objects.filter(order=order).order_by('created_date')
+
+            serializer = self.serializer_class(messages, many=True)
+
+            return Response({"id": 200, "message": serializer.data}, status=status.HTTP_200_OK)
+
+        except Exception as e:
+            return Response({"id": 400, "message": e}, status=status.HTTP_400_BAD_REQUEST)

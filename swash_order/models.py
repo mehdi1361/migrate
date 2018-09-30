@@ -15,7 +15,8 @@ class Order(Base):
         ('pickup', 'pickup'),
         ('progress', 'progress'),
         ('packing', 'packing'),
-        ('on_the_way', 'on_the_way'),
+        ('on_the_way_delivered', 'on_the_way_delivered'),
+        ('on_the_way_pickedup', 'on_the_way_pickedup'),
         ('delivered', 'delivered'),
         ('pending', 'pending'),
         ('cancel', 'cancel'),
@@ -111,6 +112,21 @@ class OrderAddress(Base):
         verbose_name = _('address')
         verbose_name_plural = _('addresses')
         db_table = 'addresses'
+
+    def __str__(self):
+        return '{}'.format(self.id)
+
+
+@python_2_unicode_compatible
+class OrderMessage(Base):
+    sender = models.ForeignKey(User, verbose_name=_('sender'), related_name='order_messages')
+    order = models.ForeignKey(Order, verbose_name=_('order'), related_name='sender_messages')
+    text_message = models.TextField(_('text message'))
+
+    class Meta:
+        verbose_name = _('message')
+        verbose_name_plural = _('messages')
+        db_table = 'messages'
 
     def __str__(self):
         return '{}'.format(self.id)

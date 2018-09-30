@@ -1,7 +1,7 @@
 from django.contrib.auth import get_user_model
 from user_data.models import Account, Profile
 from swash_service.models import Category, Service, PeriodTime
-from swash_order.models import Order, OrderStatus, OrderAddress
+from swash_order.models import Order, OrderStatus, OrderAddress, OrderMessage
 from rest_framework import serializers, status
 
 
@@ -94,8 +94,7 @@ class OrderSerializer(serializers.ModelSerializer):
 
     def get_pick_up_address(self, obj):
         try:
-            order = Order.objects.get(user=obj.user, id=obj.id)
-            order_pickup_address = OrderAddress.objects.get(order=order, status='pickup')
+            order_pickup_address = OrderAddress.objects.get(order=obj, status='pickup')
             serializer = OrderAddressSerializer(order_pickup_address)
 
             return serializer.data
@@ -140,10 +139,7 @@ class OrderAddressSerializer(serializers.ModelSerializer):
             'lat',
             'long',
             'address',
-            'status',
-            'start_time',
-            'end_time',
-            'pickup_date'
+            'status'
         )
 
 
@@ -155,4 +151,16 @@ class PeriodTimeSerializer(serializers.ModelSerializer):
             'id',
             'start_time',
             'end_time'
+        )
+
+
+class OrderMessageSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = OrderMessage
+
+        fields = (
+            'sender',
+            'order',
+            'text_message',
+            'created_date'
         )
