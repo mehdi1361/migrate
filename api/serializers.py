@@ -92,9 +92,9 @@ class OrderSerializer(serializers.ModelSerializer):
             'services'
         )
 
-    def get_pick_up_address(self, requests):
+    def get_pick_up_address(self, obj):
         try:
-            order = Order.objects.get(user=requests.user, status='pickup')
+            order = Order.objects.get(user=obj.user, id=obj.id)
             order_pickup_address = OrderAddress.objects.get(order=order, status='pickup')
             serializer = OrderAddressSerializer(order_pickup_address)
 
@@ -103,9 +103,9 @@ class OrderSerializer(serializers.ModelSerializer):
         except Exception as e:
             return {}
 
-    def get_delivery_address(self, requests):
+    def get_delivery_address(self, obj):
         try:
-            order = Order.objects.get(user=requests.user, status='pickup')
+            order = Order.objects.get(user=obj.user, id=obj.id)
             order_pickup_address = OrderAddress.objects.get(order=order, status='delivery')
             serializer = OrderAddressSerializer(order_pickup_address)
 
@@ -114,10 +114,10 @@ class OrderSerializer(serializers.ModelSerializer):
         except Exception as e:
             return {}
 
-    def get_services(self, requests):
+    def get_services(self, obj):
         order = Order.objects.get(
-            user=requests.user,
-            status__in=('draft', 'pending', 'pickup')
+            user=obj.user,
+            id=obj.id
         )
         lst_service = []
 

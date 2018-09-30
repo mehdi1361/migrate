@@ -361,22 +361,30 @@ class OrderViewSet(DefaultsMixin, AuthMixin, mixins.RetrieveModelMixin, mixins.L
 
     @list_route(methods=['post'])
     def paid(self, request):
-        order = get_object_or_404(Order, user=request.user, status='pickup')
-        order.status = 'paid'
-        order.save()
-        serializer = self.serializer_class(order)
+        try:
+            order = Order.objects.get(user=request.user, status='pickup')
+            order.status = 'paid'
+            order.save()
+            serializer = self.serializer_class(order)
 
-        return Response({"id": 200, "message": serializer.data}, status=status.HTTP_200_OK)
+            return Response({"id": 200, "message": serializer.data}, status=status.HTTP_200_OK)
+
+        except Exception as e:
+            return Response({"id": 400, "message": e}, status=status.HTTP_400_BAD_REQUEST)
 
     @list_route(methods=['post'])
     def confirm(self, request):
-        order = get_object_or_404(Order, user=request.user, status='paid')
-        order.status = 'confirmed'
-        order.save()
+        try:
+            order = Order.objects.get(user=request.user, status='paid')
+            order.status = 'confirmed'
+            order.save()
 
-        serializer = self.serializer_class(order)
+            serializer = self.serializer_class(order)
 
-        return Response({"id": 200, "message": serializer.data}, status=status.HTTP_200_OK)
+            return Response({"id": 200, "message": serializer.data}, status=status.HTTP_200_OK)
+
+        except Exception as e:
+            return Response({"id": 400, "message": e}, status=status.HTTP_400_BAD_REQUEST)
 
     @list_route(methods=['post'])
     def order_list(self, request):
