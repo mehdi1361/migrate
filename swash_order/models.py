@@ -19,6 +19,8 @@ class Order(Base):
         ('delivered', 'delivered'),
         ('pending', 'pending'),
         ('cancel', 'cancel'),
+        ('pickedup', 'pickedup'),
+
     )
 
     status = models.CharField(_('status'), max_length=20, choices=STATUS_TYPE, default='draft')

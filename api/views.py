@@ -55,8 +55,17 @@ class UserViewSet(viewsets.ModelViewSet):
     def create(self, request, *args, **kwargs):
         device_id = request.data['deviceUniqueID']
         device_name = request.data['deviceName']
-        return_id = 200
+
+        if device_id is None:
+            return Response({'id': 400, 'message': 'device id not in request'},
+                            status=status.HTTP_400_BAD_REQUEST)
+
+        if device_name is None:
+            return Response({'id': 400, 'message': 'device name not in request'},
+                            status=status.HTTP_400_BAD_REQUEST)
+
         try:
+            return_id = 200
             device = Device.objects.get(device_id=device_id)
             user_id = device.user.user.username
 
@@ -370,9 +379,31 @@ class OrderViewSet(DefaultsMixin, AuthMixin, mixins.RetrieveModelMixin, mixins.L
 
     @list_route(methods=['post'])
     def order_list(self, request):
-        orders = Order.objects.filter(status='confirmed')
+        orders = Order.objects.filter(status__in=('confirmed', 'on_the_way', 'delivered', 'pickedup'))
         serializer = OrderSerializer(orders, many=True)
         return Response({"id": 200, "message": serializer.data}, status=status.HTTP_200_OK)
+
+    @list_route(methods=['post'])
+    def operate(self, request):
+        try:
+            state = request.data.get('state')
+            order_id = request.data.get('order_id')
+
+            if state is None and state not in ('on_the_way', 'delivered', 'pickedup'):
+                raise Exception('state not valid')
+
+            if order_id is None:
+                raise Exception('order id not in request')
+
+            order = Order.objects.get(id=order_id, status__in=('confirmed', 'on_the_way', 'delivered', 'pickedup'))
+            order.status = state
+            order.save()
+
+            serializer = OrderSerializer(order)
+            return Response({"id": 200, "message": serializer.data}, status=status.HTTP_200_OK)
+
+        except Exception as e:
+            return Response({"id": 400, "message": e}, status=status.HTTP_400_BAD_REQUEST)
 
 
 class PeriodViewSet(DefaultsMixin, AuthMixin, mixins.RetrieveModelMixin, mixins.ListModelMixin,
