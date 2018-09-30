@@ -1,4 +1,5 @@
 import uuid
+import datetime
 from datetime import datetime, timedelta
 from django.contrib.auth import get_user_model
 from django.contrib.auth.models import User
@@ -284,7 +285,7 @@ class OrderViewSet(DefaultsMixin, AuthMixin, mixins.RetrieveModelMixin, mixins.L
             address = request.data.get('address')
             state = request.data.get('status')
             period_time = request.data.get('period_time')
-            date_pickup = request.data.get('period_time')
+            date_pickup = request.data.get('date_pickup')
 
             if lat is None:
                 raise Exception('lat cant null')
@@ -308,7 +309,7 @@ class OrderViewSet(DefaultsMixin, AuthMixin, mixins.RetrieveModelMixin, mixins.L
             period_time_entity = get_object_or_404(PeriodTime, id=period_time)
             order.start_time = period_time_entity.start_time
             order.end_time = period_time_entity.end_time
-            order.pickup_date = date_pickup
+            order.pickup_date = datetime.datetime.strptime(date_pickup, "%Y-%m-%d").date()
 
             try:
                 order_address = OrderAddress.objects.get(order=order, status=status)
