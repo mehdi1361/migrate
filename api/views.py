@@ -215,6 +215,9 @@ class OrderViewSet(DefaultsMixin, AuthMixin, mixins.RetrieveModelMixin, mixins.L
         except Exception as e:
             return Response({"id": 400, "message": e}, status=status.HTTP_400_BAD_REQUEST)
 
+        except Order.DoesNotExist as e:
+            return Response({"id": 400, "message": "order Does Not exisit!!!"}, status=status.HTTP_400_BAD_REQUEST)
+
     @list_route(methods=['post'])
     def add(self, request):
         try:
