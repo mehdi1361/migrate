@@ -6,7 +6,7 @@ from django.contrib.auth.models import User
 from pip._internal.download import user_agent
 from rest_framework import viewsets, status, filters, mixins
 from rest_framework.permissions import AllowAny
-from rest_framework.decorators import list_route
+from rest_framework.decorators import list_route, detail_route
 from rest_framework.response import Response
 from django.shortcuts import get_object_or_404
 
@@ -137,26 +137,26 @@ class ProfileViewSet(DefaultsMixin, AuthMixin, mixins.RetrieveModelMixin, mixins
     queryset = Profile.objects.all()
     serializer_class = ProfileSerializer
 
-    # @list_route(methods=['post'])
-    def create(self, request):
-        if request.user.accounts.count() <= 0:
+    @detail_route(methods=['post'])
+    def register(self, request):
+        profile_serializer = self.serializer_class(data=request.data)
+
+        if profile_serializer.is_valid():
+            profile_serializer.save()
             return Response(
                 {
-                    'id': 400,
-                    'data': -100,
-                    'message': 'no account registered'
+                    'id': 200,
+                    'message': profile_serializer.data
                 },
-                status=status.HTTP_400_BAD_REQUEST
+                status=status.HTTP_200_OK
             )
 
-        # if request.user
         return Response(
             {
-                'id': 200,
-                'data': request.user.username,
-                'message': 'profile registered'
+                'id': 400,
+                'message': 'error in params'
             },
-            status=status.HTTP_200_OK
+            status=status.HTTP_400_BAD_REQUEST
         )
 
 
@@ -409,6 +409,26 @@ class OrderViewSet(DefaultsMixin, AuthMixin, mixins.RetrieveModelMixin, mixins.L
             order.save()
 
             serializer = OrderSerializer(order)
+            return Response({"id": 200, "message": serializer.data}, status=status.HTTP_200_OK)
+
+        except Exception as e:
+            return Response({"id": 400, "message": e}, status=status.HTTP_400_BAD_REQUEST)
+
+    @list_route(methods=['post'])
+    def ongoing(self, request):
+        try:
+            orders = Order.objects.filter(user=request.user).exclude(status__in=('draft', 'pickup', 'paid'))
+            serializer = OrderSerializer(orders, many=True)
+            return Response({"id": 200, "message": serializer.data}, status=status.HTTP_200_OK)
+
+        except Exception as e:
+            return Response({"id": 400, "message": e}, status=status.HTTP_400_BAD_REQUEST)
+
+    @list_route(methods=['post'])
+    def past(self, request):
+        try:
+            orders = Order.objects.filter(user=request.user, status='done')
+            serializer = OrderSerializer(orders, many=True)
             return Response({"id": 200, "message": serializer.data}, status=status.HTTP_200_OK)
 
         except Exception as e:

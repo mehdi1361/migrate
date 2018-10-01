@@ -3,6 +3,7 @@ from user_data.models import Account, Profile
 from swash_service.models import Category, Service, PeriodTime
 from swash_order.models import Order, OrderStatus, OrderAddress, OrderMessage
 from rest_framework import serializers, status
+from user_data.models import Profile
 
 
 class UserSerializer(serializers.ModelSerializer):
@@ -34,10 +35,12 @@ class ProfileSerializer(serializers.ModelSerializer):
         model = Profile
 
         fields = (
-            'first_name',
-            'last_name',
-            'gender',
-            'email'
+            'name',
+            'profile_avatar',
+            'sur_name',
+            'mobile',
+            'mobile_verified',
+            'address'
         )
 
 
