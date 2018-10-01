@@ -238,35 +238,24 @@ class OrderViewSet(DefaultsMixin, AuthMixin, mixins.RetrieveModelMixin, mixins.L
 
     @list_route(methods=['post'])
     def add(self, request):
+        service_id = request.data.get('service_id')
+        service = get_object_or_404(Service, pk=service_id)
+        order = None
+
         try:
-            service_id = request.data.get('service_id')
-            service = get_object_or_404(Service, pk=service_id)
-
-            order, created = Order.objects.get_or_create(
-                user=request.user,
-                defaults={'status': 'draft'}
-            )
-
-            if created:
-                OrderService.objects.create(order=order, service=service)
-                OrderStatus.objects.create(order=order, status='draft')
-
-            else:
-                try:
-                    order_service = OrderService.objects.get(order=order, service=service)
-
-                    order_service.count += 1
-                    order_service.save()
-
-                except Exception as e:
-                    OrderService.objects.create(order=order, service=service)
-
-            serializer = self.serializer_class(order)
-
-            return Response({"id": 200, "message": serializer.data}, status=status.HTTP_200_OK)
+            order = Order.objects.get(user=request.user, status='draft')
+            order_service = OrderService.objects.get(order=order, service=service)
+            order_service.count += 1
+            order_service.save()
 
         except Exception as e:
-            return Response({"id": 400, "message": e}, status=status.HTTP_400_BAD_REQUEST)
+            order = Order.objects.create(user=request.user, status='draft')
+            OrderService.objects.create(order=order, service=service)
+            OrderStatus.objects.create(order=order, status='draft')
+
+        finally:
+            serializer = self.serializer_class(order)
+            return Response({"id": 200, "message": serializer.data}, status=status.HTTP_200_OK)
 
     @list_route(methods=['post'])
     def sub(self, request):
