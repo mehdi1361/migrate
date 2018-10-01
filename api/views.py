@@ -198,6 +198,24 @@ class CategoryViewSet(DefaultsMixin, AuthMixin, mixins.RetrieveModelMixin, mixin
         except Exception as e:
             return Response({'id': 400, 'message': e}, status=status.HTTP_400_BAD_REQUEST)
 
+    @list_route(methods=['post'])
+    def sub_service(self, request):
+        try:
+            category_id = request.data.get('category_id')
+            if category_id is None:
+                raise Exception('error in parameter category_id not found')
+
+            parent = Category.objects.get(id=category_id)
+            categories = list(Category.objects.filter(parent=parent).values_list('id', flat=True))
+
+            services = Service.objects.filter(category__parent_id__in=categories)
+            serializer = ServiceSerializer(services, many=True)
+
+            return Response({"id": 200, "message": serializer.data}, status=status.HTTP_200_OK)
+
+        except Exception as e:
+            return Response({'id': 400, 'message': e}, status=status.HTTP_400_BAD_REQUEST)
+
 
 class OrderViewSet(DefaultsMixin, AuthMixin, mixins.RetrieveModelMixin, mixins.ListModelMixin,
                      viewsets.GenericViewSet):
