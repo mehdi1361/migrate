@@ -137,27 +137,38 @@ class ProfileViewSet(DefaultsMixin, AuthMixin, mixins.RetrieveModelMixin, mixins
     queryset = Profile.objects.all()
     serializer_class = ProfileSerializer
 
-    @detail_route(methods=['post'])
+    @list_route(methods=['post'])
     def register(self, request):
-        profile_serializer = self.serializer_class(data=request.data)
+        try:
+            file = request.FILES['profile_pic_url']
+            first_name = request.data.get('first_name')
+            last_name = request.data.get('last_name')
 
-        if profile_serializer.is_valid():
-            profile_serializer.save()
-            return Response(
-                {
-                    'id': 200,
-                    'message': profile_serializer.data
-                },
-                status=status.HTTP_200_OK
-            )
+            if file is None:
+                raise Exception('no file upload')
 
-        return Response(
-            {
-                'id': 400,
-                'message': 'error in params'
-            },
-            status=status.HTTP_400_BAD_REQUEST
-        )
+            if first_name is None:
+                raise Exception('first name not found')
+
+            if last_name is None:
+                raise Exception('last name not found')
+
+            try:
+                profile = Profile.objects.get(user=request.user)
+                raise Exception('profile already exist!!!')
+
+            except:
+                profile = Profile.objects.create(
+                    user=request.user,
+                    first_name=first_name,
+                    last_name=last_name,
+                    profile_pic_url=file
+                )
+                serializer = self.serializer_class(profile)
+                return Response({"id": 200, "message": serializer.data}, status=status.HTTP_200_OK)
+
+        except Exception as e:
+            return Response({'id': 400, 'message': str(e)}, status=status.HTTP_400_BAD_REQUEST)
 
 
 class CategoryViewSet(DefaultsMixin, AuthMixin, mixins.RetrieveModelMixin, mixins.ListModelMixin,
