@@ -431,7 +431,7 @@ class OrderViewSet(DefaultsMixin, AuthMixin, mixins.RetrieveModelMixin, mixins.L
     @list_route(methods=['post'])
     def ongoing(self, request):
         try:
-            orders = Order.objects.filter(user=request.user).exclude(status__in=('draft', 'pickup', 'paid'))
+            orders = Order.objects.filter(user=request.user).exclude(status__in=('draft', 'pickup', 'paid', 'done'))
             serializer = OrderSerializer(orders, many=True)
             return Response({"id": 200, "message": serializer.data}, status=status.HTTP_200_OK)
 
