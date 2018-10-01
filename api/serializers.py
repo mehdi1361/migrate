@@ -117,21 +117,25 @@ class OrderSerializer(serializers.ModelSerializer):
             return {}
 
     def get_services(self, obj):
-        order = Order.objects.get(
-            user=obj.user,
-            id=obj.id
-        )
-        lst_service = []
+        try:
+            order = Order.objects.get(
+                user=obj.user,
+                id=obj.id
+            )
+            lst_service = []
 
-        for order_service in order.services.all():
-            service = Service.objects.get(id=order_service.service.id)
-            service_serializer = ServiceSerializer(service)
-            result = service_serializer.data
+            for order_service in order.services.all():
+                service = Service.objects.get(id=order_service.service.id)
+                service_serializer = ServiceSerializer(service)
+                result = service_serializer.data
 
-            result['order_count'] = order_service.count
-            lst_service.append(result)
+                result['order_count'] = order_service.count
+                lst_service.append(result)
 
-        return lst_service
+            return lst_service
+
+        except Exception as e:
+            return []
 
 
 class OrderAddressSerializer(serializers.ModelSerializer):
