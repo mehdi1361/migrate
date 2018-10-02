@@ -88,6 +88,9 @@ class OrderSerializer(serializers.ModelSerializer):
             'price',
             'discount',
             'pure',
+            'start_time',
+            'end_time',
+            'pickup_date'
             'pick_up_address',
             'delivery_address',
             'services',

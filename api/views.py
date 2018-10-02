@@ -3,7 +3,6 @@ import datetime as main_datetime
 from datetime import datetime, timedelta
 from django.contrib.auth import get_user_model
 from django.contrib.auth.models import User
-from pip._internal.download import user_agent
 from rest_framework import viewsets, status, filters, mixins
 from rest_framework.permissions import AllowAny
 from rest_framework.decorators import list_route, detail_route
