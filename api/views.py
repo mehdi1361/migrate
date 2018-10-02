@@ -255,9 +255,13 @@ class OrderViewSet(DefaultsMixin, AuthMixin, mixins.RetrieveModelMixin, mixins.L
 
         try:
             order = Order.objects.get(user=request.user, status='draft')
-            order_service = OrderService.objects.get(order=order, service=service)
-            order_service.count += 1
-            order_service.save()
+            try:
+                order_service = OrderService.objects.get(order=order, service=service)
+                order_service.count += 1
+                order_service.save()
+
+            except OrderService.DoesNotExist:
+                order_service = OrderService.objects.create(order=order, service=service)
 
         except Exception as e:
             order = Order.objects.create(user=request.user, status='draft')
