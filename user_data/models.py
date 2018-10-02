@@ -55,7 +55,7 @@ class Profile(Base):
         db_table = 'profiles'
 
     def __str__(self):
-        return '{}-{}'.format(self.name, self.last_name)
+        return '{}-{}'.format(self.first_name, self.last_name)
 
 
 @python_2_unicode_compatible
