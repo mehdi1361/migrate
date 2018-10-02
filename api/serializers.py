@@ -135,6 +135,15 @@ class OrderSerializer(serializers.ModelSerializer):
         except Exception as e:
             return []
 
+    def get_profile(self, obj):
+        try:
+            order_pickup_address = Profile.objects.get(user=obj.user)
+            serializer = ProfileSerializer(order_pickup_address)
+
+            return serializer.data
+
+        except Exception as e:
+            return {}
 
 class OrderAddressSerializer(serializers.ModelSerializer):
     class Meta:
