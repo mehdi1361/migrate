@@ -5,11 +5,7 @@ from .models import Profile
 @admin.register(Profile)
 class ProfileAdmin(admin.ModelAdmin):
     list_display = (
-        'name',
-        'profile_avatar',
-        'sur_name',
-        'mobile',
-        'mobile_verified',
-        'address',
-        'user'
+        'first_name',
+        'last_name',
+        'profile_pic_url',
     )

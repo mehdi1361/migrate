@@ -44,13 +44,10 @@ class Account(Base):
 
 @python_2_unicode_compatible
 class Profile(Base):
-    name = models.CharField(_('name'), max_length=50, blank=True)
-    profile_avatar = models.ImageField(_('profile avatar'), upload_to='static/profile', null=True, blank=True)
-    sur_name = models.CharField(_('Surname'), max_length=50, blank=True)
-    mobile = models.CharField(_('mobile'), max_length=200, unique=True, default='')
-    mobile_verified = models.BooleanField(_('mobile_verified'), default=False)
-    address = models.TextField(_('address'), default='')
-    user = models.OneToOneField(User, verbose_name=_('user'), related_name='user')
+    first_name = models.CharField(_('first name'), max_length=50, blank=True)
+    last_name = models.CharField(_('last name'), max_length=50, blank=True)
+    profile_pic_url = models.ImageField(_('profile avatar'), upload_to='profile', null=True, blank=True)
+    user = models.OneToOneField(User, verbose_name=_('user'), related_name='profile')
 
     class Meta:
         verbose_name = _('profile')
@@ -58,7 +55,7 @@ class Profile(Base):
         db_table = 'profiles'
 
     def __str__(self):
-        return '{}'.format(self.name)
+        return '{}-{}'.format(self.name, self.last_name)
 
 
 @python_2_unicode_compatible

@@ -77,6 +77,7 @@ class OrderSerializer(serializers.ModelSerializer):
     pick_up_address = serializers.SerializerMethodField()
     delivery_address = serializers.SerializerMethodField()
     services = serializers.SerializerMethodField()
+    profile = serializers.SerializerMethodField()
 
     class Meta:
         model = Order
