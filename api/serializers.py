@@ -90,7 +90,8 @@ class OrderSerializer(serializers.ModelSerializer):
             'pure',
             'pick_up_address',
             'delivery_address',
-            'services'
+            'services',
+            'profile'
         )
 
     def get_pick_up_address(self, obj):
