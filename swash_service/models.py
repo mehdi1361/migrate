@@ -32,7 +32,7 @@ class Service(Base):
     details = models.TextField(_('details'), null=True, blank=True)
     price = models.PositiveIntegerField(_('price'), default=0)
     discount = models.PositiveIntegerField(_('discount'), default=0)
-    duration = models.DateField(_('duration'), blank=True, null=True)
+    duration = models.PositiveIntegerField(_('duration'), blank=True, null=True)
     category = models.ForeignKey(Category, verbose_name=_('category'), related_name='services')
 
     class Meta:

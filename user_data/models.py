@@ -44,10 +44,22 @@ class Account(Base):
 
 @python_2_unicode_compatible
 class Profile(Base):
+    SEX_TYPE = (
+        ('male', 'male'),
+        ('female', 'female')
+    )
+
     first_name = models.CharField(_('first name'), max_length=50, blank=True)
     last_name = models.CharField(_('last name'), max_length=50, blank=True)
     profile_pic_url = models.ImageField(_('profile avatar'), upload_to='profile', null=True, blank=True)
+    mobile_number = models.CharField(_('mobile number'), max_length=20, null=True, blank=True)
+    mobile_verified = models.BooleanField(_('mobile verified'), default=False)
+    phone_number = models.CharField(_('phone number'), max_length=20, null=True, blank=True)
+    postal_code = models.CharField(_('postal code'), max_length=20, null=True, blank=True)
     user = models.OneToOneField(User, verbose_name=_('user'), related_name='profile')
+
+    age = models.PositiveIntegerField(_('age'), default=20)
+    sex = models.CharField(_('sex'), max_length=6, choices=SEX_TYPE, default='male')
 
     class Meta:
         verbose_name = _('profile')

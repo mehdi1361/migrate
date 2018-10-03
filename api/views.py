@@ -139,18 +139,39 @@ class ProfileViewSet(DefaultsMixin, AuthMixin, mixins.RetrieveModelMixin, mixins
     @list_route(methods=['post'])
     def register(self, request):
         try:
-            file = request.FILES['profile_pic_url']
+            # file = request.FILES['profile_pic_url']
             first_name = request.data.get('first_name')
             last_name = request.data.get('last_name')
-
-            if file is None:
-                raise Exception('no file upload')
+            mobile_number = request.data.get('mobile_number')
+            mobile_verified = request.data.get('mobile_verified')
+            phone_number = request.data.get('phone_number')
+            postal_code = request.data.get('postal_code')
+            age = request.data.get('age')
+            sex = request.data.get('sex')
 
             if first_name is None:
                 raise Exception('first name not found')
 
             if last_name is None:
                 raise Exception('last name not found')
+
+            if mobile_number is None:
+                raise Exception('mobile number not found')
+
+            if mobile_verified is None:
+                raise Exception('mobile verified not found')
+
+            if phone_number is None:
+                raise Exception('phone number not found')
+
+            if postal_code is None:
+                raise Exception('postal code not found')
+
+            if sex is None:
+                raise Exception('sex not found')
+
+            if age is None:
+                raise Exception('age not found')
 
             try:
                 profile = Profile.objects.get(user=request.user)
@@ -161,10 +182,94 @@ class ProfileViewSet(DefaultsMixin, AuthMixin, mixins.RetrieveModelMixin, mixins
                     user=request.user,
                     first_name=first_name,
                     last_name=last_name,
-                    profile_pic_url=file
+                    mobile_number=mobile_number,
+                    mobile_verified=mobile_verified,
+                    phone_number=phone_number,
+                    postal_code=postal_code,
+                    age=age,
+                    sex=sex
                 )
                 serializer = self.serializer_class(profile)
                 return Response({"id": 200, "message": serializer.data}, status=status.HTTP_200_OK)
+
+        except Exception as e:
+            return Response({'id': 400, 'message': str(e)}, status=status.HTTP_400_BAD_REQUEST)
+
+    @list_route(methods=['post'])
+    def edit(self, request):
+            # file = request.FILES['profile_pic_url']
+        first_name = request.data.get('first_name')
+        last_name = request.data.get('last_name')
+        mobile_number = request.data.get('mobile_number')
+        mobile_verified = request.data.get('mobile_verified')
+        phone_number = request.data.get('phone_number')
+        postal_code = request.data.get('postal_code')
+        age = request.data.get('age')
+        sex = request.data.get('sex')
+
+        if first_name is None:
+            raise Exception('first name not found')
+
+        if last_name is None:
+            raise Exception('last name not found')
+
+        if mobile_number is None:
+            raise Exception('mobile number not found')
+
+        if mobile_verified is None:
+            raise Exception('mobile verified not found')
+
+        if phone_number is None:
+            raise Exception('phone number not found')
+
+        if postal_code is None:
+            raise Exception('postal code not found')
+
+        if age is None:
+            raise Exception('age not found')
+
+        if sex is None:
+            raise Exception('sex not found')
+
+        try:
+            profile = Profile.objects.get(user=request.user)
+            profile.first_name = first_name
+            profile.last_name = last_name
+            profile.mobile_number = mobile_number
+            profile.mobile_verified = mobile_verified
+            profile.phone_number = phone_number
+            profile.postal_code = postal_code
+            profile.age = age
+            profile.sex = sex
+            profile.save()
+
+        except Exception as e:
+            return Response({'id': 400, 'message': str(e)}, status=status.HTTP_400_BAD_REQUEST)
+
+    @list_route(methods=['post'])
+    def show(self, request):
+        try:
+            profile = Profile.objects.get(user=request.user)
+            serializer = ProfileSerializer(profile)
+            return Response({"id": 200, "message": serializer.data}, status=status.HTTP_200_OK)
+
+        except Exception as e:
+            return Response({'id': 400, 'message': str(e)}, status=status.HTTP_400_BAD_REQUEST)
+
+    @list_route(methods=['post'])
+    def set_picture(self, request):
+        try:
+            file = request.FILES['profile_pic_url']
+
+            if file is None:
+                raise Exception('file not found')
+
+            profile = Profile.objects.get(user=request.user)
+            profile.profile_pic_url = file
+            profile.save()
+
+            serializer = ProfileSerializer(profile)
+            return Response({"id": 200, "message": serializer.data}, status=status.HTTP_200_OK)
 
         except Exception as e:
             return Response({'id': 400, 'message': str(e)}, status=status.HTTP_400_BAD_REQUEST)
