@@ -412,7 +412,8 @@ class OrderViewSet(DefaultsMixin, AuthMixin, mixins.RetrieveModelMixin, mixins.L
 
     @list_route(methods=['post'])
     def order_list(self, request):
-        orders = Order.objects.filter(status__in=('confirmed', 'on_the_way', 'delivered', 'pickedup'))
+        orders = Order.objects.filter(status__in=(
+            'confirmed', 'on_the_way_delivered',  'on_the_way_pickedup', 'delivered', 'pickedup'))
         serializer = OrderSerializer(orders, many=True)
         return Response({"id": 200, "message": serializer.data}, status=status.HTTP_200_OK)
 
