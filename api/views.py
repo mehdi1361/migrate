@@ -274,6 +274,17 @@ class ProfileViewSet(DefaultsMixin, AuthMixin, mixins.RetrieveModelMixin, mixins
         except Exception as e:
             return Response({'id': 400, 'message': str(e)}, status=status.HTTP_400_BAD_REQUEST)
 
+    @list_route(methods=['post'])
+    def verified(self, request):
+        try:
+            profile = Profile.objects.get(user=request.user)
+            verification_code = request.data.get('verification_code')
+
+
+
+        except Exception as e:
+            return Response({'id': 400, 'message': str(e)}, status=status.HTTP_400_BAD_REQUEST)
+
 
 class CategoryViewSet(DefaultsMixin, AuthMixin, mixins.RetrieveModelMixin, mixins.ListModelMixin,
                      viewsets.GenericViewSet):
