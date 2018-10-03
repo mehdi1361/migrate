@@ -26,10 +26,6 @@ class Order(Base):
 
     status = models.CharField(_('status'), max_length=20, choices=STATUS_TYPE, default='draft')
     user = models.ForeignKey(User, verbose_name=_('user'), related_name='orders')
-    start_time = models.PositiveIntegerField(_('start time'), null=True, blank=True)
-    end_time = models.PositiveIntegerField(_('end time'), null=True, blank=True)
-
-    pickup_date = models.DateField(_('pickup date'), null=True)
 
     class Meta:
         verbose_name = _('order')
@@ -107,6 +103,11 @@ class OrderAddress(Base):
     address = models.TextField(_('address'), null=True, blank=True)
     status = models.CharField(_('status'), max_length=10, choices=STATE, default='pickup')
     order = models.ForeignKey(Order, verbose_name=_('order'), related_name='addresses')
+
+    start_time = models.PositiveIntegerField(_('start time'), null=True, blank=True)
+    end_time = models.PositiveIntegerField(_('end time'), null=True, blank=True)
+
+    selected_date = models.DateField(_('pickup date'), null=True)
 
     class Meta:
         verbose_name = _('address')

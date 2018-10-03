@@ -331,15 +331,15 @@ class OrderViewSet(DefaultsMixin, AuthMixin, mixins.RetrieveModelMixin, mixins.L
 
             order = Order.objects.get(user=request.user, status__in=('draft', 'pickup'))
             period_time_entity = get_object_or_404(PeriodTime, id=period_time)
-            order.start_time = period_time_entity.start_time
-            order.end_time = period_time_entity.end_time
-            order.pickup_date = main_datetime.datetime.strptime(date_pickup, "%Y-%m-%d").date()
 
             try:
                 order_address = OrderAddress.objects.get(order=order, status=status)
                 order_address.address = address
                 order_address.lat = lat
                 order_address.long = long
+                order_address.start_time = period_time_entity.start_time
+                order_address.end_time = period_time_entity.end_time
+                order_address.selected_date = main_datetime.datetime.strptime(date_pickup, "%Y-%m-%d").date()
                 order_address.save()
 
             except:
@@ -348,6 +348,9 @@ class OrderViewSet(DefaultsMixin, AuthMixin, mixins.RetrieveModelMixin, mixins.L
                     lat=lat,
                     long=long,
                     address=address,
+                    start_time=period_time_entity.start_time,
+                    end_time=period_time_entity.end_time,
+                    selected_date=main_datetime.datetime.strptime(date_pickup, "%Y-%m-%d").date(),
                     status=state
                 )
             OrderStatus.objects.create(order=order, status='pickup')

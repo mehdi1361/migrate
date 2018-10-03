@@ -88,9 +88,6 @@ class OrderSerializer(serializers.ModelSerializer):
             'price',
             'discount',
             'pure',
-            'start_time',
-            'end_time',
-            'pickup_date',
             'pick_up_address',
             'delivery_address',
             'services',
@@ -149,6 +146,7 @@ class OrderSerializer(serializers.ModelSerializer):
         except Exception as e:
             return {}
 
+
 class OrderAddressSerializer(serializers.ModelSerializer):
     class Meta:
         model = OrderAddress
@@ -157,6 +155,9 @@ class OrderAddressSerializer(serializers.ModelSerializer):
             'lat',
             'long',
             'address',
+            'start_time',
+            'end_time',
+            'selected_date',
             'status'
         )
 
