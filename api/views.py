@@ -280,7 +280,11 @@ class ProfileViewSet(DefaultsMixin, AuthMixin, mixins.RetrieveModelMixin, mixins
             profile = Profile.objects.get(user=request.user)
             verification_code = request.data.get('verification_code')
 
+            profile.verification_codes = True
+            profile.save()
 
+            serializer = ProfileSerializer(profile)
+            return Response({"id": 200, "message": serializer.data}, status=status.HTTP_200_OK)
 
         except Exception as e:
             return Response({'id': 400, 'message': str(e)}, status=status.HTTP_400_BAD_REQUEST)
