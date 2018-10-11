@@ -3,7 +3,7 @@ from user_data.models import Account, Profile
 from swash_service.models import Category, Service, PeriodTime
 from swash_order.models import Order, OrderStatus, OrderAddress, OrderMessage
 from rest_framework import serializers, status
-from user_data.models import Profile
+from user_data.models import Profile, Ticket, TicketHistory, TicketMessage
 
 
 class UserSerializer(serializers.ModelSerializer):
@@ -188,4 +188,52 @@ class OrderMessageSerializer(serializers.ModelSerializer):
             'order',
             'text_message',
             'created_date'
+        )
+
+
+class TicketSerializer(serializers.ModelSerializer):
+    history = serializers.SerializerMethodField()
+    messages = serializers.SerializerMethodField()
+
+    class Meta:
+        model = Ticket
+
+        fields = (
+            'id',
+            'subject',
+            'department',
+            'persiority',
+            'order',
+            'state'
+            'history',
+            'messages'
+        )
+
+    def get_history(self, obj):
+        result = []
+
+        for index, history in enumerate(TicketHistory.objects.filter(ticket=obj).order_by('-created_date')):
+            result.append({"id": index, "status": history.status})
+
+        return result
+
+    def get_messages(self, obj):
+        result = []
+        for index, message in enumerate(TicketMessage.objects.filter(ticket=obj).order_by('-created-date')):
+            result.append(
+                {
+                    "id": index,
+                    "message": message.message
+                }
+            )
+
+        return result
+
+
+class TicketHistorySerializer(serializers.ModelSerializer):
+    class Meta:
+        model = TicketHistory
+
+        fields = (
+            'status',
         )

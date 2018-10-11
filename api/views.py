@@ -15,8 +15,8 @@ from rest_framework.authentication import TokenAuthentication
 from rest_framework.permissions import IsAuthenticated
 from django.conf import settings
 from .serializers import UserSerializer, AccountSerializer, ProfileSerializer, CategorySerializer, \
-    ServiceSerializer, OrderSerializer, PeriodTimeSerializer, OrderMessageSerializer
-from user_data.models import Device, Account, Profile, Verification
+    ServiceSerializer, OrderSerializer, PeriodTimeSerializer, OrderMessageSerializer, TicketSerializer
+from user_data.models import Device, Account, Profile, Verification, Ticket, TicketMessage
 from swash_service.models import Category, Service, PeriodTime
 from swash_order.models import Order, OrderService, OrderStatus, OrderAddress, OrderMessage
 from django.db import transaction
@@ -732,4 +732,121 @@ class OrderMessageViewSet(DefaultsMixin, AuthMixin, mixins.RetrieveModelMixin, m
             return Response({"id": 200, "message": serializer.data}, status=status.HTTP_200_OK)
 
         except Exception as e:
-            return Response({"id": 400, "message": e}, status=status.HTTP_400_BAD_REQUEST)
+            return Response({"id": 400, "message": str(e)}, status=status.HTTP_400_BAD_REQUEST)
+
+
+class TicketViewSet(viewsets.ModelViewSet):
+    queryset = Ticket.objects.all()
+    serializer_class = TicketSerializer
+
+    @list_route(methods=['post'])
+    @mobile_verified()
+    def show(self, request):
+        try:
+            order_id = request.data.get('order_id')
+            if order_id is None:
+                raise Exception('order id not found')
+
+            order = Order.objects.get(id=order_id)
+            tickets = Ticket.objects.filter(order=order)
+
+            serializer = self.serializer_class(tickets, many=True)
+            return Response({"id": 200, "message": serializer.data}, status=status.HTTP_200_OK)
+        except Exception as e:
+            return Response({"id": 400, "message": str(e)}, status=status.HTTP_400_BAD_REQUEST)
+
+    @list_route(methods=['post'])
+    @mobile_verified()
+    def change(self, request):
+        try:
+            ticket_id = request.data.get('ticket_id')
+            state = request.data.get('state')
+
+            if ticket_id is None:
+                raise Exception('ticket_id not found')
+
+            if state is None:
+                raise Exception('state not found')
+
+            ticket = Ticket.objects.get(id=ticket_id)
+
+            if ticket.state == 'close':
+                raise Exception('ticket close')
+
+            ticket.state = state
+            ticket.save()
+            serializer = self.serializer_class(ticket)
+
+            return Response({"id": 200, "message": serializer.data}, status=status.HTTP_200_OK)
+        except Exception as e:
+            return Response({"id": 400, "message": str(e)}, status=status.HTTP_400_BAD_REQUEST)
+
+    @list_route(methods=['post'])
+    @mobile_verified()
+    def create_ticket(self, request):
+        try:
+            subject = request.data.get('subject')
+            department = request.data.get('department')
+            persiority = request.data.get('persiority')
+            order_id = request.data.get('order_id')
+            message = request.data.get('message')
+
+            if subject is None:
+                raise Exception('subject not found')
+
+            if department is None:
+                raise Exception('department not found')
+
+            if persiority is None:
+                raise Exception('persiority not found')
+
+            if order_id is None:
+                raise Exception('order_id not found')
+
+            order = Order.objects.get(id=order_id)
+            ticket = Ticket.objects.create(
+                order=order,
+                department=department,
+                persiority=persiority,
+                subject=subject
+            )
+
+            TicketMessage.objects.create(ticket=ticket, message=message)
+
+            serializer = self.serializer_class(ticket)
+
+            return Response({"id": 200, "message": serializer.data}, status=status.HTTP_200_OK)
+
+        except Exception as e:
+            return Response({"id": 400, "message": str(e)}, status=status.HTTP_400_BAD_REQUEST)
+
+    @list_route(methods=['post'])
+    @mobile_verified()
+    def send_message(self, request):
+        try:
+            ticket_id = request.data.get('ticket_id')
+            message = request.data.get('message')
+            state = request.data.get('state')
+
+            if ticket_id is None:
+                raise Exception('subject not found')
+
+            if message is None:
+                raise Exception('message not found')
+
+            ticket = Ticket.objects.get(id=ticket_id)
+
+            if ticket.state == 'close':
+                raise Exception('ticket close')
+
+            TicketMessage.objects.create(ticket=ticket, message=message)
+
+            ticket.state = state
+            ticket.save()
+
+            serializer = self.serializer_class(ticket)
+
+            return Response({"id": 200, "message": serializer.data}, status=status.HTTP_200_OK)
+
+        except Exception as e:
+            return Response({"id": 400, "message": str(e)}, status=status.HTTP_400_BAD_REQUEST)

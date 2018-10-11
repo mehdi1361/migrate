@@ -8,6 +8,7 @@ from base.models import Base
 from django.contrib.auth.models import User
 from django.utils.translation import ugettext_lazy as _
 from django.db.models import signals
+from swash_order.models import Order
 
 
 @python_2_unicode_compatible
@@ -121,6 +122,75 @@ class Verification(Base):
 
         except:
             return False, 'profile or verification code not found', None
+
+
+@python_2_unicode_compatible
+class Ticket(Base):
+    DEPARTMENT_TYPE = (
+        ('payment', 'payment'),
+        ('technical', 'technical'),
+    )
+
+    PERSIORITY_TYPE = (
+        ('normal', 'normal'),
+        ('hight', 'hight'),
+        ('urgent', 'urgent'),
+    )
+
+    STATES = (
+        ('open', 'open'),
+        ('unread_department', 'unread_department'),
+        ('unread_user', 'unread_user'),
+        ('close', 'close'),
+    )
+
+    subject = models.CharField(_('subject'), max_length=50)
+    department = models.CharField(_('department'), max_length=40, choices=DEPARTMENT_TYPE, default='payment')
+    persiority = models.CharField(_('persiority'), max_length=40, choices=PERSIORITY_TYPE, default='normal')
+    order = models.ForeignKey(Order, verbose_name=_('order'), related_name='tickets')
+    state = models.CharField(_('state'), max_length=40, choices=STATES, default='open')
+
+    class Meta:
+        db_table = 'ticket'
+        verbose_name = _('ticket')
+        verbose_name_plural = _('tickets')
+
+    def __str__(self):
+        return '{}-{}'.format(self.subject, self.order.id)
+
+    def save(self, force_insert=False, force_update=False, using=None,
+             update_fields=None):
+        TicketHistory.objects.create(status=self.state, ticket=self)
+
+        super(Ticket, self).save(force_insert=False, force_update=False, using=None, update_fields=None)
+
+
+@python_2_unicode_compatible
+class TicketMessage(Base):
+    ticket = models.ForeignKey(Ticket, verbose_name=_('ticket'), related_name='states')
+    message = models.CharField(_('message'), max_length=200)
+
+    class Meta:
+        db_table = 'ticket_message'
+        verbose_name = _('ticket')
+        verbose_name_plural = _('tickets')
+
+    def __str__(self):
+        return '{}-{}'.format(self.subject, self.order.id)
+
+
+@python_2_unicode_compatible
+class TicketHistory(Base):
+    status = models.CharField(_('status'), max_length=30)
+    ticket = models.ForeignKey(Ticket, verbose_name=_('ticket'), related_name='states')
+
+    class Meta:
+        db_table = 'ticket_history'
+        verbose_name = _('ticket_history')
+        verbose_name_plural = _('ticket_histories')
+
+    def __str__(self):
+        return '{}'.format(self.status)
 
 
 def create_user_dependency(sender, instance, created, **kwargs):
