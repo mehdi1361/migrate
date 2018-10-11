@@ -1,3 +1,6 @@
+# import datetime
+from datetime import datetime
+import pytz
 from django.db import models
 from django.utils.encoding import python_2_unicode_compatible
 
@@ -69,6 +72,14 @@ class Profile(Base):
     def __str__(self):
         return '{}-{}'.format(self.first_name, self.last_name)
 
+    @classmethod
+    def is_active(cls, user):
+        try:
+            profile = cls.objects.get(user=user)
+            return profile.mobile_verified
+        except Exception as e:
+            return False
+
 
 @python_2_unicode_compatible
 class VerificationMobile(Base):
@@ -78,4 +89,35 @@ class VerificationMobile(Base):
 
     def __str__(self):
         return '{}'.format(self.verification_code)
+
+
+@python_2_unicode_compatible
+class Verification(Base):
+    verification_code = models.CharField(_('verification code'), max_length=8, blank=True)
+    profile = models.ForeignKey(Profile, verbose_name=_('profile'), related_name='devices')
+
+    class Meta:
+        db_table = 'verification'
+        verbose_name = _('verification')
+        verbose_name_plural = _('verification')
+
+    def __str__(self):
+        return '{}-{}'.format(self.profile.mobile_number, self.verification_code)
+
+    @classmethod
+    def is_verified(cls, mobile_no, verification_code, user):
+        try:
+            verification = cls.objects.get(
+                profile=user.profile
+            )
+
+            delta = datetime.now(tz=pytz.utc) - verification.created_date
+            minute, seconds = divmod(delta.days * 86400 + delta.seconds, 60)
+            if minute <= 1 and seconds < 60:
+                return True, 'verification code accepted', verification.profile.user.username
+
+            return False, 'verification code not accepted', None
+
+        except:
+            return False, 'profile or verification code not found', None
 

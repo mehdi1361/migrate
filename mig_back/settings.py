@@ -133,7 +133,7 @@ STATIC_URL = '/static/'
 
 JWT_AUTH = {
     'JWT_AUTH_HEADER_PREFIX': 'JWT',
-    'JWT_EXPIRATION_DELTA': datetime.timedelta(seconds=3600)
+    'JWT_EXPIRATION_DELTA': datetime.timedelta(seconds=3600 * 24)
 }
 
 MEDIA_ROOT = '{}/media'.format(BASE_DIR)

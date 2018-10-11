@@ -1,3 +1,4 @@
+import random
 import uuid
 import datetime as main_datetime
 from datetime import datetime, timedelta
@@ -15,9 +16,24 @@ from rest_framework.permissions import IsAuthenticated
 from django.conf import settings
 from .serializers import UserSerializer, AccountSerializer, ProfileSerializer, CategorySerializer, \
     ServiceSerializer, OrderSerializer, PeriodTimeSerializer, OrderMessageSerializer
-from user_data.models import Device, Account, Profile
+from user_data.models import Device, Account, Profile, Verification
 from swash_service.models import Category, Service, PeriodTime
 from swash_order.models import Order, OrderService, OrderStatus, OrderAddress, OrderMessage
+
+
+def mobile_verified():
+    def decorator(drf_custom_method):
+        def _decorator(self, *args, **kwargs):
+            if Profile.is_active(self.request.user):
+                return drf_custom_method(self, *args, **kwargs)
+            else:
+                return Response({'id': 406, 'message': 'mobile not verified'},
+                                status=status.HTTP_406_NOT_ACCEPTABLE
+                                )
+
+        return _decorator
+
+    return decorator
 
 
 class DefaultsMixin(object):
@@ -89,6 +105,7 @@ class AccountViewSet(DefaultsMixin, AuthMixin, mixins.RetrieveModelMixin, mixins
     serializer_class = AccountSerializer
 
     @list_route(methods=['post'])
+    @mobile_verified()
     def set_account(self, request):
         try:
             account = Account.objects.filter(
@@ -136,7 +153,41 @@ class ProfileViewSet(DefaultsMixin, AuthMixin, mixins.RetrieveModelMixin, mixins
     queryset = Profile.objects.all()
     serializer_class = ProfileSerializer
 
+    @list_route(methods=['POST'])
+    def set_mobile_number(self, request):
+        mobile_no = request.data.get('mobile_no')
+
+        if mobile_no is None:
+            return Response({'id': 400, 'message': 'mobile number not found'}, status=status.HTTP_400_BAD_REQUEST)
+
+        verification_code = random.randint(1000, 9999)
+
+        try:
+            user_profile = Profile.objects.get(mobile_number=mobile_no)
+
+        except Exception as e:
+            user_profile = Profile.objects.get(user=request.user)
+            user_profile.mobile_number = mobile_no
+
+        finally:
+            user_profile.mobile_verified = False
+            user_profile.save()
+            # inline = Inline(mobile_nu=mobile_no, message=verification_code)
+            # result = inline.run()
+            result = True
+
+            if result:
+                Verification.objects.create(
+                    verification_code=verification_code,
+                    profile=user_profile
+                )
+
+                return Response({'id': 200, 'message': 'verification code sent!!!'}, status=status.HTTP_200_OK)
+
+        return Response({'id': 400, 'message': 'verification code send failed'}, status=status.HTTP_400_BAD_REQUEST)
+
     @list_route(methods=['post'])
+    @mobile_verified()
     def register(self, request):
         try:
             # file = request.FILES['profile_pic_url']
@@ -196,6 +247,7 @@ class ProfileViewSet(DefaultsMixin, AuthMixin, mixins.RetrieveModelMixin, mixins
             return Response({'id': 400, 'message': str(e)}, status=status.HTTP_400_BAD_REQUEST)
 
     @list_route(methods=['post'])
+    @mobile_verified()
     def edit(self, request):
             # file = request.FILES['profile_pic_url']
         first_name = request.data.get('first_name')
@@ -247,6 +299,7 @@ class ProfileViewSet(DefaultsMixin, AuthMixin, mixins.RetrieveModelMixin, mixins
             return Response({'id': 400, 'message': str(e)}, status=status.HTTP_400_BAD_REQUEST)
 
     @list_route(methods=['post'])
+    @mobile_verified()
     def show(self, request):
         try:
             profile = Profile.objects.get(user=request.user)
@@ -257,6 +310,7 @@ class ProfileViewSet(DefaultsMixin, AuthMixin, mixins.RetrieveModelMixin, mixins
             return Response({'id': 400, 'message': str(e)}, status=status.HTTP_400_BAD_REQUEST)
 
     @list_route(methods=['post'])
+    @mobile_verified()
     def set_picture(self, request):
         try:
             file = request.FILES['profile_pic_url']
@@ -274,17 +328,35 @@ class ProfileViewSet(DefaultsMixin, AuthMixin, mixins.RetrieveModelMixin, mixins
         except Exception as e:
             return Response({'id': 400, 'message': str(e)}, status=status.HTTP_400_BAD_REQUEST)
 
-    @list_route(methods=['post'])
+    @list_route(methods=['POST'])
     def verified(self, request):
         try:
-            profile = Profile.objects.get(user=request.user)
+            response_id = 400
+            state = status.HTTP_400_BAD_REQUEST
+
             verification_code = request.data.get('verification_code')
+            mobile_no = request.data.get('mobile_no')
 
-            profile.verification_codes = True
-            profile.save()
+            if mobile_no is None:
+                raise Exception('mobile no not found')
 
-            serializer = ProfileSerializer(profile)
-            return Response({"id": 200, "message": serializer.data}, status=status.HTTP_200_OK)
+            if verification_code is None:
+                raise Exception('verification_code no not found')
+
+            verified, message, user_id = Verification.is_verified(
+                mobile_no=mobile_no,
+                verification_code=verification_code,
+                user=request.usser
+            )
+
+            if verified:
+                profile = Profile.objects.get(user=request.user)
+                profile.mobile_verified = True
+                profile.save()
+                response_id = 200
+                state = status.HTTP_200_OK
+
+            return Response({'id': response_id, 'message': message, "user_id": user_id}, status=state)
 
         except Exception as e:
             return Response({'id': 400, 'message': str(e)}, status=status.HTTP_400_BAD_REQUEST)
@@ -296,6 +368,7 @@ class CategoryViewSet(DefaultsMixin, AuthMixin, mixins.RetrieveModelMixin, mixin
     serializer_class = CategorySerializer
 
     @list_route(methods=['post'])
+    @mobile_verified()
     def main(self, request):
         categories = Category.objects.filter(parent=None)
         serializer = self.serializer_class(categories, many=True)
@@ -303,6 +376,7 @@ class CategoryViewSet(DefaultsMixin, AuthMixin, mixins.RetrieveModelMixin, mixin
         return Response(serializer.data, status=status.HTTP_200_OK)
 
     @list_route(methods=['post'])
+    @mobile_verified()
     def sub(self, request):
         try:
             category_id = request.data.get('category_id')
@@ -316,6 +390,7 @@ class CategoryViewSet(DefaultsMixin, AuthMixin, mixins.RetrieveModelMixin, mixin
             return Response({'id': 400, 'message': e}, status=status.HTTP_400_BAD_REQUEST)
 
     @list_route(methods=['post'])
+    @mobile_verified()
     def service(self, request):
         try:
             category_id = request.data.get('category_id')
@@ -329,6 +404,7 @@ class CategoryViewSet(DefaultsMixin, AuthMixin, mixins.RetrieveModelMixin, mixin
             return Response({'id': 400, 'message': e}, status=status.HTTP_400_BAD_REQUEST)
 
     @list_route(methods=['post'])
+    @mobile_verified()
     def sub_service(self, request):
         try:
             category_id = request.data.get('category_id')
@@ -353,6 +429,7 @@ class OrderViewSet(DefaultsMixin, AuthMixin, mixins.RetrieveModelMixin, mixins.L
     serializer_class = OrderSerializer
 
     @list_route(methods=['post'])
+    @mobile_verified()
     def bag(self, request):
         try:
             order = Order.objects.get(user=request.user, status__in=('draft', 'pickup'))
@@ -367,6 +444,7 @@ class OrderViewSet(DefaultsMixin, AuthMixin, mixins.RetrieveModelMixin, mixins.L
             return Response({"id": 400, "message": "order Does Not exisit!!!"}, status=status.HTTP_400_BAD_REQUEST)
 
     @list_route(methods=['post'])
+    @mobile_verified()
     def add(self, request):
         service_id = request.data.get('service_id')
         service = get_object_or_404(Service, pk=service_id)
@@ -392,6 +470,7 @@ class OrderViewSet(DefaultsMixin, AuthMixin, mixins.RetrieveModelMixin, mixins.L
             return Response({"id": 200, "message": serializer.data}, status=status.HTTP_200_OK)
 
     @list_route(methods=['post'])
+    @mobile_verified()
     def sub(self, request):
         try:
             service_id = request.data.get('service_id')
@@ -412,6 +491,7 @@ class OrderViewSet(DefaultsMixin, AuthMixin, mixins.RetrieveModelMixin, mixins.L
             return Response({"id": 400, "message": e}, status=status.HTTP_400_BAD_REQUEST)
 
     @list_route(methods=['post'])
+    @mobile_verified()
     def confirm(self, request):
         order = get_object_or_404(Order, user=request.user, defaults={'status': 'pickup'})
         order.status = 'confirmed'
@@ -422,6 +502,7 @@ class OrderViewSet(DefaultsMixin, AuthMixin, mixins.RetrieveModelMixin, mixins.L
         return Response({"id": 200, "message": "order confirmed"}, status=status.HTTP_200_OK)
 
     @list_route(methods=['post'])
+    @mobile_verified()
     def address(self, request):
         try:
             lat = request.data.get('lat')
@@ -484,6 +565,7 @@ class OrderViewSet(DefaultsMixin, AuthMixin, mixins.RetrieveModelMixin, mixins.L
             return Response({"id": 400, "message": e.args[0]}, status=status.HTTP_400_BAD_REQUEST)
 
     @list_route(methods=['post'])
+    @mobile_verified()
     def pend_or_cancel(self, request):
         try:
             state = request.data.get('state')
@@ -507,6 +589,7 @@ class OrderViewSet(DefaultsMixin, AuthMixin, mixins.RetrieveModelMixin, mixins.L
             return Response({"id": 400, "message": "not found"}, status=status.HTTP_400_BAD_REQUEST)
 
     @list_route(methods=['post'])
+    @mobile_verified()
     def paid(self, request):
         try:
             order = Order.objects.get(user=request.user, status='pickup')
@@ -520,6 +603,7 @@ class OrderViewSet(DefaultsMixin, AuthMixin, mixins.RetrieveModelMixin, mixins.L
             return Response({"id": 400, "message": e}, status=status.HTTP_400_BAD_REQUEST)
 
     @list_route(methods=['post'])
+    @mobile_verified()
     def confirm(self, request):
         try:
             order = Order.objects.get(user=request.user, status='paid')
@@ -534,6 +618,7 @@ class OrderViewSet(DefaultsMixin, AuthMixin, mixins.RetrieveModelMixin, mixins.L
             return Response({"id": 400, "message": e}, status=status.HTTP_400_BAD_REQUEST)
 
     @list_route(methods=['post'])
+    @mobile_verified()
     def order_list(self, request):
         orders = Order.objects.filter(status__in=(
             'confirmed', 'on_the_way_delivered',  'on_the_way_pickedup', 'delivered', 'pickedup'))
@@ -541,6 +626,7 @@ class OrderViewSet(DefaultsMixin, AuthMixin, mixins.RetrieveModelMixin, mixins.L
         return Response({"id": 200, "message": serializer.data}, status=status.HTTP_200_OK)
 
     @list_route(methods=['post'])
+    @mobile_verified()
     def operate(self, request):
         try:
             state = request.data.get('state')
@@ -567,6 +653,7 @@ class OrderViewSet(DefaultsMixin, AuthMixin, mixins.RetrieveModelMixin, mixins.L
             return Response({"id": 400, "message": "order not found"}, status=status.HTTP_400_BAD_REQUEST)
 
     @list_route(methods=['post'])
+    @mobile_verified()
     def ongoing(self, request):
         try:
             orders = Order.objects.filter(user=request.user).exclude(status__in=('draft', 'pickup', 'paid', 'done'))
@@ -577,6 +664,7 @@ class OrderViewSet(DefaultsMixin, AuthMixin, mixins.RetrieveModelMixin, mixins.L
             return Response({"id": 400, "message": e}, status=status.HTTP_400_BAD_REQUEST)
 
     @list_route(methods=['post'])
+    @mobile_verified()
     def past(self, request):
         try:
             orders = Order.objects.filter(user=request.user, status='done')
@@ -599,6 +687,7 @@ class OrderMessageViewSet(DefaultsMixin, AuthMixin, mixins.RetrieveModelMixin, m
     serializer_class = OrderMessageSerializer
 
     @list_route(methods=['post'])
+    @mobile_verified()
     def send(self, request):
         try:
             order_id = request.data.get('order_id')
@@ -619,6 +708,7 @@ class OrderMessageViewSet(DefaultsMixin, AuthMixin, mixins.RetrieveModelMixin, m
             return Response({"id": 400, "message": e}, status=status.HTTP_400_BAD_REQUEST)
 
     @list_route(methods=['post'])
+    @mobile_verified()
     def inbox(self, request):
         try:
             order_id = request.data.get('order_id')
