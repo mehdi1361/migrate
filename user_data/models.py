@@ -7,6 +7,7 @@ from django.utils.encoding import python_2_unicode_compatible
 from base.models import Base
 from django.contrib.auth.models import User
 from django.utils.translation import ugettext_lazy as _
+from django.db.models import signals
 
 
 @python_2_unicode_compatible
@@ -121,3 +122,10 @@ class Verification(Base):
         except:
             return False, 'profile or verification code not found', None
 
+
+def create_user_dependency(sender, instance, created, **kwargs):
+    if created:
+        profile = Profile.objects.create(user=instance, gem=100)
+
+
+signals.post_save.connect(create_user_dependency, sender=User)

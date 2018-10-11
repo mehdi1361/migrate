@@ -194,8 +194,6 @@ class ProfileViewSet(DefaultsMixin, AuthMixin, mixins.RetrieveModelMixin, mixins
             # file = request.FILES['profile_pic_url']
             first_name = request.data.get('first_name')
             last_name = request.data.get('last_name')
-            mobile_number = request.data.get('mobile_number')
-            mobile_verified = request.data.get('mobile_verified')
             phone_number = request.data.get('phone_number')
             postal_code = request.data.get('postal_code')
             age = request.data.get('age')
@@ -206,12 +204,6 @@ class ProfileViewSet(DefaultsMixin, AuthMixin, mixins.RetrieveModelMixin, mixins
 
             if last_name is None:
                 raise Exception('last name not found')
-
-            if mobile_number is None:
-                raise Exception('mobile number not found')
-
-            if mobile_verified is None:
-                raise Exception('mobile verified not found')
 
             if phone_number is None:
                 raise Exception('phone number not found')
@@ -234,8 +226,6 @@ class ProfileViewSet(DefaultsMixin, AuthMixin, mixins.RetrieveModelMixin, mixins
                     user=request.user,
                     first_name=first_name,
                     last_name=last_name,
-                    mobile_number=mobile_number,
-                    mobile_verified=mobile_verified,
                     phone_number=phone_number,
                     postal_code=postal_code,
                     age=age,
@@ -253,8 +243,7 @@ class ProfileViewSet(DefaultsMixin, AuthMixin, mixins.RetrieveModelMixin, mixins
             # file = request.FILES['profile_pic_url']
         first_name = request.data.get('first_name')
         last_name = request.data.get('last_name')
-        mobile_number = request.data.get('mobile_number')
-        mobile_verified = request.data.get('mobile_verified')
+
         phone_number = request.data.get('phone_number')
         postal_code = request.data.get('postal_code')
         age = request.data.get('age')
@@ -265,12 +254,6 @@ class ProfileViewSet(DefaultsMixin, AuthMixin, mixins.RetrieveModelMixin, mixins
 
         if last_name is None:
             raise Exception('last name not found')
-
-        if mobile_number is None:
-            raise Exception('mobile number not found')
-
-        if mobile_verified is None:
-            raise Exception('mobile verified not found')
 
         if phone_number is None:
             raise Exception('phone number not found')
@@ -288,8 +271,6 @@ class ProfileViewSet(DefaultsMixin, AuthMixin, mixins.RetrieveModelMixin, mixins
             profile = Profile.objects.get(user=request.user)
             profile.first_name = first_name
             profile.last_name = last_name
-            profile.mobile_number = mobile_number
-            profile.mobile_verified = mobile_verified
             profile.phone_number = phone_number
             profile.postal_code = postal_code
             profile.age = age
