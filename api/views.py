@@ -19,6 +19,7 @@ from .serializers import UserSerializer, AccountSerializer, ProfileSerializer, C
 from user_data.models import Device, Account, Profile, Verification
 from swash_service.models import Category, Service, PeriodTime
 from swash_order.models import Order, OrderService, OrderStatus, OrderAddress, OrderMessage
+from django.db import transaction
 
 
 def mobile_verified():
@@ -468,6 +469,32 @@ class OrderViewSet(DefaultsMixin, AuthMixin, mixins.RetrieveModelMixin, mixins.L
         finally:
             serializer = self.serializer_class(order)
             return Response({"id": 200, "message": serializer.data}, status=status.HTTP_200_OK)
+
+    @list_route(methods=['post'])
+    @mobile_verified()
+    def bulk_service(self, request):
+        services = request.data.get('services')
+
+        if not isinstance(services,dict):
+            raise Exception('services type invalid!!!')
+
+        try:
+            order = Order.objects.get(user=request.user, status='draft')
+            OrderService.objects.filter(order=order).delete()
+            try:
+                with transaction.atomic():
+                    for key in services:
+                        service = Service.objects.filter(id=key).last()
+
+                        if service is not None:
+                            OrderService.objects.create(order=order, service=service, count=services[key])
+
+            except Exception as e:
+                return Response({"id": 400, "message": str(e)}, status=status.HTTP_400_BAD_REQUEST)
+
+            return Response({"id": 200, "message": "services add to order"}, status=status.HTTP_200_OK)
+        except Exception as e:
+            return Response({"id": 400, "message": str(e)}, status=status.HTTP_400_BAD_REQUEST)
 
     @list_route(methods=['post'])
     @mobile_verified()
