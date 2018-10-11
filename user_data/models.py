@@ -167,7 +167,7 @@ class Ticket(Base):
 
 @python_2_unicode_compatible
 class TicketMessage(Base):
-    ticket = models.ForeignKey(Ticket, verbose_name=_('ticket'), related_name='states')
+    ticket = models.ForeignKey(Ticket, verbose_name=_('ticket'), related_name='messages')
     message = models.CharField(_('message'), max_length=200)
 
     class Meta:
