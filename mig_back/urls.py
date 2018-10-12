@@ -20,6 +20,7 @@ from api.urls import router
 from django.conf import settings
 from django.conf.urls.static import static
 
+#config test
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
     url(r'^login/', obtain_jwt_token),
