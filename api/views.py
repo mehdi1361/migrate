@@ -328,11 +328,11 @@ class ProfileViewSet(DefaultsMixin, AuthMixin, mixins.RetrieveModelMixin, mixins
             verified, message, user_id = Verification.is_verified(
                 mobile_no=mobile_no,
                 verification_code=verification_code,
-                user=request.usser
+                user=request.user
             )
 
             if verified:
-                profile = Profile.objects.get(user=request.user)
+                profile = Profile.objects.get(user=user_id)
                 profile.mobile_verified = True
                 profile.save()
                 response_id = 200
