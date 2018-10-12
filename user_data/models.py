@@ -195,7 +195,7 @@ class TicketHistory(Base):
 
 def create_user_dependency(sender, instance, created, **kwargs):
     if created:
-        profile = Profile.objects.create(user=instance, gem=100)
+        profile = Profile.objects.create(user=instance)
 
 
 signals.post_save.connect(create_user_dependency, sender=User)
